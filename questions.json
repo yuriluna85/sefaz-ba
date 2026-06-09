@@ -1,0 +1,1218 @@
+[
+    {
+        "id": "q_ti_1",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "FCC - SEFAZ-BA (Adaptada)",
+        "question": "Em bancos de dados relacionais, qual cláusula ou comando SQL deve ser utilizado quando desejamos retornar todos os registros da tabela à esquerda (tabela A), mesmo aqueles que não possuem correspondência na tabela à direita (tabela B)?",
+        "options": {
+            "A": "INNER JOIN",
+            "B": "LEFT JOIN",
+            "C": "RIGHT JOIN",
+            "D": "CROSS JOIN",
+            "E": "FULL OUTER JOIN"
+        },
+        "correct": "B",
+        "explanation": "O LEFT JOIN (ou LEFT OUTER JOIN) retorna todas as linhas da tabela à esquerda (tabela A), com as linhas correspondentes da tabela à direita (tabela B). Se não houver correspondência, valores NULL são exibidos para as colunas da tabela B."
+    },
+    {
+        "id": "q_ti_2",
+        "category": "ti",
+        "subject": "Gestão e Governança de TI",
+        "source": "FGV - Área Fiscal (Adaptada)",
+        "question": "No framework COBIT 2019, a governança e a gestão de TI são tratadas de forma distinta. Qual das seguintes opções descreve uma responsabilidade exclusiva do nível de Governança de TI?",
+        "options": {
+            "A": "Planejar, construir e executar atividades de infraestrutura em alinhamento com a diretoria.",
+            "B": "Monitorar a conformidade das operações de suporte de TI aos usuários finais.",
+            "C": "Avaliar, Direcionar e Monitorar (domínio EDM) o uso da TI corporativa para garantir valor ao negócio.",
+            "D": "Gerenciar o ciclo de vida de desenvolvimento de sistemas utilizando práticas ágeis.",
+            "E": "Garantir a criptografia ponta a ponta dos bancos de dados relacionais de produção."
+        },
+        "correct": "C",
+        "explanation": "No COBIT 2019, o domínio de Governança está centrado em Avaliar, Direcionar e Monitorar (Evaluate, Direct and Monitor - EDM), enquanto a Gestão é responsável pelo planejamento, construção, execução e monitoramento das atividades diárias (domínios APO, BAI, DSS e MEA)."
+    },
+    {
+        "id": "q_ti_3",
+        "category": "ti",
+        "subject": "Segurança da Informação",
+        "source": "FGV - Senes (Adaptada)",
+        "question": "Com relação à criptografia assimétrica, analise os mecanismos de confidencialidade e assinatura digital. Para garantir a confidencialidade e garantir a autoria (assinatura digital) de uma mensagem enviada de Alice para Bob, Alice deve cifrar a mensagem utilizando respectivamente quais chaves?",
+        "options": {
+            "A": "Chave pública de Bob para confidencialidade, e chave privada de Alice para assinatura digital.",
+            "B": "Chave privada de Alice para confidencialidade, e chave pública de Bob para assinatura digital.",
+            "C": "Chave pública de Alice para confidencialidade, e chave privada de Bob para assinatura digital.",
+            "D": "Chave privada de Bob para confidencialidade, e chave pública de Alice para assinatura digital.",
+            "E": "Chave pública de Bob para ambos os objetivos."
+        },
+        "correct": "A",
+        "explanation": "Para confidencialidade, ciframos com a chave pública do destinatário (só Bob poderá decifrar com sua chave privada). Para autenticidade/assinatura digital, ciframos com a chave privada do remetente (qualquer um pode decifrar com a chave pública de Alice, provando que foi ela quem enviou)."
+    },
+    {
+        "id": "q_gen_1",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "FGV - SEFAZ-BA (Adaptada)",
+        "question": "De acordo com o Código Tributário Nacional (CTN) e a Constituição Federal de 1988, a taxa é um tributo vinculado que tem como fato gerador legítimo:",
+        "options": {
+            "A": "A prestação de um serviço público geral e indivisível (uti universi) à coletividade.",
+            "B": "A valorização de imóveis particulares decorrente da realização de obras públicas.",
+            "C": "O exercício regular do poder de polícia ou a utilização, efetiva ou potencial, de serviço público específico e divisível prestado ao contribuinte ou posto à sua disposição.",
+            "D": "A manifestação de capacidade contributiva decorrente da aquisição de renda ou patrimônio.",
+            "E": "A contribuição corporativa obrigatória para o financiamento da seguridade social."
+        },
+        "correct": "C",
+        "explanation": "Conforme o art. 77 do CTN e o art. 145, II, da CF/88, as taxas têm como fato gerador o exercício regular do poder de polícia ou a utilização, efetiva ou potencial, de serviço público específico e divisível (uti singuli) prestado ao contribuinte ou posto à sua disposição."
+    },
+    {
+        "id": "q_gen_2",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual",
+        "source": "FGV - SEFAZ-BA (Agente de Tributos)",
+        "question": "A Lei Kandir (Lei Complementar nº 87/1996) disciplina as diretrizes nacionais do ICMS. De acordo com essa lei, o ICMS NÃO incide sobre:",
+        "options": {
+            "A": "Operações interestaduais que destinem energia elétrica a outro Estado.",
+            "B": "Operações que destinem mercadorias para o exterior, bem como serviços prestados a destinatários no exterior.",
+            "C": "Entrada de mercadoria importada do exterior por pessoa jurídica para o ativo permanente.",
+            "D": "Fornecimento de alimentação e bebidas em bares e restaurantes.",
+            "E": "Operações interestaduais de transporte marítimo de cargas."
+        },
+        "correct": "B",
+        "explanation": "A Lei Kandir (em consonância com a imunidade constitucional à exportação - CF, art. 155, §2º, X, 'a') prevê expressamente a desoneração (não incidência) do ICMS sobre operações e prestações de serviços que destinem mercadorias ou serviços ao exterior."
+    },
+    {
+        "id": "q_gen_3",
+        "category": "general",
+        "subject": "Contabilidade Geral",
+        "source": "FCC - SEFAZ-BA (Auditor Fiscal)",
+        "question": "Uma empresa adquire mercadorias para revenda por R$ 10.000,00 a prazo. Sabendo que o ICMS recuperável embutido na compra é de 18%, o lançamento contábil correto para registrar essa operação de compra é:",
+        "options": {
+            "A": "Débito em Estoques de R$ 10.000,00 e Crédito em Fornecedores de R$ 10.000,00.",
+            "B": "Débito em Estoques de R$ 8.200,00, Débito em ICMS a Recuperar de R$ 1.800,00 e Crédito em Fornecedores de R$ 10.000,00.",
+            "C": "Débito em Estoques de R$ 10.000,00, Crédito em ICMS a Recolher de R$ 1.800,00 e Crédito em Fornecedores de R$ 8.200,00.",
+            "D": "Débito em Compras de R$ 10.000,00, Crédito em ICMS a Recuperar de R$ 1.800,00 e Crédito em Caixa de R$ 8.200,00.",
+            "E": "Débito em Fornecedores de R$ 10.000,00 e Crédito em Estoques de R$ 10.000,00."
+        },
+        "correct": "B",
+        "explanation": "Na compra de mercadorias com ICMS recuperável (tributo por dentro), o imposto de 18% (R$ 1.800,00) deve ser segregado do custo do estoque. Assim: Débito em Estoque (ativo) pelo valor líquido (R$ 8.200,00), Débito em ICMS a Recuperar (ativo) pelo valor do tributo (R$ 1.800,00) e Crédito na obrigação com Fornecedores (passivo) pelo valor total (R$ 10.000,00)."
+    },
+    {
+        "id": "q_gen_4",
+        "category": "general",
+        "subject": "Direito Tributário - Reforma Tributária",
+        "source": "FGV - SEFAZ-RN (Simulada)",
+        "question": "A Emenda Constitucional nº 132/2023 alterou profundamente o Sistema Tributário Nacional ao introduzir o modelo de Imposto sobre o Valor Agregado (IVA) Dual. Com base nessa reforma, assinale a afirmativa correta sobre a CBS (Contribuição sobre Bens e Serviços) e o IBS (Imposto sobre Bens e Serviços):",
+        "options": {
+            "A": "A CBS é de competência dos Estados e Municípios, enquanto o IBS é de competência exclusiva da União.",
+            "B": "Ambos possuem caráter puramente cumulativo e incidem apenas sobre bens materiais tangíveis.",
+            "C": "O IBS será gerido de forma integrada por um Comitê Gestor que conta com representantes dos Estados, do Distrito Federal e dos Municípios.",
+            "D": "A CBS e o IBS incidirão obrigatoriamente nas operações de exportação de mercadorias para o exterior, eliminando a imunidade tributária antiga.",
+            "E": "A alíquota do IBS será única para todos os bens e serviços em todo o território nacional, sendo expressamente vedados regimes diferenciados ou descontos."
+        },
+        "correct": "C",
+        "explanation": "De acordo com a EC 132/2023, o IBS será administrado por um Comitê Gestor com representação paritária de Estados, DF e Municípios, enquanto a CBS será administrada pela União. Ambos seguem o regime de não cumulatividade ampla (IVA Dual), desoneram as exportações e preveem regimes favorecidos para setores como saúde, transporte público e educação."
+    },
+    {
+        "id": "q_ti_4",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Fluência em Dados",
+        "source": "Cebraspe - SEFAZ-RN (Simulada)",
+        "question": "No âmbito das disciplinas de Ciência de Dados e Big Data, o conceito ou dimensão de 'Veracidade' refere-se prioritariamente a qual dos seguintes aspectos?",
+        "options": {
+            "A": "À velocidade operacional com que os dados fiscais estruturados são processados na nuvem.",
+            "B": "À confiabilidade, qualidade e acurácia dos dados, garantindo que análises e decisões não se baseiem em informações inconsistentes ou incorretas.",
+            "C": "Ao volume maciço de terabytes gerados em redes sociais e transações de comércio eletrônico.",
+            "D": "À variedade de formatos e estruturas de arquivos, incluindo dados estruturados e semiestruturados.",
+            "E": "Ao valor monetário obtido após a aplicação de algoritmos de inteligência artificial sobre os dados."
+        },
+        "correct": "B",
+        "explanation": "A Veracidade (um dos 5 V's tradicionais do Big Data) está ligada diretamente à integridade, qualidade e confiabilidade dos dados coletados, assegurando que as conclusões analíticas de fato correspondam à realidade."
+    },
+    {
+        "id": "q_gen_5",
+        "category": "general",
+        "subject": "Direito Tributário - Geral",
+        "source": "Cebraspe - SEFAZ-RN (Simulada)",
+        "question": "Em relação à solidariedade tributária devedora regulamentada pelas normas gerais do Código Tributário Nacional (CTN), assinale a afirmativa correta:",
+        "options": {
+            "A": "A solidariedade tributária comporta benefício de ordem, devendo o fisco acionar primeiro o sujeito passivo principal indicado no contrato social.",
+            "B": "A solidariedade devedora decorre unicamente da convenção de vontades entre as partes (autonomia contratual), não dependendo de expressa previsão em lei.",
+            "C": "A interrupção da prescrição em desfavor de um dos coobrigados solidários não prejudica nem aproveita aos demais devedores.",
+            "D": "São solidariamente obrigadas as pessoas que tenham interesse comum na situação que constitua o fato gerador da obrigação principal.",
+            "E": "A isenção pessoal concedida a um dos devedores solidários extingue integralmente o débito para todos os demais coobrigados."
+        },
+        "correct": "D",
+        "explanation": "Conforme o art. 124, I, do CTN, as pessoas que tenham interesse comum na situação que constitua o fato gerador da obrigação principal são solidariamente obrigadas. O parágrafo único deixa claro que a solidariedade não comporta benefício de ordem."
+    },
+    {
+        "id": "q_gen_6",
+        "category": "general",
+        "subject": "Auditoria Fiscal - Procedimentos",
+        "source": "FGV - Área Fiscal (Simulada)",
+        "question": "No transcorrer de uma auditoria em uma distribuidora, o auditor fiscal depara-se com suspeitas de omissão de saídas tributadas (subavaliação de receita). Para detectar com precisão essa subavaliação, qual o procedimento de auditoria mais adequado?",
+        "options": {
+            "A": "Partir do livro razão contábil e confrontar os lançamentos de vendas com as notas fiscais correspondentes de modo a atestar sua ocorrência real.",
+            "B": "Selecionar uma amostra física de notas fiscais de saídas emitidas e rastreá-las até os respectivos lançamentos nos livros diário e razão contábil.",
+            "C": "Efetuar a contagem física do estoque remanescente e confrontá-la diretamente com o balanço patrimonial publicado da controladora.",
+            "D": "Confirmar saldos de contas a pagar por meio de cartas de circularização enviadas aos clientes inadimplentes.",
+            "E": "Verificar a regularidade formal da conciliação bancária de encerramento do exercício."
+        },
+        "correct": "B",
+        "explanation": "Para auditar a subavaliação (omissão de registro), o auditor deve testar do documento de origem (nota fiscal/fato físico) para o registro contábil. Se ele partir do registro para o documento (opção A), estará testando a superavaliação (venda fictícia)."
+    },
+    {
+        "id": "q_ti_5",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Regulamentação",
+        "source": "Cebraspe - SEFAZ-RN (Simulada)",
+        "question": "À luz da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), o tratamento de dados pessoais realizado por órgãos e entidades da administração pública para a execução de políticas públicas previstas em leis ou regulamentos:",
+        "options": {
+            "A": "Depende de consentimento expresso e por escrito do titular em todos os atos de tratamento.",
+            "B": "É dispensado de consentimento, desde que o tratamento seja realizado para o atendimento de sua finalidade pública, na persecução do interesse público.",
+            "C": "É vedado por envolver segredo de estado e segredo de justiça na área fiscal tributária.",
+            "D": "Exige autorização judicial ou parecer prévio obrigatório da Autoridade Nacional de Proteção de Dados (ANPD).",
+            "E": "Somente é lícito caso os dados sejam previamente anonimizados por processo irreversível."
+        },
+        "correct": "B",
+        "explanation": "Conforme o art. 7º, III, da LGPD, o tratamento de dados pessoais pode ser efetuado pela administração pública para a execução de políticas públicas previstas em leis e regulamentos, sendo dispensado o consentimento, embora devendo observar a finalidade e a transparência pública."
+    },
+    {
+        "id": "q_gen_7",
+        "category": "general",
+        "subject": "Contabilidade de Custos - Métodos",
+        "source": "FGV - Área Fiscal (Simulada)",
+        "question": "Determinada indústria produz 1.000 unidades de um produto e vende 800 unidades no mesmo mês, restando 200 no estoque final. Sob a perspectiva da apuração de lucro líquido do período, a comparação entre o Custeio por Absorção e o Custeio Variável revela que:",
+        "options": {
+            "A": "O lucro líquido do período será menor no custeio por absorção.",
+            "B": "O valor atribuído ao estoque final de produtos acabados será menor no custeio por absorção.",
+            "C": "O lucro líquido do período será maior no custeio por absorção.",
+            "D": "O Custo dos Produtos Vendidos (CPV) será matematicamente idêntico em ambos os métodos.",
+            "E": "Os custos fixos de fabricação são lançados integralmente como despesa do período no custeio por absorção."
+        },
+        "correct": "C",
+        "explanation": "No custeio por absorção, a parcela dos custos fixos correspondente às 200 unidades em estoque é ativada no balanço patrimonial. No custeio variável, todos os custos fixos são despesados na DRE. Isso faz com que o CPV seja menor no absorção, elevando o lucro líquido."
+    },
+    {
+        "id": "q_ti_6",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Banco de Dados",
+        "source": "Cebraspe - Área Fiscal (Simulada)",
+        "question": "O Teorema CAP é uma diretriz amplamente consolidada no projeto de arquiteturas distribuídas e de bancos de dados NoSQL. Esse teorema postula que um sistema distribuído de dados não consegue assegurar simultaneamente quais propriedades?",
+        "options": {
+            "A": "Concorrência (Concurrency), Acesso (Access) e Performance (Performance).",
+            "B": "Consistência (Consistency), Disponibilidade (Availability) e Tolerância a Partição (Partition Tolerance).",
+            "C": "Criptografia (Cryptography), Autenticação (Authentication) e Privacidade (Privacy).",
+            "D": "Custódia (Custody), Auditoria (Audit) e Processabilidade (Processability).",
+            "E": "Conexão (Connection), Adaptabilidade (Adaptability) e Portabilidade (Portability)."
+        },
+        "correct": "B",
+        "explanation": "O Teorema CAP (ou Teorema de Brewer) estabelece que um banco de dados distribuído pode garantir no máximo duas das três propriedades ao mesmo tempo: Consistência (C), Disponibilidade (A) e Tolerância a Partição de Rede (P)."
+    },
+    {
+        "id": "q_gen_8",
+        "category": "general",
+        "subject": "Economia do Setor Público",
+        "source": "FGV - Área Fiscal (Simulada)",
+        "question": "Na teoria das falhas de mercado de Economia do Setor Público, um bem público puro caracteriza-se essencialmente pela conjunção de quais propriedades?",
+        "options": {
+            "A": "Rivalidade no consumo e Excludibilidade pelo sistema de preços.",
+            "B": "Alta rentabilidade comercial e livre concorrência perfeita.",
+            "C": "Não rivalidade no consumo e Não excludibilidade de consumidores.",
+            "D": "Monopólio natural de produção e tabelamento estatal de tarifas.",
+            "E": "Externalidades negativas e assimetria de informações."
+        },
+        "correct": "C",
+        "explanation": "Bens públicos puros são caracterizados por duas propriedades econômicas fundamentais: (1) Não rivalidade (o consumo por um indivíduo não reduz o consumo de outros) e (2) Não excludibilidade (é impossível impedir as pessoas de consumirem o bem após fornecido)."
+    },
+    {
+        "id": "q_ti_7",
+        "category": "ti",
+        "subject": "Banco de Dados - SQL",
+        "source": "FCC - Sefaz-SP (Adaptada)",
+        "question": "Considere a existência de uma tabela chamada 'vendas' com as colunas 'id_vendedor', 'data_venda' e 'valor_venda'. Para selecionar o id do vendedor e a soma total de suas vendas, retornando apenas os vendedores cujo valor acumulado de vendas seja superior a R$ 50.000,00, deve-se utilizar qual sintaxe SQL?",
+        "options": {
+            "A": "SELECT id_vendedor, SUM(valor_venda) FROM vendas WHERE SUM(valor_venda) > 50000 GROUP BY id_vendedor;",
+            "B": "SELECT id_vendedor, SUM(valor_venda) FROM vendas GROUP BY id_vendedor HAVING SUM(valor_venda) > 50000;",
+            "C": "SELECT id_vendedor, SUM(valor_venda) FROM vendas GROUP BY id_vendedor WHERE valor_venda > 50000;",
+            "D": "SELECT id_vendedor, SUM(valor_venda) FROM vendas HAVING SUM(valor_venda) > 50000;",
+            "E": "SELECT id_vendedor, SUM(valor_venda) FROM vendas WHERE valor_venda > 50000 GROUP BY id_vendedor;"
+        },
+        "correct": "B",
+        "explanation": "Em SQL, funções agregadas (como SUM) não podem ser utilizadas na cláusula WHERE. Para filtrar o resultado de agrupamentos (GROUP BY), deve-se utilizar a cláusula HAVING. Portanto, a resposta correta é a alternativa B."
+    },
+    {
+        "id": "q_ti_8",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Python",
+        "source": "FCC - Área Fiscal (Adaptada)",
+        "question": "Na linguagem Python, utilizando a biblioteca Pandas, dispõe-se de um DataFrame chamado 'df_contribuintes'. Qual comando deve ser executado para retornar a contagem de linhas e colunas (estrutura dimensional) desse DataFrame na forma de uma tupla?",
+        "options": {
+            "A": "df_contribuintes.dimensions()",
+            "B": "df_contribuintes.size",
+            "C": "df_contribuintes.shape",
+            "D": "df_contribuintes.columns.count()",
+            "E": "df_contribuintes.info()"
+        },
+        "correct": "C",
+        "explanation": "No Pandas, o atributo '.shape' retorna uma tupla representando a dimensionalidade do DataFrame (número de linhas, número de colunas). O atributo '.size' retorna o número total de elementos (linhas x colunas)."
+    },
+    {
+        "id": "q_ti_9",
+        "category": "ti",
+        "subject": "Engenharia de Software",
+        "source": "FCC - TRT (Adaptada)",
+        "question": "Os padrões de projeto (Design Patterns) do GoF catalogam soluções para problemas comuns no desenvolvimento orientado a objetos. Qual padrão de projeto tem como objetivo garantir que uma classe tenha apenas uma única instância em toda a aplicação e fornecer um ponto global de acesso para ela?",
+        "options": {
+            "A": "Factory Method",
+            "B": "Singleton",
+            "C": "Builder",
+            "D": "Facade",
+            "E": "Observer"
+        },
+        "correct": "B",
+        "explanation": "O padrão Singleton garante a existência de apenas uma instância de uma determinada classe durante o ciclo de vida da aplicação, mantendo um construtor privado e um método estático que gerencia e retorna a referência da instância única."
+    },
+    {
+        "id": "q_ti_10",
+        "category": "ti",
+        "subject": "Governança de TI - ITIL v4",
+        "source": "FCC - ALESP (Adaptada)",
+        "question": "No framework ITIL v4, a cadeia de valor de serviço (Service Value Chain) é um modelo operacional que descreve as principais atividades necessárias para responder à demanda e facilitar a criação de valor. Qual atividade da cadeia de valor de serviço tem como propósito assegurar um entendimento compartilhado dos requisitos, da visão e dos objetivos de melhoria para todos os produtos e serviços?",
+        "options": {
+            "A": "Engajar (Engage)",
+            "B": "Planejar (Plan)",
+            "C": "Melhorar (Improve)",
+            "D": "Obter/Construir (Obtain/Build)",
+            "E": "Desenho e Transição (Design and Transition)"
+        },
+        "correct": "B",
+        "explanation": "O propósito da atividade 'Planejar' (Plan) é assegurar o entendimento compartilhado da visão, situação atual, direção e melhoria para os quatro aspectos e todos os produtos e serviços da organização."
+    },
+    {
+        "id": "q_ti_11",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Regulamentação",
+        "source": "FCC - TRF (Adaptada)",
+        "question": "Com base na Lei de Acesso à Informação (LAI — Lei nº 12.527/2011), as informações relativas à soberania nacional e à integridade do território nacional, caso reveladas, possam colocar em risco a segurança da sociedade ou do Estado. Essas informações podem ser classificadas como ultrassecretas, secretas ou reservadas, e seus prazos máximos de restrição de acesso são, respectivamente:",
+        "options": {
+            "A": "30 anos, 20 anos e 10 anos.",
+            "B": "25 anos, 15 anos e 5 anos.",
+            "C": "20 anos, 10 anos e 5 anos.",
+            "D": "15 anos, 10 anos e 2 anos.",
+            "E": "50 anos, 25 anos e 10 anos."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o art. 24, § 1º da Lei nº 12.527/2011 (LAI), os prazos máximos de classificação são: Ultrassecreta (25 anos), Secreta (15 anos) e Reservada (5 anos)."
+    },
+    {
+        "id": "q_gen_9",
+        "category": "general",
+        "subject": "Direito Administrativo - Licitações",
+        "source": "FCC - DPE-SP (Adaptada)",
+        "question": "A Lei Federal nº 14.133/2021 (Nova Lei de Licitações e Contratos) introduziu uma nova modalidade de licitação destinada a contratações que envolvam inovação tecnológica ou técnica, onde a administração pública debate soluções com licitantes previamente selecionados. Trata-se da modalidade denominada:",
+        "options": {
+            "A": "Pregão Eletrônico",
+            "B": "Diálogo Competitivo",
+            "C": "Concurso de Ideias",
+            "D": "Tomada de Preços",
+            "E": "Credenciamento Tecnológico"
+        },
+        "correct": "B",
+        "explanation": "O 'Diálogo Competitivo' é a nova modalidade trazida pela Lei nº 14.133/2021, que consiste em conversas da administração com licitantes selecionados em busca de soluções para necessidades complexas, seguido da apresentação das propostas finais."
+    },
+    {
+        "id": "q_gen_10",
+        "category": "general",
+        "subject": "Direito Constitucional",
+        "source": "FCC - SEFAZ-PE (Adaptada)",
+        "question": "O princípio da anterioridade tributária protege o contribuinte contra surpresas fiscais. De acordo com a Constituição Federal de 1988, a instituição ou majoração de qual dos seguintes tributos constitui exceção ao princípio da anterioridade nonagesimal (noventena), podendo ser cobrado imediatamente após a publicação da lei (respeitada apenas a anterioridade do exercício)?",
+        "options": {
+            "A": "Contribuições da Seguridade Social",
+            "B": "Imposto sobre a Propriedade Territorial Urbana (IPTU) - apenas em relação à base de cálculo.",
+            "C": "Imposto sobre a Renda e Proventos de Qualquer Natureza (IR).",
+            "D": "Imposto sobre Circulação de Mercadorias e Serviços (ICMS).",
+            "E": "Taxas de Serviços de Segurança Pública."
+        },
+        "correct": "C",
+        "explanation": "O Imposto sobre a Renda (IR) é exceção expressa à anterioridade nonagesimal (noventena), nos termos do art. 150, § 1º, da CF/88. Ele obedece apenas à anterioridade de exercício (anual), podendo ser cobrado no dia 1º de janeiro do exercício seguinte ao da publicação da lei, sem necessidade de esperar 90 dias. O IPTU (base de cálculo) e o IPVA (base de cálculo) também são exceções à noventena."
+    },
+    {
+        "id": "q_gen_11",
+        "category": "general",
+        "subject": "Direito Comercial",
+        "source": "FCC - TJ-MS (Adaptada)",
+        "question": "No âmbito do Direito Societário e da Sociedade Limitada regida pelo Código Civil brasileiro, qual órgão ou ato é responsável por aprovar a exclusão extrajudicial de um sócio minoritário que esteja colocando em risco a continuidade da empresa por atos de inegável gravidade?",
+        "options": {
+            "A": "Decisão judicial unânime do Tribunal de Justiça.",
+            "B": "Deliberação da maioria dos sócios, representando mais da metade do capital social, em assembleia ou reunião convocada para esse fim.",
+            "C": "Decisão discricionária exclusiva do sócio administrador.",
+            "D": "Recomendação do Ministério Público Estadual.",
+            "E": "Votação unânime de todos os demais sócios, independentemente da quota de capital."
+        },
+        "correct": "B",
+        "explanation": "Conforme o art. 1.085 do Código Civil, nas sociedades limitadas de dois ou mais sócios, a exclusão por justa causa de um sócio minoritário pode ser feita extrajudicialmente por deliberação da maioria dos sócios, representando mais da metade do capital social (desde que haja previsão no contrato social)."
+    },
+    {
+        "id": "q_gen_12",
+        "category": "general",
+        "subject": "Direito Civil",
+        "source": "FCC - TRT (Adaptada)",
+        "question": "Prescrição e decadência são institutos que tratam da perda de direitos pelo decurso do tempo. De acordo com o Código Civil brasileiro, a principal diferença técnica entre eles reside em:",
+        "options": {
+            "A": "A prescrição extingue o direito subjetivo em si, ao passo que a decadência extingue apenas a pretensão da ação judicial correspondente.",
+            "B": "A prescrição pode ser suspensa ou interrompida pelos motivos previstos em lei, enquanto os prazos decadenciais, em regra, não se suspendem nem se interrompem.",
+            "C": "A decadência somente pode ser alegada pelo devedor, ao passo que a prescrição deve ser decretada de ofício pelo juiz em qualquer instância.",
+            "D": "Os prazos de prescrição são fixados pelas partes em contrato, ao passo que os de decadência são determinados exclusivamente por lei federal.",
+            "E": "A prescrição aplica-se somente a direitos não patrimoniais, ao passo que a decadência aplica-se a obrigações comerciais."
+        },
+        "correct": "B",
+        "explanation": "O Código Civil (art. 207) estabelece que, salvo disposição em contrário, os prazos de decadência não correm contra incapazes nem sofrem suspensão ou interrupção. Por outro lado, a prescrição pode ser suspensa ou interrompida (arts. 197 a 204). Além disso, a prescrição extingue a pretensão, enquanto a decadência extingue o próprio direito."
+    },
+    {
+        "id": "q_gen_13",
+        "category": "general",
+        "subject": "Contabilidade Avançada",
+        "source": "FCC - Metrô-SP (Adaptada)",
+        "question": "Na contabilidade de empresas coligadas e controladas, o Método de Equivalência Patrimonial (MEP) deve ser aplicado para avaliar investimentos relevantes. Quando a investida apura um lucro líquido no período e distribui dividendos para a investidora, o lançamento na investidora referente ao recebimento desses dividendos envolve:",
+        "options": {
+            "A": "Débito em Caixa/Bancos e Crédito em Receita de Dividendos (DRE).",
+            "B": "Débito em Caixa/Bancos e Crédito na conta de Investimentos em Coligadas (Ativo).",
+            "C": "Débito em Receita de Equivalência Patrimonial e Crédito em Caixa/Bancos.",
+            "D": "Débito em Investimentos em Coligadas (Ativo) e Crédito em Lucros Acumulados.",
+            "E": "Débito em Caixa/Bancos e Crédito em Receita de Equivalência Patrimonial."
+        },
+        "correct": "B",
+        "explanation": "Pelo Método de Equivalência Patrimonial (MEP), o recebimento de dividendos de coligadas/controladas não é reconhecido como receita na DRE. O dividendo reduz o patrimônio líquido da coligada e, consequentemente, reduz o valor do investimento da investidora. Assim, o lançamento correto é Débito em Caixa/Bancos e Crédito na conta do Investimento (reduzindo o Ativo)."
+    },
+    {
+        "id": "q_ti_12",
+        "category": "ti",
+        "subject": "Segurança da Informação",
+        "source": "FGV - SEFAZ-BA (Simulada)",
+        "question": "Um auditor fiscal de TI precisa analisar o tráfego de dados e garantir que as comunicações entre os servidores internos da SEFAZ sejam seguras e cifradas. Ele optou por implementar algoritmos simétricos e assimétricos nas camadas de transporte. Em relação a essas tecnologias, assinale a afirmativa correta:",
+        "options": {
+            "A": "O algoritmo AES é um exemplo de criptografia assimétrica que utiliza um par de chaves pública e privada para encriptar e decifrar.",
+            "B": "A criptografia simétrica exige um canal seguro prévio ou um protocolo de troca de chaves (como Diffie-Hellman) para compartilhar a chave secreta entre emissor e receptor.",
+            "C": "O algoritmo RSA é extremamente rápido comparado ao AES, sendo ideal para cifrar grandes volumes de dados de Notas Fiscais Eletrônicas em tempo real.",
+            "D": "A assinatura digital é realizada cifrando-se o hash da mensagem com a chave pública do remetente, garantindo a confidencialidade do conteúdo.",
+            "E": "Tanto o algoritmo AES quanto o RSA são suscetíveis a colisões de hash, pois operam gerando resumos matemáticos de tamanho fixo para as mensagens."
+        },
+        "correct": "B",
+        "explanation": "A criptografia simétrica (como o AES) utiliza a mesma chave secreta para cifrar e decifrar. O grande desafio é o compartilhamento seguro dessa chave, o que exige um protocolo de troca de chaves (como Diffie-Hellman) ou o uso de criptografia assimétrica híbrida para cifrar a chave simétrica."
+    },
+    {
+        "id": "q_ti_13",
+        "category": "ti",
+        "subject": "Fluência em Dados e Machine Learning",
+        "source": "Cebraspe - Auditor de TI (Simulada)",
+        "question": "Durante a modelagem de um classificador de aprendizado de máquina para detecção de fraudes em declarações de ICMS, a equipe de cientistas de dados notou que o modelo apresentou excelente desempenho nos dados de treino (acurácia de 99.8%), mas desempenho muito baixo nos dados de teste e validação (acurácia de 68.5%). Esse comportamento é característico do fenômeno de:",
+        "options": {
+            "A": "Underfitting (subajuste), que ocorre quando o modelo é excessivamente simples e não consegue aprender os padrões dos dados de treinamento.",
+            "B": "Overfitting (sobreajuste), que ocorre quando o modelo se ajusta excessivamente ao ruído e às particularidades do conjunto de treino, perdendo capacidade de generalização.",
+            "C": "Normalização de dados, que consiste no escalonamento de variáveis numéricas entre 0 e 1, gerando disparidades de escala nas previsões.",
+            "D": "Engenharia de features, que adiciona ruído indesejado ao dataset e reduz a acurácia nos dados históricos.",
+            "E": "Validação cruzada K-fold, que gera partições tendenciosas nos dados e distorce a acurácia final do modelo."
+        },
+        "correct": "B",
+        "explanation": "O overfitting (sobreajuste) ocorre quando o algoritmo de Machine Learning aprende demais as características e ruídos do dataset de treinamento, memorizando-os. Como resultado, ele tem excelente desempenho no treino, mas perde o poder de generalização para novos dados (teste/validação)."
+    },
+    {
+        "id": "q_ti_14",
+        "category": "ti",
+        "subject": "Engenharia de Software - Padrões de Projeto",
+        "source": "FCC - TRT (Adaptada)",
+        "question": "No desenvolvimento de um módulo de cálculo de alíquotas do ICMS que varia dinamicamente de acordo com o Estado de destino da mercadoria e o regime tributário da empresa, o desenvolvedor deseja encapsular cada algoritmo de cálculo em uma classe separada, permitindo que eles sejam trocados em tempo de execução sem alterar o código do cliente. O padrão de projeto GoF ideal para resolver esse cenário é o:",
+        "options": {
+            "A": "State",
+            "B": "Strategy",
+            "C": "Decorator",
+            "D": "Adapter",
+            "E": "Singleton"
+        },
+        "correct": "B",
+        "explanation": "O padrão Strategy define uma família de algoritmos, encapsula cada um deles e os torna intercambiáveis. Ele permite que o algoritmo varie independentemente dos clientes que o utilizam. Já o padrão State foca na mudança de comportamento do objeto de acordo com o seu estado interno atual."
+    },
+    {
+        "id": "q_ti_15",
+        "category": "ti",
+        "subject": "Redes de Computadores",
+        "source": "FGV - Analista de TI (Adaptada)",
+        "question": "A arquitetura de protocolos TCP/IP e o modelo de referência OSI organizam as comunicações em redes em diferentes camadas. Qual protocolo da suíte TCP/IP atua especificamente na Camada de Transporte, oferecendo uma entrega de dados confiável, orientada à conexão, com controle de fluxo e retransmissão de pacotes perdidos?",
+        "options": {
+            "A": "IP (Internet Protocol)",
+            "B": "UDP (User Datagram Protocol)",
+            "C": "TCP (Transmission Control Protocol)",
+            "D": "HTTP (Hypertext Transfer Protocol)",
+            "E": "ARP (Address Resolution Protocol)"
+        },
+        "correct": "C",
+        "explanation": "O TCP é o protocolo da camada de transporte que garante confiabilidade na transmissão de dados. Ele é orientado à conexão (realiza o handshake de 3 vias), garante a entrega na ordem correta, oferece controle de fluxo e faz o reenvio de pacotes perdidos, ao contrário do UDP, que é não confiável e não orientado à conexão."
+    },
+    {
+        "id": "q_ti_16",
+        "category": "ti",
+        "subject": "Big Data e Armazenamento Distribuído",
+        "source": "FCC - SEFAZ-SP (Adaptada)",
+        "question": "O ecossistema Apache Hadoop é amplamente utilizado para processamento e armazenamento de grandes volumes de dados. O componente responsável pelo sistema de arquivos distribuído que armazena os arquivos em blocos de dados divididos em réplicas por diversas máquinas (nós) do cluster é denominado:",
+        "options": {
+            "A": "MapReduce",
+            "B": "YARN",
+            "C": "HDFS",
+            "D": "Hive",
+            "E": "Zookeeper"
+        },
+        "correct": "C",
+        "explanation": "O HDFS (Hadoop Distributed File System) é o sistema de arquivos distribuído do ecossistema Hadoop. Ele é projetado para rodar em hardware comum e armazenar arquivos massivos dividindo-os em blocos (tipicamente de 128MB) e replicando-os em nós de dados para garantir tolerância a falhas."
+    },
+    {
+        "id": "q_ti_17",
+        "category": "ti",
+        "subject": "Gestão de TI - Métodos Ágeis",
+        "source": "Cebraspe - DPF (Adaptada)",
+        "question": "No framework ágil Scrum, o desenvolvimento é realizado de forma iterativa e incremental através de ciclos de tempo chamados Sprints. Qual papel é o único responsável por maximizar o valor do produto resultante do trabalho do Time de Desenvolvimento, atuando como o principal canal de comunicação com os stakeholders e gerenciando o Product Backlog?",
+        "options": {
+            "A": "Scrum Master",
+            "B": "Product Owner",
+            "C": "Agile Coach",
+            "D": "Gerente de Projeto Tradicional",
+            "E": "Tech Lead"
+        },
+        "correct": "B",
+        "explanation": "O Product Owner (PO) é o responsável por maximizar o valor do produto e pelo gerenciamento do Product Backlog (definição de itens, priorização e clareza). O Scrum Master atua como um líder servidor, garantindo que o Scrum seja compreendido e aplicado, removendo impedimentos."
+    },
+    {
+        "id": "q_ti_18",
+        "category": "ti",
+        "subject": "Banco de Dados - Transações",
+        "source": "FGV - Sefaz-AM (Adaptada)",
+        "question": "Em sistemas de gerenciamento de bancos de dados relacionais (SGBD), as transações devem respeitar as propriedades conhecidas como ACID. Qual dessas propriedades garante que, se uma falha no servidor ou no hardware ocorrer no meio de uma transação de transferência de fundos, todas as alterações parciais feitas até então sejam desfeitas (rollback), retornando o banco de dados ao estado inicial íntegro?",
+        "options": {
+            "A": "Atomicidade (Atomicity)",
+            "B": "Consistência (Consistency)",
+            "C": "Isolamento (Isolation)",
+            "D": "Durabilidade (Durability)",
+            "E": "Concorrência (Concurrency)"
+        },
+        "correct": "A",
+        "explanation": "A Atomicidade garante que uma transação seja tratada como uma unidade única e indivisível de trabalho: ou todas as operações da transação são executadas com sucesso (commit) ou nenhuma delas é executada (rollback)."
+    },
+    {
+        "id": "q_ti_19",
+        "category": "ti",
+        "subject": "Programação - Python",
+        "source": "FCC - TRF (Adaptada)",
+        "question": "Considere o seguinte trecho de código escrito em Python 3:\n\n`valores = [x**2 for x in range(5) if x % 2 == 0]` \n`print(valores)`\n\nQual será a saída exibida no console após a execução do código?",
+        "options": {
+            "A": "[0, 1, 4, 9, 16]",
+            "B": "[1, 9]",
+            "C": "[0, 4, 16]",
+            "D": "[0, 2, 4]",
+            "E": "[4, 16]"
+        },
+        "correct": "C",
+        "explanation": "O código usa uma compreensão de lista (list comprehension). `range(5)` gera os números [0, 1, 2, 3, 4]. A condição `if x % 2 == 0` filtra apenas os números pares: 0, 2 e 4. A expressão `x**2` calcula o quadrado desses números: 0**2 = 0, 2**2 = 4, e 4**2 = 16. O resultado final é a lista `[0, 4, 16]`."
+    },
+    {
+        "id": "q_ti_20",
+        "category": "ti",
+        "subject": "Segurança de Sistemas e Aplicações",
+        "source": "Cebraspe - Auditor de TI (Simulada)",
+        "question": "Um desenvolvedor de sistemas da SEFAZ percebeu que um dos campos de formulário de pesquisa do portal da fazenda estadual não realiza a sanitização adequada das entradas dos usuários, permitindo que scripts JavaScript maliciosos digitados no campo sejam executados no navegador de outros usuários que acessarem a mesma página futuramente. Esse tipo de vulnerabilidade de segurança é conhecido como:",
+        "options": {
+            "A": "SQL Injection (SQLi)",
+            "B": "Stored Cross-Site Scripting (Stored XSS)",
+            "C": "Cross-Site Request Forgery (CSRF)",
+            "D": "Denial of Service (DoS)",
+            "E": "Broken Access Control"
+        },
+        "correct": "B",
+        "explanation": "O Cross-Site Scripting Armazenado (Stored ou Persistent XSS) ocorre quando a aplicação web recebe uma entrada maliciosa (contendo scripts como JavaScript), armazena-a em um banco de dados sem sanitização e, posteriormente, renderiza essa informação para outros usuários, fazendo com que o navegador deles execute o script malicioso."
+    },
+    {
+        "id": "q_ti_21",
+        "category": "ti",
+        "subject": "Engenharia de Software - APIs",
+        "source": "FGV - MPE-RJ (Adaptada)",
+        "question": "Ao projetar uma API RESTful para a recepção de notas fiscais, a equipe de desenvolvimento deve mapear as operações com os métodos HTTP correspondentes. Caso a requisição do contribuinte resulte na criação bem-sucedida de um novo recurso de nota fiscal no servidor, quais devem ser o método HTTP utilizado na requisição e o código de status HTTP de resposta adequado retornado pelo servidor, respectivamente?",
+        "options": {
+            "A": "PUT e Código 200 OK",
+            "B": "POST e Código 201 Created",
+            "C": "GET e Código 202 Accepted",
+            "D": "POST e Código 204 No Content",
+            "E": "PATCH e Código 200 OK"
+        },
+        "correct": "B",
+        "explanation": "No padrão REST, o método POST é utilizado para criar novos recursos no servidor (onde a URI do recurso criado é controlada pelo próprio servidor). A resposta de criação bem-sucedida é o status HTTP 201 Created."
+    },
+    {
+        "id": "q_ti_22",
+        "category": "ti",
+        "subject": "Banco de Dados - Álgebra Relacional",
+        "source": "FCC - TRT (Adaptada)",
+        "question": "Na teoria de bancos de dados relacionais, a álgebra relacional é uma linguagem de consulta procedural formal. Qual operação unária da álgebra relacional é responsável por retornar um subconjunto de tuplas da relação original que atendam a uma determinada condição de filtragem lógica (predicado)?",
+        "options": {
+            "A": "Projeção (π)",
+            "B": "Seleção (σ)",
+            "C": "Junção (⋈)",
+            "D": "União (∪)",
+            "E": "Interseção (∩)"
+        },
+        "correct": "B",
+        "explanation": "A operação de Seleção (representada pela letra grega sigma - σ) filtra as linhas (tuplas) de uma tabela que atendem a um predicado. A Projeção (pi - π) filtra as colunas (atributos) de uma tabela."
+    },
+    {
+        "id": "q_ti_23",
+        "category": "ti",
+        "subject": "Fluência em Dados - Data Warehouse",
+        "source": "Cebraspe - SEFAZ-DF (Adaptada)",
+        "question": "No design dimensional de um Data Warehouse de arrecadação fiscal, as tabelas de fatos e de dimensões podem ser organizadas de formas distintas. Assinale a afirmativa que apresenta uma característica correta sobre os esquemas Star Schema (Estrela) e Snowflake (Floco de Neve):",
+        "options": {
+            "A": "No esquema Star Schema, as tabelas de dimensão são normalizadas, gerando relacionamentos em cadeia e tabelas secundárias.",
+            "B": "O esquema Snowflake possui consultas SQL mais simples e rápidas porque exige menos junções (joins) entre tabelas.",
+            "C": "No esquema Snowflake, as tabelas de dimensões são desnormalizadas, contendo redundancy intencional para otimização de consultas.",
+            "D": "O esquema Snowflake normaliza as tabelas de dimensão, dividindo-as em tabelas menores adicionais de forma a economizar espaço e evitar redundâncias.",
+            "E": "O Star Schema é ideal para economizar espaço de armazenamento físico, pois elimina redundâncias textuais nas dimensões."
+        },
+        "correct": "D",
+        "explanation": "No Snowflake (Floco de Neve), as dimensões são normalizadas (divididas em tabelas adicionais para remover redundâncias, ex: dim_cidade aponta para dim_estado). No Star Schema (Estrela), as dimensões são desnormalizadas em tabelas únicas conectadas diretamente à tabela de fatos, o que simplifica as consultas."
+    },
+    {
+        "id": "q_ti_24",
+        "category": "ti",
+        "subject": "Governança de TI - ITIL v4",
+        "source": "FGV - MPE-BA (Adaptada)",
+        "question": "No framework ITIL v4, as práticas de gerenciamento desempenham papel essencial na entrega de serviços de valor. Qual a diferença conceitual e operacional correta entre o Gerenciamento de Incidentes (Incident Management) e o Gerenciamento de Problemas (Problem Management)?",
+        "options": {
+            "A": "Incidentes visam encontrar e eliminar a causa raiz definitiva de todas as falhas, enquanto Problemas visam apenas o restabelecimento imediato do serviço.",
+            "B": "O Gerenciamento de Incidentes tem como objetivo restaurar a operação normal do serviço o mais rápido possível, enquanto o Gerenciamento de Problemas busca identificar causas raiz, prevenir repetições e minimizar o impacto operacional das falhas.",
+            "C": "Incidentes são causados exclusivamente por falhas de hardware, ao passo que Problemas referem-se a falhas humanas de processos administrativos.",
+            "D": "O Gerenciamento de Incidentes é uma atividade reativa, enquanto o Gerenciamento de Problemas é puramente proativo, nunca atuando sobre falhas já ocorridas.",
+            "E": "Ambos possuem o mesmo escopo técnico e devem ser fundidos sob uma única equipe integrada no nível de Service Desk básico."
+        },
+        "correct": "B",
+        "explanation": "No ITIL v4, o Gerenciamento de Incidentes foca na velocidade de restabelecimento do serviço (usando contornadas ou workarounds se necessário). O Gerenciamento de Problemas foca em investigar as causas reais dessas interrupções para evitar que aconteçam de novo."
+    },
+    {
+        "id": "q_ti_25",
+        "category": "ti",
+        "subject": "Redes de Computadores - DNS",
+        "source": "FCC - TRF (Adaptada)",
+        "question": "O sistema de nomes de domínios (DNS) é fundamental para traduzir nomes amigáveis em endereços IP em redes de computadores. Qual tipo de registro DNS é utilizado especificamente para mapear um nome de domínio a um endereço IP na versão 6 (IPv6)?",
+        "options": {
+            "A": "Registro A",
+            "B": "Registro AAAA",
+            "C": "Registro MX",
+            "D": "Registro CNAME",
+            "E": "Registro TXT"
+        },
+        "correct": "B",
+        "explanation": "O registro 'AAAA' (quad-A) associa um nome de domínio a um endereço IPv6 (128 bits). O registro 'A' associa a um endereço IPv4 (32 bits). O registro 'MX' aponta para servidores de e-mail e o 'CNAME' cria apelidos para domínios."
+    },
+    {
+        "id": "q_ti_26",
+        "category": "ti",
+        "subject": "Segurança e Integração Contínua",
+        "source": "Cebraspe - SERPRO (Adaptada)",
+        "question": "A cultura DevSecOps introduz a segurança de forma contínua no ciclo de vida de desenvolvimento de software. Qual o objetivo da prática automatizada chamada 'Secret Scanning' implementada em esteiras de integração contínua (CI/CD)?",
+        "options": {
+            "A": "Bloquear o acesso dos desenvolvedores à internet durante o horário de trabalho fiscal.",
+            "B": "Detectar vulnerabilidades conhecidas em pacotes de terceiros e bibliotecas de código aberto importadas pela aplicação.",
+            "C": "Identificar e impedir que chaves de API, senhas, tokens e credenciais de banco de dados tenham sido inseridas em texto claro (hardcoded) no repositório de código-fonte.",
+            "D": "Cifrar a aplicação compilada inteira em tempo de compilação usando algoritmos assimétricos de alta performance.",
+            "E": "Auditar a infraestrutura de rede para garantir que portas lógicas não essenciais estejam abertas."
+        },
+        "correct": "C",
+        "explanation": "O Secret Scanning (varredura de segredos) busca assinaturas e padrões de chaves privadas, tokens, senhas e chaves de API que possam ter sido acidentalmente commitadas no código-fonte em texto claro, o que constitui um grave risco de segurança se exposto no repositório."
+    },
+    {
+        "id": "q_ti_27",
+        "category": "ti",
+        "subject": "Programação - Orientação a Objetos",
+        "source": "FGV - TRT (Adaptada)",
+        "question": "No desenvolvimento orientado a objetos, o mecanismo que permite que classes distintas implementem métodos com a mesma assinatura (nome e parâmetros), mas com comportamentos diferentes de acordo com a classe do objeto que os chama, é definido como:",
+        "options": {
+            "A": "Herança",
+            "B": "Polimorfismo",
+            "C": "Encapsulamento",
+            "D": "Acoplamento",
+            "E": "Abstração"
+        },
+        "correct": "B",
+        "explanation": "O Polimorfismo é a capacidade de um objeto assumir muitas formas. Em código, permite que um método com a mesma assinatura execute ações diferentes dependendo da subclasse específica do objeto que está sendo instanciada em tempo de execução."
+    },
+    {
+        "id": "q_ti_28",
+        "category": "ti",
+        "subject": "Fluência em Dados - Apache Spark",
+        "source": "FCC - SEFAZ-PE (Adaptada)",
+        "question": "O Apache Spark é uma ferramenta de Big Data extremamente eficiente no processamento de grandes conjuntos de dados. Qual a principal característica de arquitetura do Apache Spark que o torna substancialmente mais rápido em processamentos repetitivos (como algoritmos iterativos de machine learning) do que o modelo MapReduce do Hadoop tradicional?",
+        "options": {
+            "A": "Armazenamento persistente exclusivo em discos de estado sólido (SSD).",
+            "B": "Processamento de dados em memória (in-memory processing) utilizando estruturas como RDDs de modo a minimizar operações de leitura/escrita em disco.",
+            "C": "Uso obrigatório de computação baseada exclusivamente em processadores gráficos (GPU).",
+            "D": "Eliminação total de redes para comunicação entre nós de trabalho.",
+            "E": "Exigência de que os dados estejam em formato XML estruturado nativo."
+        },
+        "correct": "B",
+        "explanation": "A principal vantagem do Spark sobre o MapReduce do Hadoop clássico é o seu motor de processamento em memória, que mantém os dados intermediários em RAM através de RDDs (Resilient Distributed Datasets) e DataFrames, reduzindo drasticamente o gargalo de leitura/escrita em disco entre as fases de processamento."
+    },
+    {
+        "id": "q_ti_29",
+        "category": "ti",
+        "subject": "Bancos de Dados NoSQL",
+        "source": "Cebraspe - Auditor de TI (Simulada)",
+        "question": "Ao projetar uma plataforma para armazenar dados de auditoria fiscal compostos por registros com estruturas flexíveis, variáveis e altamente aninhadas, o arquiteto optou por utilizar um banco de dados NoSQL orientado a Documentos. Qual das seguintes opções apresenta um exemplo típico de SGBD NoSQL orientado a documentos e o formato amplamente utilizado para representar esses documentos?",
+        "options": {
+            "A": "PostgreSQL e formato CSV",
+            "B": "MongoDB e formato JSON/BSON",
+            "C": "Redis e formato CSV",
+            "D": "Cassandra e formato SQL",
+            "E": "Neo4j e formato XML"
+        },
+        "correct": "B",
+        "explanation": "O MongoDB é o banco de dados NoSQL orientado a documentos mais popular, utilizando o formato BSON (uma representação binária do JSON) para armazenar os dados com esquemas dinâmicos de forma hierárquica e flexível."
+    },
+    {
+        "id": "q_gen_14",
+        "category": "general",
+        "subject": "Direito Tributário - Competências",
+        "source": "FGV - SEFAZ-BA (Simulada)",
+        "question": "A Constituição Federal de 1988 reparte rigidamente as competências tributárias entre a União, Estados, Distrito Federal e Municípios. A respeito da competência residual da União para a instituição de novos impostos, assinale a opção que descreve os requisitos constitucionais cumulativos corretos para sua instituição:",
+        "options": {
+            "A": "Deve ser instituída por meio de Decreto Presidencial em caso de relevância e urgência, possuindo caráter cumulativo.",
+            "B": "Deve ser instituída mediante Lei Complementar, ser não cumulativa e ter fatos geradores ou bases de cálculo distintos dos impostos já previstos na Constituição.",
+            "C": "Pode ser instituída por Lei Ordinária, devendo reverter 50% de sua arrecadação aos Estados onde os fatos geradores ocorreram.",
+            "D": "Deve ser aprovada por maioria simples no Congresso Nacional, incidindo exclusivamente sobre operações de importação de insumos tecnológicos.",
+            "E": "É vedada sua instituição em tempos de paz, sendo admitida apenas na iminência ou no caso de guerra externa."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o art. 154, I, da Constituição Federal, a União pode instituir impostos residuais mediante Lei Complementar, desde que sejam não cumulativos e não tenham fato gerador ou base de cálculo próprios dos já discriminados na CF/88."
+    },
+    {
+        "id": "q_gen_15",
+        "category": "general",
+        "subject": "Legislação Tributária da Bahia",
+        "source": "FCC - SEFAZ-BA (Agente de Tributos - Adaptada)",
+        "question": "A respeito do ICMS na Bahia, considere uma operação interestadual na qual uma empresa industrial baiana vende mercadorias de produção própria a uma empresa varejista de outro Estado, sendo o adquirente contribuinte do imposto. De acordo com a Lei Estadual nº 7.014/1996 e as normas gerais do ICMS, a responsabilidade pelo recolhimento do Diferencial de Alíquota (DIFAL) é do:",
+        "options": {
+            "A": "Destinatário varejista, situado no Estado de destino da mercadoria.",
+            "B": "Remetente industrial baiano, que deve recolher o DIFAL ao Estado de destino em favor do destinatário.",
+            "C": "Remetente industrial baiano, mas o valor do DIFAL é revertido integralmente ao Estado da Bahia.",
+            "D": "Ambos os sujeitos passivos, em caráter de solidariedade obrigatória automática e sem benefício de ordem.",
+            "E": "Agente transportador das mercadorias, na condição de substituto tributário presumido."
+        },
+        "correct": "A",
+        "explanation": "Conforme a Emenda Constitucional 87/2015 e a Lei Complementar 190/2022, nas operações interestaduais com destino a consumidor final contribuinte do ICMS, o recolhimento do diferencial de alíquota (DIFAL) cabe ao destinatário da mercadoria (localizado no Estado de destino). Se o destinatário não for contribuinte do ICMS, a obrigação do DIFAL seria do remetente."
+    },
+    {
+        "id": "q_gen_16",
+        "category": "general",
+        "subject": "Contabilidade Geral - DFC",
+        "source": "Cebraspe - SEFAZ-AL (Adaptada)",
+        "question": "A Demonstração dos Fluxos de Caixa (DFC) é obrigatória para diversas sociedades por ações. No método direto de apresentação da DFC, qual dos seguintes eventos deve ser classificado no grupo de Fluxos de Caixa das Atividades de Financiamento?",
+        "options": {
+            "A": "Recebimento de caixa decorrente da venda de imobilizado de uso operacional.",
+            "B": "Pagamento de caixa a fornecedores de mercadorias adquiridas a prazo.",
+            "C": "Pagamento de dividendos ou juros sobre o capital próprio aos acionistas da própria entidade.",
+            "D": "Aquisição de debêntures emitidas por outras empresas com vencimento em longo prazo.",
+            "E": "Pagamento de caixa aos empregados pelos serviços prestados no período."
+        },
+        "correct": "C",
+        "explanation": "As atividades de financiamento são aquelas que resultam em alterações no tamanho e na composição do capital próprio e nos empréstimos da entidade. Portanto, a captação de empréstimos, a emissão de ações e o pagamento de dividendos/JCP aos acionistas classificam-se como fluxos de financiamento. (CPC 03)."
+    },
+    {
+        "id": "q_gen_17",
+        "category": "general",
+        "subject": "Direito Administrativo - Poderes",
+        "source": "FGV - Auditor Fiscal (Simulada)",
+        "question": "A atuação administrativa da SEFAZ para fiscalizar estabelecimentos comerciais, lacrar depósitos clandestinos com mercadorias sem nota fiscal e aplicar multas a infratores tributários decorre diretamente do exercício de qual poder da Administração Pública, manifestando as características de imperatividade e autoexecutoriedade?",
+        "options": {
+            "A": "Poder Regulamentar",
+            "B": "Poder Disciplinar",
+            "C": "Poder de Polícia",
+            "D": "Poder Hierárquico",
+            "E": "Poder Judiciário"
+        },
+        "correct": "C",
+        "explanation": "O Poder de Polícia é a prerrogativa concedida à Administração Pública para condicionar, restringir e limitar o uso e gozo de bens, atividades e direitos individuais em benefício da coletividade ou da ordem pública. A fiscalização tributária de estabelecimentos e a apreensão de mercadorias irregulares são expressões diretas desse poder."
+    },
+    {
+        "id": "q_gen_18",
+        "category": "general",
+        "subject": "Direito Constitucional",
+        "source": "FCC - SEFAZ-BA (Auditor Fiscal - Adaptada)",
+        "question": "De acordo com o sistema de repartição de receitas tributárias previsto na Constituição Federal de 1988, pertence aos Municípios o produto da arrecadação de qual imposto estadual e em qual proporção?",
+        "options": {
+            "A": "100% da arrecadação do Imposto sobre Transmissão Causa Mortis e Doação (ITD) correspondente aos bens imóveis situados em seu território.",
+            "B": "50% do produto da arrecadação do ICMS efetuado no respectivo território municipal.",
+            "C": "25% do produto da arrecadação do ICMS efetuado no respectivo território municipal, e 50% do IPVA licenciado no respectivo município.",
+            "D": "50% do produto da arrecadação do ITD e 25% do IPVA.",
+            "E": "10% da arrecadação das taxas estaduais de segurança pública arrecadadas no município."
+        },
+        "correct": "C",
+        "explanation": "Conforme o art. 158 da CF/88, pertence aos Municípios: (1) 50% do produto da arrecadação do imposto do Estado sobre a propriedade de veículos automotores (IPVA) licenciados em seus territórios (inciso III); (2) 25% do produto da arrecadação do imposto do Estado sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação (ICMS) (inciso IV)."
+    },
+    {
+        "id": "q_gen_19",
+        "category": "general",
+        "subject": "Auditoria Fiscal - Amostragem",
+        "source": "Cebraspe - Auditor Fiscal (Simulada)",
+        "question": "No planejamento de procedimentos de auditoria para avaliar a regularidade do estoque, o auditor decide utilizar a técnica de amostragem. A respeito da amostragem em auditoria (NBC TA 530), assinale a afirmativa correta:",
+        "options": {
+            "A": "O risco de amostragem é a possibilidade de o auditor tirar uma conclusão baseada em amostra que seja diferente da conclusão que seria alcançada se toda a população fosse submetida ao mesmo procedimento.",
+            "B": "A amostragem não estatística impede que o auditor use o julgamento profissional para avaliar os resultados.",
+            "C": "Quanto menor for a taxa intolerável de desvio estabelecida pelo auditor, maior poderá ser o erro tolerado e menor será o tamanho da amostra requerida.",
+            "D": "O risco de amostragem pode ser reduzido a zero caso o auditor aumente a taxa de relevância contábil dos itens sem alterar o tamanho da amostra.",
+            "E": "Na amostragem estratificada, a população é dividida em subpopulações homogêneas de modo a maximizar a variabilidade dos itens selecionados."
+        },
+        "correct": "A",
+        "explanation": "O risco de amostragem (definido pela NBC TA 530) é exatamente o risco de que a conclusão do auditor, com base em uma amostra, seja diferente da conclusão que seria obtida se toda a população (100% dos dados) fosse testada."
+    },
+    {
+        "id": "q_gen_20",
+        "category": "general",
+        "subject": "Finanças Públicas e LRF",
+        "source": "FGV - SEFAZ-RN (Simulada)",
+        "question": "A Lei de Responsabilidade Fiscal (LC nº 101/2000) impõe limites rígidos para as despesas com pessoal nos diversos entes da Federação. Para os Estados membros, a despesa total com pessoal, em cada período de apuração, não poderá exceder qual percentual da Receita Corrente Líquida (RCL)?",
+        "options": {
+            "A": "40% da RCL.",
+            "B": "50% da RCL.",
+            "C": "60% da RCL.",
+            "D": "70% da RCL.",
+            "E": "80% da RCL."
+        },
+        "correct": "C",
+        "explanation": "De acordo com o art. 19, II, da LRF, a despesa total com pessoal dos Estados não poderá exceder o limite de 60% da Receita Corrente Líquida (RCL). A repartição desse limite de 60% é dividida em: Executivo (49%), Legislativo/TCE (3%), Judiciário (6%) e Ministério Público (2%)."
+    },
+    {
+        "id": "q_gen_21",
+        "category": "general",
+        "subject": "Direito Tributário - Crédito Tributário",
+        "source": "FCC - SEFAZ-AP (Adaptada)",
+        "question": "O Código Tributário Nacional (CTN) distingue de forma precisa as hipóteses que suspendem a exigibilidade do crédito tributário daquelas que o extinguem ou o excluem. Qual das seguintes hipóteses atua especificamente suspendendo a exigibilidade do crédito tributário?",
+        "options": {
+            "A": "A compensação de débitos com créditos acumulados homologada pela Fazenda.",
+            "B": "A remissão concedida por lei específica estadual em razão de calamidade pública.",
+            "C": "A moratória instituída por lei do ente tributante.",
+            "D": "A decadência do direito de constituir o crédito tributário pelo decurso do prazo.",
+            "E": "A anistia em relação às infrações cometidas pelo contribuinte antes da vigência da lei."
+        },
+        "correct": "C",
+        "explanation": "Conforme o art. 151, I, do CTN, a moratória suspende a exigibilidade do crédito tributário. A anistia e a isenção excluem o crédito (art. 175). A decadência, compensação e remissão extinguem o crédito tributário (art. 156)."
+    },
+    {
+        "id": "q_gen_22",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual - IPVA",
+        "source": "Cebraspe - SEFAZ-DF (Adaptada)",
+        "question": "Acerca do Imposto sobre a Propriedade de Veículos Automotores (IPVA), disciplinado pela legislação da Bahia, assinale a afirmativa correta:",
+        "options": {
+            "A": "O IPVA incide sobre a propriedade de veículos automotores de via terrestre, aquática e aérea, sem qualquer distinção de alíquota decorrente da essencialidade.",
+            "B": "O IPVA tem como fato gerador a propriedade de veículo automotor, e o imposto é devido anualmente no dia 1º de janeiro de cada exercício financeiro para os veículos usados.",
+            "C": "A isenção do IPVA aplica-se indistintamente a todas as locadoras de veículos sediadas fora do território do Estado da Bahia.",
+            "D": "A base de cálculo do IPVA para veículo novo nacional é o preço médio apurado em pesquisas de mercado pelo DETRAN, excluído o frete.",
+            "E": "O lançamento do IPVA ocorre sob a modalidade por homologação, incumbindo ao proprietário calcular e recolher o imposto sem notificação prévia."
+        },
+        "correct": "B",
+        "explanation": "O fato gerador do IPVA ocorre em 1º de janeiro de cada ano para veículos usados. Para veículos novos, ocorre na data da primeira aquisição pelo consumidor final. Ressalta-se que, segundo o STF (RE 134.509), o IPVA incide apenas sobre veículos de via terrestre (não alcançando barcos, iates e aviões), e o lançamento é feito de ofício pelo Fisco."
+    },
+    {
+        "id": "q_gen_23",
+        "category": "general",
+        "subject": "Contabilidade Geral - Impairment",
+        "source": "FGV - Auditor Fiscal (Simulada)",
+        "question": "A Cia. Estrela avalia periodicamente o valor recuperável de seus ativos de longa duração. No encerramento do exercício, um maquinário com valor contábil líquido de R$ 120.000,00 apresentou as seguintes informações de mercado:\n\n- Valor em uso (fluxo de caixa descontado esperado): R$ 95.000,00\n- Valor justo líquido de despesas de venda: R$ 102.000,00\n\nNessa situação, de acordo com o Pronunciamento Técnico CPC 01 (Redução ao Valor Recuperável de Ativos), a Cia. Estrela deve:",
+        "options": {
+            "A": "Reconhecer uma perda por impairment de R$ 25.000,00 na DRE do período.",
+            "B": "Reconhecer uma perda por impairment de R$ 18.000,00, reduzindo o valor do ativo para R$ 102.000,00.",
+            "C": "Reconhecer um ganho por reavaliação de R$ 7.000,00 no patrimônio líquido.",
+            "D": "Não efetuar qualquer lançamento, pois o valor contábil líquido do ativo é superior aos valores de mercado.",
+            "E": "Reconhecer uma provisão de passivo contingente no valor de R$ 120.000,00."
+        },
+        "correct": "B",
+        "explanation": "O valor recuperável é o maior valor entre o valor em uso (R$ 95.000,00) e o valor justo líquido de despesas de venda (R$ 102.000,00). Assim, o valor recuperável é R$ 102.000,00. Como o valor contábil (R$ 120.000,00) é maior que o valor recuperável, deve-se reconhecer uma perda por impairment de R$ 18.000,00 (120.000 - 102.000) na DRE."
+    },
+    {
+        "id": "q_gen_24",
+        "category": "general",
+        "subject": "Direito Administrativo - Atos Administrativos",
+        "source": "FCC - SEFAZ-PE (Adaptada)",
+        "question": "Os atos administrativos possuem atributos que os distinguem dos atos privados comuns. O atributo que impõe a obrigação de os administrados obedecerem ao ato administrativo independentemente de concordância prévia ou manifestação de vontade deles, decorrendo diretamente do poder de império do Estado, é a:",
+        "options": {
+            "A": "Autoexecutoriedade",
+            "B": "Presunção de Legitimidade",
+            "C": "Imperatividade",
+            "D": "Tipicidade",
+            "E": "Discricionariedade"
+        },
+        "correct": "C",
+        "explanation": "A Imperatividade é o atributo pelo qual os atos administrativos se impõem a terceiros, criando obrigações de forma unilateral, mesmo sem o consentimento dos destinatários. A Autoexecutoriedade permite que a Administração execute diretamente suas decisões sem precisar de autorização judicial prévia."
+    },
+    {
+        "id": "q_gen_25",
+        "category": "general",
+        "subject": "Economia e Finanças Públicas",
+        "source": "Cebraspe - SEFAZ-DF (Adaptada)",
+        "question": "Na teoria econômica tributária, a Curva de Laffer representa uma representação gráfica da relação entre as alíquotas de tributação cobradas pelo Estado e o volume total de receita fiscal arrecadada. A premissa central dessa curva postula que:",
+        "options": {
+            "A": "O aumento progressivo das alíquotas tributárias sempre gerará aumento infinito na arrecadação estatal.",
+            "B": "Existe uma alíquota tributária ótima que maximiza as receitas estatais, acima da qual novos aumentos de alíquota desestimulam o trabalho e a produção, reduzindo a arrecadação total.",
+            "C": "A arrecadação estatal é nula quando a alíquota de tributação sobre a renda é igual a 50%.",
+            "D": "Tributar o consumo é economicamente mais eficiente do que tributar o patrimônio sob qualquer alíquota.",
+            "E": "A sonegação fiscal diminui matematicamente quando as alíquotas marginais de impostos atingem 100%."
+        },
+        "correct": "B",
+        "explanation": "A Curva de Laffer mostra que tanto com alíquota de 0% quanto de 100% a arrecadação do governo seria nula (em 100% não há incentivo para trabalhar legalmente). Existe um ponto ótimo de tributação: antes desse ponto, aumentar impostos eleva a arrecadação; depois desse ponto, novos aumentos geram retração econômica e aumento de sonegação, fazendo a arrecadação total cair."
+    },
+    {
+        "id": "q_gen_26",
+        "category": "general",
+        "subject": "Auditoria Fiscal - Procedimentos",
+        "source": "FGV - Auditor Fiscal (Simulada)",
+        "question": "No planejamento do trabalho de auditoria independente e fiscal, o auditor divide seus exames em testes de controle (observância) e procedimentos substantivos. Qual o objetivo principal dos testes de controle?",
+        "options": {
+            "A": "Detectar erros e fraudes materiais ocorridos diretamente nos saldos das contas do ativo intangível.",
+            "B": "Confirmar a exatidão aritmética dos lançamentos de débito e crédito no livro razão.",
+            "C": "Avaliar a eficácia do sistema de controle interno da entidade auditada em prevenir, detectar ou corrigir distorções relevantes.",
+            "D": "Obter evidência física da existência dos ativos por meio de contagem física de mercadorias no almoxarifado.",
+            "E": "Verificar se as demonstrações contábeis foram elaboradas de acordo com as normas internacionais de contabilidade (IFRS)."
+        },
+        "correct": "C",
+        "explanation": "Os testes de controle (ou de observância) visam obter evidência razoável de que os controles internos estabelecidos pela administração da entidade auditada estão operando de forma efetiva e contínua no período examinado."
+    },
+    {
+        "id": "q_gen_27",
+        "category": "general",
+        "subject": "Direito Constitucional - Limitações",
+        "source": "FCC - SEFAZ-BA (Agente de Tributos - Adaptada)",
+        "question": "A Constituição Federal de 1988 estabelece limitações ao poder de tributar por meio de princípios e imunidades. A respeito da imunidade tributária, assinale a opção que descreve um caso constitucional legítimo de imunidade de impostos:",
+        "options": {
+            "A": "Isenção temporária concedida por portaria do Secretário da Fazenda para aquisição de veículos por taxistas autônomos.",
+            "B": "Impossibilidade de instituição de impostos sobre templos de qualquer culto, bem como sobre patrimônio, renda ou serviços de partidos políticos e suas fundações.",
+            "C": "Suspensão temporária do ICMS sobre mercadorias remetidas para feiras e exposições interestaduais.",
+            "D": "Redução da alíquota do Imposto de Importação (II) sobre medicamentos essenciais promovida pela ANVISA.",
+            "E": "Imunidade de taxas estaduais de saneamento básico para entidades filantrópicas sem fins lucrativos."
+        },
+        "correct": "B",
+        "explanation": "Conforme o art. 150, VI, 'b' e 'c', da CF/88, é vedado instituir impostos sobre templos de qualquer culto e sobre patrimônio, renda ou serviços de partidos políticos, fundações destes, entidades sindicais dos trabalhadores, instituições de educação e de assistência social, sem fins lucrativos, atendidos os requisitos da lei."
+    },
+    {
+        "id": "q_gen_28",
+        "category": "general",
+        "subject": "Orçamento e Finanças Públicas",
+        "source": "Cebraspe - SEFAZ-AL (Adaptada)",
+        "question": "O planejamento orçamentário no Brasil é estruturado a partir de três leis de iniciativa do Poder Executivo: PPA, LDO e LOA. Qual desses instrumentos de planejamento orçamentário tem como uma de suas funções constitucionais estabelecer as metas e prioridades da administração pública federal, dispor sobre alterações na legislação tributária e orientar a elaboração da lei orçamentária anual?",
+        "options": {
+            "A": "Plano Plurianual (PPA)",
+            "B": "Lei de Diretrizes Orçamentárias (LDO)",
+            "C": "Lei Orçamentária Anual (LOA)",
+            "D": "Plano Diretor Decenal (PDD)",
+            "E": "Decreto de Contingenciamento Orçamentário (DCO)"
+        },
+        "correct": "B",
+        "explanation": "Conforme o art. 165, § 2º, da Constituição Federal, a Lei de Diretrizes Orçamentárias (LDO) compreende as metas e prioridades da administração pública, orienta a elaboração da LOA, dispõe sobre alterações na legislação tributária e estabelece a política de aplicação das agências financeiras oficiais de fomento."
+    },
+    {
+        "id": "q_gen_29",
+        "category": "general",
+        "subject": "Direito Tributário - Lançamento",
+        "source": "FGV - SEFAZ-BA (Simulada)",
+        "question": "O lançamento é o procedimento administrativo destinado a constituir o crédito tributário. Com relação às modalidades de lançamento tributário previstas no Código Tributário Nacional (CTN), o ICMS é um imposto cujo lançamento ocorre tipicamente por:",
+        "options": {
+            "A": "Lançamento de Ofício, sendo efetuado diretamente pela autoridade fiscal tributária independentemente de colaboração do sujeito passivo.",
+            "B": "Lançamento por Declaração (misto), onde o contribuinte presta informações sobre a matéria de fato e a autoridade fiscal calcula e lança o tributo.",
+            "C": "Lançamento por Homologação (autolançamento), cabendo ao contribuinte antecipar o pagamento do imposto sem prévio exame da autoridade administrativa.",
+            "D": "Lançamento Arbitrado, executado de forma extraordinária pelo Fisco devido à perda de livros contábeis obrigatórios por incêndio.",
+            "E": "Lançamento Judicial, homologado por sentença transitada em julgado na esfera cível tributária."
+        },
+        "correct": "C",
+        "explanation": "O ICMS (assim como o IPI e o Imposto de Renda) tem lançamento por homologação (art. 150 do CTN), onde a lei atribui ao sujeito passivo o dever de antecipar o pagamento do imposto apurado sem prévio exame da autoridade administrativa. A atividade fiscal de homologação é posterior."
+    },
+    {
+        "id": "q_gen_30",
+        "category": "general",
+        "subject": "Contabilidade de Custos - Margem",
+        "source": "FCC - SEFAZ-BA (Auditor Fiscal - Adaptada)",
+        "question": "Uma empresa comercializa um produto por R$ 200,00 a unidade. Os custos e despesas variáveis totalizam R$ 120,00 por unidade. Os custos e despesas fixos da estrutura fabril são de R$ 80.000,00 por mês. Sabendo que a empresa deseja obter um lucro operacional meta de R$ 20.000,00 no período, a quantidade mínima de unidades que devem ser vendidas para atingir o Ponto de Equilíbrio Econômico é de:",
+        "options": {
+            "A": "800 unidades",
+            "B": "1.000 unidades",
+            "C": "1.250 unidades",
+            "D": "1.500 unidades",
+            "E": "2.000 unidades"
+        },
+        "correct": "C",
+        "explanation": "A Margem de Contribuição Unitária (MCU) é o preço de venda menos custos/despesas variáveis: MCU = 200 - 120 = R$ 80,00. O Ponto de Equilíbrio Econômico (PEE) considera o lucro meta desejado além dos custos fixos: PEE = (Custos Fixos + Lucro Meta) / MCU = (80.000 + 20.000) / 80 = 100.000 / 80 = 1.250 unidades."
+    },
+    {
+        "id": "q_gen_31",
+        "category": "general",
+        "subject": "Direito Administrativo - Responsabilidade",
+        "source": "Cebraspe - TJ-BA (Adaptada)",
+        "question": "A respeito da Responsabilidade Civil do Estado prevista no art. 37, § 6º, da Constituição Federal de 1988, assinale a afirmativa correta:",
+        "options": {
+            "A": "As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, sob a teoria da responsabilidade objetiva (risco administrativo).",
+            "B": "A responsabilidade civil do Estado exige sempre a demonstração de culpa grave ou dolo do agente público no ato causador do dano para gerar direito à indenização civil ao terceiro lesado.",
+            "C": "O direito de regresso do Estado contra o agente público responsável pelo dano prescreve no prazo constitucional improrrogável de 3 anos a contar do pagamento da indenização.",
+            "D": "O caso fortuito, a força maior e a culpa exclusiva da vítima não excluem nem atenuam o dever de indenizar do Estado, pois vigora no Brasil a teoria do risco integral na responsabilidade pública comum.",
+            "E": "A responsabilidade objetiva aplica-se apenas aos atos administrativos lícitos, sendo que atos ilícitos administrativos respondem subjetivamente."
+        },
+        "correct": "A",
+        "explanation": "O art. 37, § 6º, da CF/88 consagra a responsabilidade civil objetiva da Administração Pública sob a modalidade do risco administrativo, aplicando-se tanto para pessoas jurídicas de direito público quanto para as de direito privado prestadoras de serviços públicos. O lesado não precisa provar dolo ou culpa do agente público, bastando comprovar o fato, o dano e o nexo causal. Caso fortuito, força maior e culpa exclusiva da vítima são excludentes de responsabilidade."
+    },
+    {
+        "id": "q_gen_real_1",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "FGV - SEFAZ-AM (2022)",
+        "question": "Determinado Estado da Federação passou a cobrar IPVA dos proprietários de embarcações e aeronaves com base em lei estadual específica, sob o argumento de que são veículos automotores. À luz da jurisprudência consolidada do Supremo Tribunal Federal (STF), a cobrança do IPVA sobre tais bens é:",
+        "options": {
+            "A": "Constitucional, desde que a alíquota seja uniforme e idêntica àquela aplicada a veículos terrestres.",
+            "B": "Inconstitucional, pois o conceito constitucional de veículos automotores para fins de IPVA restringe-se aos veículos terrestres.",
+            "C": "Constitucional, porque o IPVA é de competência plena dos Estados e do Distrito Federal, abrangendo qualquer meio de transporte.",
+            "D": "Inconstitucional, salvo se houver autorização prévia por meio de Lei Complementar Federal específica para cada Estado.",
+            "E": "Constitucional, contanto que o valor arrecadado seja revertido integralmente para a melhoria da infraestrutura portuária e aeroportuária do Estado."
+        },
+        "correct": "B",
+        "explanation": "O STF possui jurisprudência pacífica no sentido de que o IPVA (Art. 155, III, CF/88) incide apenas sobre veículos automotores terrestres, não alcançando embarcações e aeronaves (RE 379.572 e RE 255.111)."
+    },
+    {
+        "id": "q_gen_real_2",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "FGV - SEFAZ-AM (2022)",
+        "question": "Determinado Estado da Federação instituiu, por meio de decisão administrativa fiscal, a cobrança de IPVA sobre bicicletas elétricas por analogia às motocicletas. À luz do Código Tributário Nacional (CTN) e dos princípios constitucionais tributários, essa cobrança é:",
+        "options": {
+            "A": "Válida, pois a analogia é método de integração expressamente permitido pelo CTN para cobrança de novos tributos.",
+            "B": "Inválida, pois o emprego da analogia não poderá resultar na exigência de tributo não previsto em lei.",
+            "C": "Válida, desde que a alíquota cobrada seja inferior à menor alíquota vigente no Estado para motocicletas de baixa cilindrada.",
+            "D": "Inválida, salvo se houver convênio firmado no âmbito do CONFAZ autorizando a equiparação.",
+            "E": "Válida, sob o princípio da igualdade tributária, visto que ambos os veículos possuem propulsão mecânica."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o art. 108, § 1º, do CTN, o emprego da analogia não poderá resultar na exigência de tributo não previsto em lei, preservando o princípio constitucional da legalidade tributária (art. 150, I, CF/88)."
+    },
+    {
+        "id": "q_ti_real_1",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "No âmbito dos bancos de dados Oracle, a SGA (System Global Area) e a PGA (Program Global Area) são estruturas de memória fundamentais. A diferença primordial entre SGA e PGA reside no fato de que:",
+        "options": {
+            "A": "A SGA é uma área de memória compartilhada por todos os processos do servidor, enquanto a PGA é uma área privada dedicada a uma única sessão ou processo de servidor individual.",
+            "B": "A SGA armazena apenas dados temporários de consultas, enquanto a PGA guarda os logs de redo e undo de transações ativas.",
+            "C": "A SGA é alocada dinamicamente na máquina do cliente, ao passo que a PGA reside permanentemente no servidor de disco do banco de dados.",
+            "D": "A PGA gerencia o cache de blocos de dados (Buffer Cache), enquanto a SGA gerencia apenas a ordenação SQL e variáveis locais.",
+            "E": "Ambas são compartilhadas, mas a PGA serve apenas para conexões não autenticadas e a SGA para transações em produção."
+        },
+        "correct": "A",
+        "explanation": "A SGA (System Global Area) é compartilhada e contém dados e informações de controle do banco de dados (como buffer cache, shared pool, redo log buffer). A PGA (Program Global Area) é uma região de memória privada de cada processo de servidor, contendo dados e informações de controle de uma sessão individual (como dados de ordenação e sessão)."
+    },
+    {
+        "id": "q_ti_real_2",
+        "category": "ti",
+        "subject": "Banco de Dados - BI",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "Na modelagem dimensional para Data Warehouses proposta por Ralph Kimball, os esquemas de modelagem são fundamentais para otimização de consultas analíticas. Considere o esquema Estrela (Star Schema) e o esquema Floco de Neve (Snowflake Schema). A principal diferença entre eles é que o esquema Floco de Neve:",
+        "options": {
+            "A": "Não possui tabelas fatos, sendo composto unicamente por tabelas dimensão diretamente integradas.",
+            "B": "Normaliza as tabelas dimensão, dividindo-as em subdimensões secundárias, enquanto o esquema estrela mantém as dimensões totalmente desnormalizadas.",
+            "C": "Desnormaliza a tabela fato para eliminar completamente o uso de junções (joins) em tempo de execução.",
+            "D": "Utiliza apenas chaves naturais ao invés de chaves substitutas (surrogate keys) na tabela fato principal.",
+            "E": "Duplica a tabela fato para garantir o isolamento físico de dados históricos e atuais."
+        },
+        "correct": "B",
+        "explanation": "No Star Schema (esquema estrela), as dimensões são desnormalizadas in tabelas únicas conectadas à tabela fato. No Snowflake Schema (esquema floco de neve), as tabelas de dimensão são normalizadas, gerando subdimensões (tabelas secundárias), o que economiza espaço de armazenamento mas exige mais joins em consultas."
+    },
+    {
+        "id": "q_ti_real_3",
+        "category": "ti",
+        "subject": "Segurança da Informação",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "Sob a ótica da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), em relação à transferência internacional de dados pessoais pela administração pública para organismos internacionais ou entidades governamentais estrangeiras, assinale a afirmativa correta:",
+        "options": {
+            "A": "É expressamente vedada por razões de soberania de dados nacionais, independentemente de convênios fiscais bilaterais.",
+            "B": "É permitida desde que o país ou organismo destinatário ofereça grau de proteção de dados pessoais adequado ao previsto na LGPD.",
+            "C": "Exige autorização prévia de todos os contribuintes do Estado por meio de plebiscito digital.",
+            "D": "Fica sujeita à anonimização reversível compulsória executada por chave criptográfica exclusiva sob posse da Receita Federal.",
+            "E": "É permitida sem qualquer restrição jurídica por envolver transações fiscais internacionais e de controle aduaneiro."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o Art. 33, I, da LGPD, a transferência internacional de dados pessoais é permitida para países ou organismos internacionais que proporcionem grau de proteção de dados pessoais adequado ao previsto na lei brasileira."
+    },
+    {
+        "id": "q_gen_real_3",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual",
+        "source": "FGV - SEFAZ-BA (2022)",
+        "question": "Com base no Processo Administrativo Fiscal da Bahia (PAF — Decreto Estadual nº 7.629/1999), a peça que inicia formalmente a fase de contencioso administrativo para julgamento de exigência de crédito tributário formulada em Auto de Infração é denominada:",
+        "options": {
+            "A": "Petição de Embargos Fiscais.",
+            "B": "Impugnação ou Reclamação.",
+            "C": "Recurso Ordinário de Ofício.",
+            "D": "Representação Fiscal para Fins Penais.",
+            "E": "Notificação de Lançamento Avulso."
+        },
+        "correct": "B",
+        "explanation": "A defesa apresentada pelo sujeito passivo no PAF da Bahia contra o lançamento efetuado por Auto de Infração ou Notificação de Lançamento inicia a fase contenciosa e é denominada impugnação (ou reclamação)."
+    },
+    {
+        "id": "q_rn_1",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "As funções de um sistema de gerenciamento de banco de dados (SGBD) e de um sistema operacional (SO) são complementares no ecossistema de TI. Dentre as seguintes opções, assinale aquela que apresenta uma responsabilidade exclusiva do SGBD:",
+        "options": {
+            "A": "Gerenciar o escalonamento de processos no processador principal por meio do banco de dados.",
+            "B": "Gerenciar o sistema de arquivos físicos e os privilégios básicos do sistema de arquivos.",
+            "C": "Gerenciar a entrada e saída de dispositivos de hardware e criar canais físicos de barramento.",
+            "D": "Gerenciar a memória RAM física geral do computador enquanto o computador estiver ligado.",
+            "E": "Transformar e apresentar dados de forma independente, controlar o acesso concorrente de múltiplos usuários e prover interfaces de comunicação do banco de dados."
+        },
+        "correct": "E",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nSGBD vs. SISTEMA OPERACIONAL:\n* Funções do SGBD: Incluem a gerência de armazenamento lógico de dados, o controle de concorrência (garantindo transações isoladas), a segurança lógica dos dados, a independência de dados (transformando a forma física em apresentação lógica), a gerência do dicionário de dados (metadados) e as interfaces de acesso (SQL/APIs).\n* Funções do SO: Responsável por tarefas de nível de hardware e infraestrutura física, como escalonamento de processos no processador, gerência da memória física (RAM), controle de entrada/saída de dispositivos periféricos (I/O) e o sistema de arquivos físico do disco.\nLogo, a única alternativa que traz funções exclusivas do SGBD é a E."
+    },
+    {
+        "id": "q_rn_2",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "No modelo relacional de banco de dados, as chaves desempenham papel fundamental para assegurar a integridade e unicidade dos registros. A propriedade que dita que 'duas tuplas distintas, em qualquer estado da relação, não podem ter valores idênticos para os atributos definidos na chave' refere-se à propriedade de:",
+        "options": {
+            "A": "Unicidade da chave do modelo.",
+            "B": "Irredutibilidade da chave do modelo.",
+            "C": "Restrição de integridade referencial.",
+            "D": "Dependência multivalorada da chave.",
+            "E": "Integridade de domínio dos atributos."
+        },
+        "correct": "A",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nPROPRIEDADES DAS CHAVES NO MODELO RELACIONAL:\n* Unicidade: Garante que nenhuma tupla (linha) duplicada possa existir com a mesma chave. Em outras palavras, os valores dos atributos da chave identificam unicamente cada registro da tabela.\n* Irredutibilidade: Significa que nenhum subconjunto apropriado da chave pode possuir a propriedade de unicidade. Ou seja, se removermos qualquer atributo da chave, ela perde a capacidade de identificar os registros unicamente.\nO enunciado descreve exatamente a propriedade da Unicidade (Alternativa A)."
+    },
+    {
+        "id": "q_rn_3",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Dentre as 12 regras propostas por Edgar F. Codd para avaliar o quão verdadeiramente relacional é um SGBD, aquela que estabelece que o sistema deve continuar operando com sucesso independentemente de os dados estarem centralizados ou distribuídos fisicamente em múltiplas localidades refere-se à:",
+        "options": {
+            "A": "Regra da não-subversão de restrições por linguagens de baixo nível.",
+            "B": "Independência física de dados.",
+            "C": "Independência lógica de dados.",
+            "D": "Independência de distribuição (Regra 11).",
+            "E": "Independência de integridade dos metadados."
+        },
+        "correct": "D",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nAS REGRAS DE CODD (RELAÇÃO E DISTRIBUIÇÃO):\n* Regra 11 (Independência de Distribuição): Postula que o banco de dados deve continuar operando de forma idêntica e transparente para o usuário/aplicação, mesmo se os dados forem distribuídos fisicamente por servidores diferentes. As queries SQL devem rodar sem alteração de sintaxe.\n* Outras Regras Importantes:\n  - Independência Física: Mudanças físicas no armazenamento (ex: trocar HD por SSD ou alterar índices) não afetam a visão lógica/queries.\n  - Independência Lógica: Alterações na estrutura lógica (ex: adicionar colunas ou tabelas) não quebram aplicações existentes.\nO enunciado descreve a Independência de Distribuição (Alternativa D)."
+    },
+    {
+        "id": "q_rn_4",
+        "category": "ti",
+        "subject": "Banco de Dados - BI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Em sistemas de suporte à decisão (OLAP), os cubos multidimensionais de dados permitem navegar ao longo dos níveis hierárquicos das dimensões. A operação que permite que o usuário passe de um nível mais detalhado (por exemplo, Mês) para um nível menos detalhado e mais agregado (por exemplo, Ano), reduzindo a quantidade de informações exibidas e aumentando a granularidade lógica, é denominada:",
+        "options": {
+            "A": "Drill-down",
+            "B": "Roll-up",
+            "C": "Slice (Fatiar)",
+            "D": "Dice (Cortar em cubos)",
+            "E": "Pivot (Rotacionar)"
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nOPERAÇÕES OLAP E MULTIDIMENSIONAIS:\n* Roll-up (ou Consolidação): Agrega os dados subindo na hierarquia (ex: de Mês para Trimestre, e depois para Ano). Isso reduz o nível de detalhe (aumentando o nível de agrupamento dos dados).\n* Drill-down (ou Detalhar): Faz o inverso. Desce na hierarquia (ex: de Ano para Mês ou Dia), trazendo mais detalhes e diminuindo o agrupamento.\n* Slice: Seleciona uma fatia do cubo aplicando um filtro em uma dimensão (ex: vendas apenas do ano de 2026).\n* Dice: Seleciona um subcubo aplicando filtros em múltiplas dimensões.\n* Pivot (ou Rotação): Rotaciona os eixos das dimensões para visualizar os dados sob outra perspectiva.\nA alternativa correta é a B (Roll-up)."
+    },
+    {
+        "id": "q_rn_5",
+        "category": "ti",
+        "subject": "Gestão e Governança de TI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Um auditor de TI observou que determinado serviço de recepção tributária passava a ficar inoperante ou com baixíssimo desempenho em períodos de pico de acesso. Ele constatou que a organização não havia realizado avaliações e previsões prévias sistemáticas sobre os padrões de consumo e comportamento do negócio. Segundo a ITIL v3, a implantação de qual processo resolveria a raiz do problema?",
+        "options": {
+            "A": "Gerenciamento de Incidentes do estágio de Operação de Serviço.",
+            "B": "Gerenciamento de Mudanças do estágio de Transição de Serviço.",
+            "C": "Gerenciamento de Demanda do estágio de Estratégia de Serviço.",
+            "D": "Gerenciamento de Portfólio do estágio de Desenho de Serviço.",
+            "E": "Gerenciamento de Liberação do estágio de Melhoria de Serviço Contínua."
+        },
+        "correct": "C",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nITIL V3 - GERENCIAMENTO DE DEMANDA vs. CAPACIDADE:\n* Gerenciamento de Demanda: Localizado na Estratégia de Serviço, busca compreender, prever e influenciar a demanda do cliente por serviços. Trabalha analisando Padrões de Atividade de Negócio (PAN) e Perfis de Usuário para prever picos de demanda antes que eles ocorram.\n* Gerenciamento de Capacidade: Localizado no Desenho de Serviço, foca em fornecer os recursos físicos necessários (hardware, links, licenças) para sustentar a demanda projetada.\n* Gerenciamento de Incidentes: Age de forma reativa para restaurar o serviço o mais rápido possível após uma queda, sem focar na previsão de demanda.\nA falha em antecipar o comportamento de pico de demanda é resolvida pelo Gerenciamento de Demanda (Alternativa C)."
+    },
+    {
+        "id": "q_rn_6",
+        "category": "ti",
+        "subject": "Gestão e Governança de TI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "No ciclo de vida de projetos de desenvolvimento de sistemas baseados nas boas práticas do Guia PMBOK, o documento que formalmente autoriza o início do projeto, define seus limites gerais e confere autoridade legal ao gerente do projeto para utilizar recursos organizacionais é denominado:",
+        "options": {
+            "A": "Termo de Abertura do Projeto (Project Charter).",
+            "B": "Estrutura Analítica do Projeto (EAP).",
+            "C": "Plano de Gerenciamento do Projeto.",
+            "D": "Declaração de Escopo do Projeto.",
+            "E": "Registro das Partes Interessadas."
+        },
+        "correct": "A",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nGERENCIAMENTO DE INTEGRAÇÃO - TERMO DE ABERTURA:\n* O Termo de Abertura do Projeto (Project Charter) é o artefato que formaliza a existência do projeto e dá autoridade ao gerente. É elaborado no grupo de processos de Iniciação.\n* WBS / EAP: Decompõe o escopo do projeto em pacotes de trabalho menores e entregáveis, facilitando o planejamento e controle.\n* Declaração de Escopo: Descreve detalhadamente o escopo, as premissas, as restrições e as entregas do projeto.\n* Plano de Gerenciamento: É o documento integrado que descreve como o projeto será executado, monitorado e controlado.\nA formalização de autoridade e início do projeto é feita pelo Termo de Abertura (Alternativa A)."
+    },
+    {
+        "id": "q_rn_7",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "A Emenda Constitucional nº 132/2023 alterou profundamente o Sistema Tributário Nacional ao introduzir a sistemática do IVA Dual sobre o consumo de bens e serviços. Sobre essa reforma constitucional, assinale a opção que expressa de forma correta a composição da competência e a incidência tributária:",
+        "options": {
+            "A": "A CBS é de competência municipal e o IBS é de competência federal, incidindo ambos apenas sobre bens tangíveis industriais.",
+            "B": "A CBS (federal) e o IBS (estadual, distrital e municipal) são não cumulativos, possuem incidência ampla sobre bens materiais e imateriais (incluindo serviços e direitos) e são regidos pelo princípio do destino.",
+            "C": "O IBS incide na modalidade cumulativa (em cascata), não gerando créditos fiscais nas operações intermediárias da cadeia produtiva.",
+            "D": "A CBS e o IBS incidirão ativamente sobre as exportações de bens e serviços, mantendo a imunidade apenas nas importações.",
+            "E": "As alíquotas do IBS serão definidas integralmente por decreto presidencial, sem participação das assembleias legislativas estaduais."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nREFORMA TRIBUTÁRIA (IVA DUAL - IBS e CBS):\n* IVA Dual: Composto pela Contribuição sobre Bens e Serviços (CBS, da União) e pelo Imposto sobre Bens e Serviços (IBS, de Estados e Municípios, gerido de forma integrada por um Comitê Gestor).\n* Não-cumulatividade ampla: O imposto pago em etapas anteriores gera crédito financeiro total de forma a eliminar o imposto 'em cascata'.\n* Incidência Ampla: Incidem sobre qualquer operação de consumo de bens materiais ou imateriais, inclusive serviços e direitos.\n* Desoneração das Exportações: As exportações são totalmente imunes (princípio do destino), enquanto as importações são tributadas para equilibrar a concorrência.\nA resposta correta é a alternativa B."
+    },
+    {
+        "id": "q_rn_8",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "Determinada universidade estadual, constituída sob a forma jurídica de autarquia pública, passou a oferecer cursos de pós-graduação pagos ao público em geral. A fiscalização federal exige o recolhimento do imposto sobre a renda referente aos valores recebidos dessas matrículas. Conforme a disciplina constitucional tributária e a jurisprudência, a exigência é:",
+        "options": {
+            "A": "Legal, uma vez que as receitas não decorrem de impostos e envolvem contraprestação financeira direta dos usuários.",
+            "B": "Inconstitucional, pois as autarquias públicas possuem imunidade recíproca sobre seu patrimônio, renda e serviços vinculados às suas finalidades essenciais ou às delas decorrentes.",
+            "C": "Legal, dado que as autarquias perdem automaticamente a imunidade tributária quando praticam qualquer atividade comercial ou de serviços no mercado.",
+            "D": "Inconstitucional, contanto que a autarquia obtenha prévia autorização judicial de isenção no Supremo Tribunal Federal.",
+            "E": "Legal, desde que o Estado não institua regime favorecido tributário próprio para a sua universidade autárquica."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nIMUNIDADE RECÍPROCA (AUTARQUIAS E FUNDAÇÕES):\n* Art. 150, VI, 'a' da CF/88: Veda à União, aos Estados, ao DF e aos Municípios instituir impostos sobre patrimônio, renda ou serviços uns dos outros.\n* Extensão da Imunidade (§ 2º): A imunidade aplica-se às autarquias e fundações instituídas e mantidas pelo Poder Público, no que se refere ao patrimônio, à renda e aos serviços, vinculados a suas finalidades essenciais ou às delas decorrentes.\n* Jurisprudência do STF: O fato de a autarquia cobrar tarifa ou mensalidade (ex: cursos pagos) não afasta a imunidade, desde que os recursos arrecadados sejam revertidos e aplicados integralmente na manutenção de suas atividades essenciais de educação. A presunção de vinculação milita em favor da autarquia, cabendo ao fisco provar desvio de finalidade.\nA cobrança é inconstitucional (Alternativa B)."
+    },
+    {
+        "id": "q_rn_9",
+        "category": "general",
+        "subject": "Contabilidade Geral",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "Determinada indústria produziu 1.000 unidades de seu produto e vendeu 800 unidades no mesmo período, restando 200 em estoque final de produtos acabados. Não havia estoques iniciais. Sob a perspectiva da apuração de lucro líquido do período, a comparação técnica entre os métodos de Custeio por Absorção e Custeio Variável revela que:",
+        "options": {
+            "A": "O custeio variável resultará em maior valor monetário para o estoque final de produtos acabados.",
+            "B": "O lucro líquido do período apurado pelo Custeio por Absorção será maior do que o obtido pelo Custeio Variável.",
+            "C": "O Custo dos Produtos Vendidos (CPV) será maior no custeio por absorção.",
+            "D": "O lucro líquido obtido pelo Custeio Variável será maior devido ao abatimento total imediato dos custos fixos na produção vendida.",
+            "E": "Os custos fixos de produção são considerados despesas do período em ambos os métodos de custeio."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nCUSTEIO POR ABSORÇÃO vs. CUSTEIO VARIÁVEL:\n* Custeio por Absorção (Regra Fiscal - RIR/CPC): Todos os custos de produção (diretos e indiretos, fixos e variáveis) são apropriados aos produtos. Se uma parte da produção ficar estocada, parte dos custos fixos industriais será 'ativada' no estoque (ativo circulante), saindo da DRE.\n* Custeio Variável (Gerencial): Apenas os custos variáveis são apropriados aos produtos. Os custos fixos de produção são tratados integralmente como despesas do período, sendo lançados diretamente na DRE, independentemente de haver estoque.\n* Relação de Lucro:\n  - Se Produção > Vendas (Formação de Estoque): O lucro do Absorção é MAIOR que o Variável (porque o Absorção 'esconde' custos fixos no estoque).\n  - Se Vendas > Produção (Venda de Estoque Antigo): O lucro do Variável é MAIOR.\nNo caso proposto, Produção (1000) > Vendas (800), logo o lucro no Custeio por Absorção é maior (Alternativa B)."
+    },
+    {
+        "id": "q_rn_10",
+        "category": "general",
+        "subject": "Auditoria Fiscal",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "No planejamento de procedimentos de auditoria fiscal para identificar omissão de receitas tributáveis por saídas não registradas (omissão de vendas), o auditor fiscal deve aplicar testes substantivos. O ponto de partida mais adequado para esse teste consiste em selecionar uma amostra de:",
+        "options": {
+            "A": "Registros no livro Razão Contábil de vendas e rastreá-los até a guia física de expedição de mercadorias no depósito.",
+            "B": "Fatos físicos reais (como relatórios internos de expedição ou notas de entrega) e rastrear seu fluxo até os registros contábeis e notas fiscais emitidas.",
+            "C": "Notas fiscais de compras registradas no livro Registro de Entradas e rastrear até a respectiva duplicata a pagar.",
+            "D": "Saldos das contas de clientes no Balanço Patrimonial e confrontá-los com extratos bancários homologados.",
+            "E": "Registros de impostos a recolher na escrituração fiscal digital (EFD) e recalcular as alíquotas aplicadas."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nDIREÇÃO DOS TESTES DE AUDITORIA (SUPERAVALIAÇÃO vs. SUBAVALIAÇÃO):\n* Teste de Subavaliação (Omissão/Subregistro): O auditor busca identificar o que NÃO foi registrado. Portanto, o ponto de partida deve ser a origem física ou documental (extratos, relatórios de portaria, estoque físico, notas de entrega) e o rastreamento deve seguir em direção ao registro contábil (da Origem para o Livro). Se um item tem origem física mas não está no livro, há omissão.\n* Teste de Superavaliação (Superfaturamento/Falsidade): O auditor busca provar se os registros existentes são reais ou fictícios. O ponto de partida é o registro contábil e o rastreamento segue em direção aos documentos de suporte (do Livro para a Origem).\nPara identificar omissão de receitas (subavaliação), deve-se partir dos fatos físicos reais para a contabilidade (Alternativa B)."
+    }
+]
