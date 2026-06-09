@@ -545,6 +545,10 @@ function loadProgress() {
   fetch('/api/progress')
     .then(res => {
       if (!res.ok) throw new Error("Flask API not available");
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Response is not JSON");
+      }
       return res.json();
     })
     .then(data => {
@@ -602,6 +606,10 @@ function saveProgress() {
   })
   .then(res => {
     if (!res.ok) throw new Error("Flask API write failed");
+    const contentType = res.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Response is not JSON");
+    }
     return res.json();
   })
   .then(data => {
@@ -620,7 +628,14 @@ function loadLocalFiles() {
   `;
 
   fetch('/api/files')
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("Flask API not available");
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Response is not JSON");
+      }
+      return res.json();
+    })
     .then(files => {
       if (files.error) {
         container.innerHTML = `<div class="empty-state"><i class="fa-solid fa-circle-exclamation text-cyan"></i> Erro ao listar arquivos: ${files.error}</div>`;
@@ -651,8 +666,24 @@ function loadLocalFiles() {
       `).join('');
     })
     .catch(err => {
-      console.error("Error loading files:", err);
-      container.innerHTML = `<div class="empty-state"><i class="fa-solid fa-circle-exclamation text-cyan"></i> Ocorreu um erro ao carregar os arquivos.</div>`;
+      console.warn("Local files API not available. Showing explanation.", err);
+      container.innerHTML = `
+        <div class="empty-state" style="padding: 30px; text-align: center;">
+          <i class="fa-solid fa-server" style="font-size: 40px; color: var(--text-muted); opacity: 0.6; margin-bottom: 15px; display: block;"></i>
+          <strong style="color: var(--text-main); font-size: 16px;">Servidor Local Desconectado (Modo Estático / GitHub Pages)</strong>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin: 8px auto 0 auto; max-width: 500px; line-height: 1.5;">
+            Os materiais da pasta física local do computador só podem ser listados e baixados quando o servidor local em Python estiver ativo.
+          </p>
+          <div style="background-color: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); padding: 12px; border-radius: 6px; display: inline-block; margin-top: 15px; text-align: left; font-size: 13px;">
+            <strong>Para ativar o servidor:</strong>
+            <ol style="margin: 5px 0 0 18px; padding: 0;">
+              <li>Abra o terminal na pasta do projeto</li>
+              <li>Execute o comando: <code style="color: var(--accent-cyan); background: rgba(6, 182, 212, 0.1); padding: 2px 4px; border-radius: 4px;">python app.py</code></li>
+              <li>Acesse pelo navegador em: <a href="http://127.0.0.1:5000" target="_blank" style="color: var(--accent-cyan); text-decoration: underline;">http://127.0.0.1:5000</a></li>
+            </ol>
+          </div>
+        </div>
+      `;
     });
 }
 
@@ -673,6 +704,10 @@ function loadQuestions() {
   fetch('/api/questions')
     .then(res => {
       if (!res.ok) throw new Error("Flask API not available");
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Response is not JSON");
+      }
       return res.json();
     })
     .then(data => {
@@ -681,7 +716,14 @@ function loadQuestions() {
     .catch(err => {
       console.log("Using static fallback for questions.json");
       fetch('questions.json')
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw new Error("Static file questions.json not found");
+          const contentType = res.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Static response is not JSON");
+          }
+          return res.json();
+        })
         .then(data => {
           allQuestions = data;
         })
@@ -691,6 +733,10 @@ function loadQuestions() {
   fetch('/api/discursivas')
     .then(res => {
       if (!res.ok) throw new Error("Flask API not available");
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Response is not JSON");
+      }
       return res.json();
     })
     .then(data => {
@@ -699,7 +745,14 @@ function loadQuestions() {
     .catch(err => {
       console.log("Using static fallback for discursivas.json");
       fetch('discursivas.json')
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw new Error("Static file discursivas.json not found");
+          const contentType = res.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Static response is not JSON");
+          }
+          return res.json();
+        })
         .then(data => {
           allDiscursivas = data;
           if (currentQuizType === 'disc') {
@@ -822,13 +875,13 @@ function selectQuizOption(optionKey) {
 
 // Check if answer is correct and reveal explanation
 function checkQuizAnswer() {
-  if (!selectedOption || answerChecked) return;
-
   const actionBtn = document.getElementById("quiz-action-btn");
-  if (actionBtn.textContent.trim() === "Próxima Questão" || actionBtn.textContent.trim() === "Finalizar Simulado") {
+  if (actionBtn && (actionBtn.textContent.trim() === "Próxima Questão" || actionBtn.textContent.trim() === "Finalizar Simulado")) {
     nextQuizQuestion();
     return;
   }
+
+  if (!selectedOption || answerChecked) return;
 
   answerChecked = true;
   const q = activeQuizQuestions[currentQuestionIdx];

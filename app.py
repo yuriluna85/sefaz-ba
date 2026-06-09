@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='.', static_folder='static')
 
 # Path to the sibling "Concurso SEFAZ" folder containing PDFs
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SEFAZ_FILES_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', 'Concurso SEFAZ'))
+SEFAZ_FILES_DIR = os.path.abspath(os.path.join(BASE_DIR, 'Concurso SEFAZ'))
 PROGRESS_FILE = os.path.join(BASE_DIR, 'progress.json')
 QUESTIONS_FILE = os.path.join(BASE_DIR, 'questions.json')
 DISCURSIVAS_FILE = os.path.join(BASE_DIR, 'discursivas.json')

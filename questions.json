@@ -958,5 +958,261 @@
         },
         "correct": "A",
         "explanation": "O art. 37, § 6º, da CF/88 consagra a responsabilidade civil objetiva da Administração Pública sob a modalidade do risco administrativo, aplicando-se tanto para pessoas jurídicas de direito público quanto para as de direito privado prestadoras de serviços públicos. O lesado não precisa provar dolo ou culpa do agente público, bastando comprovar o fato, o dano e o nexo causal. Caso fortuito, força maior e culpa exclusiva da vítima são excludentes de responsabilidade."
+    },
+    {
+        "id": "q_gen_real_1",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "FGV - SEFAZ-AM (2022)",
+        "question": "Determinado Estado da Federação passou a cobrar IPVA dos proprietários de embarcações e aeronaves com base em lei estadual específica, sob o argumento de que são veículos automotores. À luz da jurisprudência consolidada do Supremo Tribunal Federal (STF), a cobrança do IPVA sobre tais bens é:",
+        "options": {
+            "A": "Constitucional, desde que a alíquota seja uniforme e idêntica àquela aplicada a veículos terrestres.",
+            "B": "Inconstitucional, pois o conceito constitucional de veículos automotores para fins de IPVA restringe-se aos veículos terrestres.",
+            "C": "Constitucional, porque o IPVA é de competência plena dos Estados e do Distrito Federal, abrangendo qualquer meio de transporte.",
+            "D": "Inconstitucional, salvo se houver autorização prévia por meio de Lei Complementar Federal específica para cada Estado.",
+            "E": "Constitucional, contanto que o valor arrecadado seja revertido integralmente para a melhoria da infraestrutura portuária e aeroportuária do Estado."
+        },
+        "correct": "B",
+        "explanation": "O STF possui jurisprudência pacífica no sentido de que o IPVA (Art. 155, III, CF/88) incide apenas sobre veículos automotores terrestres, não alcançando embarcações e aeronaves (RE 379.572 e RE 255.111)."
+    },
+    {
+        "id": "q_gen_real_2",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "FGV - SEFAZ-AM (2022)",
+        "question": "Determinado Estado da Federação instituiu, por meio de decisão administrativa fiscal, a cobrança de IPVA sobre bicicletas elétricas por analogia às motocicletas. À luz do Código Tributário Nacional (CTN) e dos princípios constitucionais tributários, essa cobrança é:",
+        "options": {
+            "A": "Válida, pois a analogia é método de integração expressamente permitido pelo CTN para cobrança de novos tributos.",
+            "B": "Inválida, pois o emprego da analogia não poderá resultar na exigência de tributo não previsto em lei.",
+            "C": "Válida, desde que a alíquota cobrada seja inferior à menor alíquota vigente no Estado para motocicletas de baixa cilindrada.",
+            "D": "Inválida, salvo se houver convênio firmado no âmbito do CONFAZ autorizando a equiparação.",
+            "E": "Válida, sob o princípio da igualdade tributária, visto que ambos os veículos possuem propulsão mecânica."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o art. 108, § 1º, do CTN, o emprego da analogia não poderá resultar na exigência de tributo não previsto em lei, preservando o princípio constitucional da legalidade tributária (art. 150, I, CF/88)."
+    },
+    {
+        "id": "q_ti_real_1",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "No âmbito dos bancos de dados Oracle, a SGA (System Global Area) e a PGA (Program Global Area) são estruturas de memória fundamentais. A diferença primordial entre SGA e PGA reside no fato de que:",
+        "options": {
+            "A": "A SGA é uma área de memória compartilhada por todos os processos do servidor, enquanto a PGA é uma área privada dedicada a uma única sessão ou processo de servidor individual.",
+            "B": "A SGA armazena apenas dados temporários de consultas, enquanto a PGA guarda os logs de redo e undo de transações ativas.",
+            "C": "A SGA é alocada dinamicamente na máquina do cliente, ao passo que a PGA reside permanentemente no servidor de disco do banco de dados.",
+            "D": "A PGA gerencia o cache de blocos de dados (Buffer Cache), enquanto a SGA gerencia apenas a ordenação SQL e variáveis locais.",
+            "E": "Ambas são compartilhadas, mas a PGA serve apenas para conexões não autenticadas e a SGA para transações em produção."
+        },
+        "correct": "A",
+        "explanation": "A SGA (System Global Area) é compartilhada e contém dados e informações de controle do banco de dados (como buffer cache, shared pool, redo log buffer). A PGA (Program Global Area) é uma região de memória privada de cada processo de servidor, contendo dados e informações de controle de uma sessão individual (como dados de ordenação e sessão)."
+    },
+    {
+        "id": "q_ti_real_2",
+        "category": "ti",
+        "subject": "Banco de Dados - BI",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "Na modelagem dimensional para Data Warehouses proposta por Ralph Kimball, os esquemas de modelagem são fundamentais para otimização de consultas analíticas. Considere o esquema Estrela (Star Schema) e o esquema Floco de Neve (Snowflake Schema). A principal diferença entre eles é que o esquema Floco de Neve:",
+        "options": {
+            "A": "Não possui tabelas fatos, sendo composto unicamente por tabelas dimensão diretamente integradas.",
+            "B": "Normaliza as tabelas dimensão, dividindo-as em subdimensões secundárias, enquanto o esquema estrela mantém as dimensões totalmente desnormalizadas.",
+            "C": "Desnormaliza a tabela fato para eliminar completamente o uso de junções (joins) em tempo de execução.",
+            "D": "Utiliza apenas chaves naturais ao invés de chaves substitutas (surrogate keys) na tabela fato principal.",
+            "E": "Duplica a tabela fato para garantir o isolamento físico de dados históricos e atuais."
+        },
+        "correct": "B",
+        "explanation": "No Star Schema (esquema estrela), as dimensões são desnormalizadas in tabelas únicas conectadas à tabela fato. No Snowflake Schema (esquema floco de neve), as tabelas de dimensão são normalizadas, gerando subdimensões (tabelas secundárias), o que economiza espaço de armazenamento mas exige mais joins em consultas."
+    },
+    {
+        "id": "q_ti_real_3",
+        "category": "ti",
+        "subject": "Segurança da Informação",
+        "source": "FGV - SEFAZ-MG (2023)",
+        "question": "Sob a ótica da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), em relação à transferência internacional de dados pessoais pela administração pública para organismos internacionais ou entidades governamentais estrangeiras, assinale a afirmativa correta:",
+        "options": {
+            "A": "É expressamente vedada por razões de soberania de dados nacionais, independentemente de convênios fiscais bilaterais.",
+            "B": "É permitida desde que o país ou organismo destinatário ofereça grau de proteção de dados pessoais adequado ao previsto na LGPD.",
+            "C": "Exige autorização prévia de todos os contribuintes do Estado por meio de plebiscito digital.",
+            "D": "Fica sujeita à anonimização reversível compulsória executada por chave criptográfica exclusiva sob posse da Receita Federal.",
+            "E": "É permitida sem qualquer restrição jurídica por envolver transações fiscais internacionais e de controle aduaneiro."
+        },
+        "correct": "B",
+        "explanation": "De acordo com o Art. 33, I, da LGPD, a transferência internacional de dados pessoais é permitida para países ou organismos internacionais que proporcionem grau de proteção de dados pessoais adequado ao previsto na lei brasileira."
+    },
+    {
+        "id": "q_gen_real_3",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual",
+        "source": "FGV - SEFAZ-BA (2022)",
+        "question": "Com base no Processo Administrativo Fiscal da Bahia (PAF — Decreto Estadual nº 7.629/1999), a peça que inicia formalmente a fase de contencioso administrativo para julgamento de exigência de crédito tributário formulada em Auto de Infração é denominada:",
+        "options": {
+            "A": "Petição de Embargos Fiscais.",
+            "B": "Impugnação ou Reclamação.",
+            "C": "Recurso Ordinário de Ofício.",
+            "D": "Representação Fiscal para Fins Penais.",
+            "E": "Notificação de Lançamento Avulso."
+        },
+        "correct": "B",
+        "explanation": "A defesa apresentada pelo sujeito passivo no PAF da Bahia contra o lançamento efetuado por Auto de Infração ou Notificação de Lançamento inicia a fase contenciosa e é denominada impugnação (ou reclamação)."
+    },
+    {
+        "id": "q_rn_1",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "As funções de um sistema de gerenciamento de banco de dados (SGBD) e de um sistema operacional (SO) são complementares no ecossistema de TI. Dentre as seguintes opções, assinale aquela que apresenta uma responsabilidade exclusiva do SGBD:",
+        "options": {
+            "A": "Gerenciar o escalonamento de processos no processador principal por meio do banco de dados.",
+            "B": "Gerenciar o sistema de arquivos físicos e os privilégios básicos do sistema de arquivos.",
+            "C": "Gerenciar a entrada e saída de dispositivos de hardware e criar canais físicos de barramento.",
+            "D": "Gerenciar a memória RAM física geral do computador enquanto o computador estiver ligado.",
+            "E": "Transformar e apresentar dados de forma independente, controlar o acesso concorrente de múltiplos usuários e prover interfaces de comunicação do banco de dados."
+        },
+        "correct": "E",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nSGBD vs. SISTEMA OPERACIONAL:\n* Funções do SGBD: Incluem a gerência de armazenamento lógico de dados, o controle de concorrência (garantindo transações isoladas), a segurança lógica dos dados, a independência de dados (transformando a forma física em apresentação lógica), a gerência do dicionário de dados (metadados) e as interfaces de acesso (SQL/APIs).\n* Funções do SO: Responsável por tarefas de nível de hardware e infraestrutura física, como escalonamento de processos no processador, gerência da memória física (RAM), controle de entrada/saída de dispositivos periféricos (I/O) e o sistema de arquivos físico do disco.\nLogo, a única alternativa que traz funções exclusivas do SGBD é a E."
+    },
+    {
+        "id": "q_rn_2",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "No modelo relacional de banco de dados, as chaves desempenham papel fundamental para assegurar a integridade e unicidade dos registros. A propriedade que dita que 'duas tuplas distintas, em qualquer estado da relação, não podem ter valores idênticos para os atributos definidos na chave' refere-se à propriedade de:",
+        "options": {
+            "A": "Unicidade da chave do modelo.",
+            "B": "Irredutibilidade da chave do modelo.",
+            "C": "Restrição de integridade referencial.",
+            "D": "Dependência multivalorada da chave.",
+            "E": "Integridade de domínio dos atributos."
+        },
+        "correct": "A",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nPROPRIEDADES DAS CHAVES NO MODELO RELACIONAL:\n* Unicidade: Garante que nenhuma tupla (linha) duplicada possa existir com a mesma chave. Em outras palavras, os valores dos atributos da chave identificam unicamente cada registro da tabela.\n* Irredutibilidade: Significa que nenhum subconjunto apropriado da chave pode possuir a propriedade de unicidade. Ou seja, se removermos qualquer atributo da chave, ela perde a capacidade de identificar os registros unicamente.\nO enunciado descreve exatamente a propriedade da Unicidade (Alternativa A)."
+    },
+    {
+        "id": "q_rn_3",
+        "category": "ti",
+        "subject": "Banco de Dados",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Dentre as 12 regras propostas por Edgar F. Codd para avaliar o quão verdadeiramente relacional é um SGBD, aquela que estabelece que o sistema deve continuar operando com sucesso independentemente de os dados estarem centralizados ou distribuídos fisicamente em múltiplas localidades refere-se à:",
+        "options": {
+            "A": "Regra da não-subversão de restrições por linguagens de baixo nível.",
+            "B": "Independência física de dados.",
+            "C": "Independência lógica de dados.",
+            "D": "Independência de distribuição (Regra 11).",
+            "E": "Independência de integridade dos metadados."
+        },
+        "correct": "D",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nAS REGRAS DE CODD (RELAÇÃO E DISTRIBUIÇÃO):\n* Regra 11 (Independência de Distribuição): Postula que o banco de dados deve continuar operando de forma idêntica e transparente para o usuário/aplicação, mesmo se os dados forem distribuídos fisicamente por servidores diferentes. As queries SQL devem rodar sem alteração de sintaxe.\n* Outras Regras Importantes:\n  - Independência Física: Mudanças físicas no armazenamento (ex: trocar HD por SSD ou alterar índices) não afetam a visão lógica/queries.\n  - Independência Lógica: Alterações na estrutura lógica (ex: adicionar colunas ou tabelas) não quebram aplicações existentes.\nO enunciado descreve a Independência de Distribuição (Alternativa D)."
+    },
+    {
+        "id": "q_rn_4",
+        "category": "ti",
+        "subject": "Banco de Dados - BI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Em sistemas de suporte à decisão (OLAP), os cubos multidimensionais de dados permitem navegar ao longo dos níveis hierárquicos das dimensões. A operação que permite que o usuário passe de um nível mais detalhado (por exemplo, Mês) para um nível menos detalhado e mais agregado (por exemplo, Ano), reduzindo a quantidade de informações exibidas e aumentando a granularidade lógica, é denominada:",
+        "options": {
+            "A": "Drill-down",
+            "B": "Roll-up",
+            "C": "Slice (Fatiar)",
+            "D": "Dice (Cortar em cubos)",
+            "E": "Pivot (Rotacionar)"
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nOPERAÇÕES OLAP E MULTIDIMENSIONAIS:\n* Roll-up (ou Consolidação): Agrega os dados subindo na hierarquia (ex: de Mês para Trimestre, e depois para Ano). Isso reduz o nível de detalhe (aumentando o nível de agrupamento dos dados).\n* Drill-down (ou Detalhar): Faz o inverso. Desce na hierarquia (ex: de Ano para Mês ou Dia), trazendo mais detalhes e diminuindo o agrupamento.\n* Slice: Seleciona uma fatia do cubo aplicando um filtro em uma dimensão (ex: vendas apenas do ano de 2026).\n* Dice: Seleciona um subcubo aplicando filtros em múltiplas dimensões.\n* Pivot (ou Rotação): Rotaciona os eixos das dimensões para visualizar os dados sob outra perspectiva.\nA alternativa correta é a B (Roll-up)."
+    },
+    {
+        "id": "q_rn_5",
+        "category": "ti",
+        "subject": "Gestão e Governança de TI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "Um auditor de TI observou que determinado serviço de recepção tributária passava a ficar inoperante ou com baixíssimo desempenho em períodos de pico de acesso. Ele constatou que a organização não havia realizado avaliações e previsões prévias sistemáticas sobre os padrões de consumo e comportamento do negócio. Segundo a ITIL v3, a implantação de qual processo resolveria a raiz do problema?",
+        "options": {
+            "A": "Gerenciamento de Incidentes do estágio de Operação de Serviço.",
+            "B": "Gerenciamento de Mudanças do estágio de Transição de Serviço.",
+            "C": "Gerenciamento de Demanda do estágio de Estratégia de Serviço.",
+            "D": "Gerenciamento de Portfólio do estágio de Desenho de Serviço.",
+            "E": "Gerenciamento de Liberação do estágio de Melhoria de Serviço Contínua."
+        },
+        "correct": "C",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nITIL V3 - GERENCIAMENTO DE DEMANDA vs. CAPACIDADE:\n* Gerenciamento de Demanda: Localizado na Estratégia de Serviço, busca compreender, prever e influenciar a demanda do cliente por serviços. Trabalha analisando Padrões de Atividade de Negócio (PAN) e Perfis de Usuário para prever picos de demanda antes que eles ocorram.\n* Gerenciamento de Capacidade: Localizado no Desenho de Serviço, foca em fornecer os recursos físicos necessários (hardware, links, licenças) para sustentar a demanda projetada.\n* Gerenciamento de Incidentes: Age de forma reativa para restaurar o serviço o mais rápido possível após uma queda, sem focar na previsão de demanda.\nA falha em antecipar o comportamento de pico de demanda é resolvida pelo Gerenciamento de Demanda (Alternativa C)."
+    },
+    {
+        "id": "q_rn_6",
+        "category": "ti",
+        "subject": "Gestão e Governança de TI",
+        "source": "Cebraspe - SEFAZ-RS (2019 - Adaptada)",
+        "question": "No ciclo de vida de projetos de desenvolvimento de sistemas baseados nas boas práticas do Guia PMBOK, o documento que formalmente autoriza o início do projeto, define seus limites gerais e confere autoridade legal ao gerente do projeto para utilizar recursos organizacionais é denominado:",
+        "options": {
+            "A": "Termo de Abertura do Projeto (Project Charter).",
+            "B": "Estrutura Analítica do Projeto (EAP).",
+            "C": "Plano de Gerenciamento do Projeto.",
+            "D": "Declaração de Escopo do Projeto.",
+            "E": "Registro das Partes Interessadas."
+        },
+        "correct": "A",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nGERENCIAMENTO DE INTEGRAÇÃO - TERMO DE ABERTURA:\n* O Termo de Abertura do Projeto (Project Charter) é o artefato que formaliza a existência do projeto e dá autoridade ao gerente. É elaborado no grupo de processos de Iniciação.\n* WBS / EAP: Decompõe o escopo do projeto em pacotes de trabalho menores e entregáveis, facilitando o planejamento e controle.\n* Declaração de Escopo: Descreve detalhadamente o escopo, as premissas, as restrições e as entregas do projeto.\n* Plano de Gerenciamento: É o documento integrado que descreve como o projeto será executado, monitorado e controlado.\nA formalização de autoridade e início do projeto é feita pelo Termo de Abertura (Alternativa A)."
+    },
+    {
+        "id": "q_rn_7",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "A Emenda Constitucional nº 132/2023 alterou profundamente o Sistema Tributário Nacional ao introduzir a sistemática do IVA Dual sobre o consumo de bens e serviços. Sobre essa reforma constitucional, assinale a opção que expressa de forma correta a composição da competência e a incidência tributária:",
+        "options": {
+            "A": "A CBS é de competência municipal e o IBS é de competência federal, incidindo ambos apenas sobre bens tangíveis industriais.",
+            "B": "A CBS (federal) e o IBS (estadual, distrital e municipal) são não cumulativos, possuem incidência ampla sobre bens materiais e imateriais (incluindo serviços e direitos) e são regidos pelo princípio do destino.",
+            "C": "O IBS incide na modalidade cumulativa (em cascata), não gerando créditos fiscais nas operações intermediárias da cadeia produtiva.",
+            "D": "A CBS e o IBS incidirão ativamente sobre as exportações de bens e serviços, mantendo a imunidade apenas nas importações.",
+            "E": "As alíquotas do IBS serão definidas integralmente por decreto presidencial, sem participação das assembleias legislativas estaduais."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nREFORMA TRIBUTÁRIA (IVA DUAL - IBS e CBS):\n* IVA Dual: Composto pela Contribuição sobre Bens e Serviços (CBS, da União) e pelo Imposto sobre Bens e Serviços (IBS, de Estados e Municípios, gerido de forma integrada por um Comitê Gestor).\n* Não-cumulatividade ampla: O imposto pago em etapas anteriores gera crédito financeiro total de forma a eliminar o imposto 'em cascata'.\n* Incidência Ampla: Incidem sobre qualquer operação de consumo de bens materiais ou imateriais, inclusive serviços e direitos.\n* Desoneração das Exportações: As exportações são totalmente imunes (princípio do destino), enquanto as importações são tributadas para equilibrar a concorrência.\nA resposta correta é a alternativa B."
+    },
+    {
+        "id": "q_rn_8",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "Determinada universidade estadual, constituída sob a forma jurídica de autarquia pública, passou a oferecer cursos de pós-graduação pagos ao público em geral. A fiscalização federal exige o recolhimento do imposto sobre a renda referente aos valores recebidos dessas matrículas. Conforme a disciplina constitucional tributária e a jurisprudência, a exigência é:",
+        "options": {
+            "A": "Legal, uma vez que as receitas não decorrem de impostos e envolvem contraprestação financeira direta dos usuários.",
+            "B": "Inconstitucional, pois as autarquias públicas possuem imunidade recíproca sobre seu patrimônio, renda e serviços vinculados às suas finalidades essenciais ou às delas decorrentes.",
+            "C": "Legal, dado que as autarquias perdem automaticamente a imunidade tributária quando praticam qualquer atividade comercial ou de serviços no mercado.",
+            "D": "Inconstitucional, contanto que a autarquia obtenha prévia autorização judicial de isenção no Supremo Tribunal Federal.",
+            "E": "Legal, desde que o Estado não institua regime favorecido tributário próprio para a sua universidade autárquica."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nIMUNIDADE RECÍPROCA (AUTARQUIAS E FUNDAÇÕES):\n* Art. 150, VI, 'a' da CF/88: Veda à União, aos Estados, ao DF e aos Municípios instituir impostos sobre patrimônio, renda ou serviços uns dos outros.\n* Extensão da Imunidade (§ 2º): A imunidade aplica-se às autarquias e fundações instituídas e mantidas pelo Poder Público, no que se refere ao patrimônio, à renda e aos serviços, vinculados a suas finalidades essenciais ou às delas decorrentes.\n* Jurisprudência do STF: O fato de a autarquia cobrar tarifa ou mensalidade (ex: cursos pagos) não afasta a imunidade, desde que os recursos arrecadados sejam revertidos e aplicados integralmente na manutenção de suas atividades essenciais de educação. A presunção de vinculação milita em favor da autarquia, cabendo ao fisco provar desvio de finalidade.\nA cobrança é inconstitucional (Alternativa B)."
+    },
+    {
+        "id": "q_rn_9",
+        "category": "general",
+        "subject": "Contabilidade Geral",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "Determinada indústria produziu 1.000 unidades de seu produto e vendeu 800 unidades no mesmo período, restando 200 em estoque final de produtos acabados. Não havia estoques iniciais. Sob a perspectiva da apuração de lucro líquido do período, a comparação técnica entre os métodos de Custeio por Absorção e Custeio Variável revela que:",
+        "options": {
+            "A": "O custeio variável resultará em maior valor monetário para o estoque final de produtos acabados.",
+            "B": "O lucro líquido do período apurado pelo Custeio por Absorção será maior do que o obtido pelo Custeio Variável.",
+            "C": "O Custo dos Produtos Vendidos (CPV) será maior no custeio por absorção.",
+            "D": "O lucro líquido obtido pelo Custeio Variável será maior devido ao abatimento total imediato dos custos fixos na produção vendida.",
+            "E": "Os custos fixos de produção são considerados despesas do período em ambos os métodos de custeio."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nCUSTEIO POR ABSORÇÃO vs. CUSTEIO VARIÁVEL:\n* Custeio por Absorção (Regra Fiscal - RIR/CPC): Todos os custos de produção (diretos e indiretos, fixos e variáveis) são apropriados aos produtos. Se uma parte da produção ficar estocada, parte dos custos fixos industriais será 'ativada' no estoque (ativo circulante), saindo da DRE.\n* Custeio Variável (Gerencial): Apenas os custos variáveis são apropriados aos produtos. Os custos fixos de produção são tratados integralmente como despesas do período, sendo lançados diretamente na DRE, independentemente de haver estoque.\n* Relação de Lucro:\n  - Se Produção > Vendas (Formação de Estoque): O lucro do Absorção é MAIOR que o Variável (porque o Absorção 'esconde' custos fixos no estoque).\n  - Se Vendas > Produção (Venda de Estoque Antigo): O lucro do Variável é MAIOR.\nNo caso proposto, Produção (1000) > Vendas (800), logo o lucro no Custeio por Absorção é maior (Alternativa B)."
+    },
+    {
+        "id": "q_rn_10",
+        "category": "general",
+        "subject": "Auditoria Fiscal",
+        "source": "Cebraspe - SEFAZ-RN (2026 - Adaptada)",
+        "question": "No planejamento de procedimentos de auditoria fiscal para identificar omissão de receitas tributáveis por saídas não registradas (omissão de vendas), o auditor fiscal deve aplicar testes substantivos. O ponto de partida mais adequado para esse teste consiste em selecionar uma amostra de:",
+        "options": {
+            "A": "Registros no livro Razão Contábil de vendas e rastreá-los até a guia física de expedição de mercadorias no depósito.",
+            "B": "Fatos físicos reais (como relatórios internos de expedição ou notas de entrega) e rastrear seu fluxo até os registros contábeis e notas fiscais emitidas.",
+            "C": "Notas fiscais de compras registradas no livro Registro de Entradas e rastrear até a respectiva duplicata a pagar.",
+            "D": "Saldos das contas de clientes no Balanço Patrimonial e confrontá-los com extratos bancários homologados.",
+            "E": "Registros de impostos a recolher na escrituração fiscal digital (EFD) e recalcular as alíquotas aplicadas."
+        },
+        "correct": "B",
+        "explanation": "--- RESUMO DO CONTEÚDO ---\nDIREÇÃO DOS TESTES DE AUDITORIA (SUPERAVALIAÇÃO vs. SUBAVALIAÇÃO):\n* Teste de Subavaliação (Omissão/Subregistro): O auditor busca identificar o que NÃO foi registrado. Portanto, o ponto de partida deve ser a origem física ou documental (extratos, relatórios de portaria, estoque físico, notas de entrega) e o rastreamento deve seguir em direção ao registro contábil (da Origem para o Livro). Se um item tem origem física mas não está no livro, há omissão.\n* Teste de Superavaliação (Superfaturamento/Falsidade): O auditor busca provar se os registros existentes são reais ou fictícios. O ponto de partida é o registro contábil e o rastreamento segue em direção aos documentos de suporte (do Livro para a Origem).\nPara identificar omissão de receitas (subavaliação), deve-se partir dos fatos físicos reais para a contabilidade (Alternativa B)."
     }
 ]
