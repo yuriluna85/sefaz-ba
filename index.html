@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEFAZ-BA 2026 — Hub de Estudos e Novidades</title>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-chart-line logo-icon"></i>
+          <span>SEFAZ-BA <span class="accent-text">2026</span></span>
+        </div>
+        <p class="tagline">Guia de Estudos Fiscais</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="dashboard">
+          <i class="fa-solid fa-house"></i> Painel Geral
+        </button>
+        <button class="nav-item" data-tab="trilhas">
+          <i class="fa-solid fa-graduation-cap"></i> Trilhas de Estudo
+        </button>
+        <button class="nav-item" data-tab="videoaulas">
+          <i class="fa-solid fa-circle-play"></i> Videoaulas
+        </button>
+        <button class="nav-item" data-tab="materiais">
+          <i class="fa-solid fa-folder-open"></i> Materiais de Apoio
+        </button>
+        <button class="nav-item" data-tab="cronograma">
+          <i class="fa-solid fa-calendar-days"></i> Cronograma Semanal
+        </button>
+        <button class="nav-item" data-tab="simulados">
+          <i class="fa-solid fa-pen-to-square"></i> Simulados
+        </button>
+      </nav>
+
+      <div class="profile-card">
+        <div class="profile-title"><i class="fa-solid fa-users"></i> Usuários Ativos</div>
+        <div class="user-stats">
+          <div class="user-stat-row">
+            <span class="user-indicator indicator-ti"></span>
+            <span class="user-name">Irmão TI</span>
+            <span class="user-percentage" id="ti-sidebar-pct">0%</span>
+          </div>
+          <div class="user-stat-row">
+            <span class="user-indicator indicator-brother"></span>
+            <span class="user-name">Irmão Geral</span>
+            <span class="user-percentage" id="brother-sidebar-pct">0%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-footer">
+        <p>Preparação Conjunta v1.0</p>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="page-title-area">
+          <h1 id="page-title">Painel Geral</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span class="status-text">Comissão Formada (Provas em datas distintas)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB SECTIONS -->
+      <div class="tab-wrapper">
+        
+        <!-- DASHBOARD TAB -->
+        <section id="dashboard" class="tab-content active">
+          <!-- HERO CARD -->
+          <div class="hero-card">
+            <div class="hero-info">
+              <h2>Rumo à SEFAZ-BA 2026</h2>
+              <p>Uma oportunidade histórica com <strong>200 vagas</strong> autorizadas no orçamento! Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).</p>
+              <div class="hero-stats">
+                <div class="h-stat">
+                  <span class="h-val">100</span>
+                  <span class="h-lbl">Vagas Auditor (TI/Outros)</span>
+                </div>
+                <div class="h-stat">
+                  <span class="h-val">100</span>
+                  <span class="h-lbl">Vagas Agente (Qualquer Nível)</span>
+                </div>
+                <div class="h-stat">
+                  <span class="h-val">R$ 23k+</span>
+                  <span class="h-lbl">Salário Auditores</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-countdown">
+              <div class="countdown-title">Estimativa do Edital</div>
+              <div class="countdown-timer">
+                <div class="time-block">
+                  <span class="time-val" id="days-val">--</span>
+                  <span class="time-lbl">Dias</span>
+                </div>
+              </div>
+              <p class="countdown-desc">Baseado na previsão de provas no final de 2026.</p>
+            </div>
+          </div>
+
+          <!-- PROGRESS OVERVIEW -->
+          <div class="grid-2-col">
+            <div class="card progress-card">
+              <h3>Progresso da Preparação</h3>
+              <div class="progress-box">
+                <div class="prog-row">
+                  <div class="prog-labels">
+                    <span><i class="fa-solid fa-laptop-code text-cyan"></i> Irmão TI (Auditor/Agente)</span>
+                    <strong id="ti-progress-pct-txt">0%</strong>
+                  </div>
+                  <div class="prog-bar-container">
+                    <div class="prog-bar bar-ti" id="ti-progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="prog-row">
+                  <div class="prog-labels">
+                    <span><i class="fa-solid fa-graduation-cap text-purple"></i> Irmão Geral (Agente)</span>
+                    <strong id="brother-progress-pct-txt">0%</strong>
+                  </div>
+                  <div class="prog-bar-container">
+                    <div class="prog-bar bar-brother" id="brother-progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-note">
+                <i class="fa-solid fa-info-circle"></i> O progresso é calculado com base nas matérias concluídas na aba de <strong>Trilhas de Estudo</strong>.
+              </div>
+            </div>
+
+            <!-- RECENT NEWS -->
+            <div class="card news-card">
+              <h3>Novidades do Concurso</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="tl-badge active"><i class="fa-solid fa-check"></i></div>
+                  <div class="tl-content">
+                    <span class="tl-date">Maio 2026</span>
+                    <h4>Datas de Provas Diferentes</h4>
+                    <p>O governo da Bahia confirmou que as provas para Auditor e Agente serão em finais de semana ou turnos distintos, possibilitando que candidatos prestem os dois exames!</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="tl-badge active"><i class="fa-solid fa-check"></i></div>
+                  <div class="tl-content">
+                    <span class="tl-date">Abril 2026</span>
+                    <h4>Comissão Organizadora Formada</h4>
+                    <p>A Secretaria de Administração do Estado (SAEB) instituiu os grupos de trabalho para definir os perfis de disciplinas do certame.</p>
+                  </div>
+                </div>
+                <div class="timeline-item pending">
+                  <div class="tl-badge"><i class="fa-solid fa-spinner fa-spin"></i></div>
+                  <div class="tl-content">
+                    <span class="tl-date">Próximo Passo</span>
+                    <h4>Escolha da Banca Examinadora</h4>
+                    <p>A comissão finalizará o termo de referência para contratar a banca organizadora. As favoritas são FGV, FCC ou Cebraspe.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TRILHAS DE ESTUDO TAB -->
+        <section id="trilhas" class="tab-content">
+          <div class="trilha-header-selector">
+            <button class="trilha-selector-btn active" id="btn-trilha-ti" onclick="switchTrilha('ti')">
+              <i class="fa-solid fa-laptop-code"></i> Trilha Auditor Fiscal (Tecnologia da Informação)
+            </button>
+            <button class="trilha-selector-btn" id="btn-trilha-brother" onclick="switchTrilha('brother')">
+              <i class="fa-solid fa-scale-balanced"></i> Trilha Agente de Tributos (Qualquer Formação)
+            </button>
+          </div>
+
+          <!-- TRILHA TI CONTENT -->
+          <div id="trilha-ti-content" class="trilha-details active">
+            <div class="trilha-summary-bar">
+              <div class="trilha-info-text">
+                <h3>Trilha de Estudos: Auditor Fiscal - TI</h3>
+                <p>Contempla as disciplinas de conhecimentos gerais (peso fiscal) e as específicas de TI.</p>
+              </div>
+              <div class="trilha-pct-circle">
+                <span id="ti-trilha-pct">0%</span> Concluído
+              </div>
+            </div>
+
+            <div class="accordion-container" id="accordion-ti">
+              <!-- Subjects will be dynamically loaded/inserted here -->
+            </div>
+          </div>
+
+          <!-- TRILHA BROTHER CONTENT -->
+          <div id="trilha-brother-content" class="trilha-details">
+            <div class="trilha-summary-bar">
+              <div class="trilha-info-text">
+                <h3>Trilha de Estudos: Agente de Tributos Estaduais</h3>
+                <p>Focada em qualquer formação acadêmica, com forte peso em Legislação Tributária da Bahia (LTE) e Auditoria.</p>
+              </div>
+              <div class="trilha-pct-circle color-purple">
+                <span id="brother-trilha-pct">0%</span> Concluído
+              </div>
+            </div>
+
+            <div class="accordion-container" id="accordion-brother">
+              <!-- Subjects will be dynamically loaded/inserted here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- VIDEOAULAS TAB -->
+        <section id="videoaulas" class="tab-content">
+          <div class="video-grid">
+            <div class="card video-category-card">
+              <h3><i class="fa-solid fa-book-open"></i> Direito Tributário</h3>
+              <p>Playlists completas e revisões gratuitas de Direito Tributário focado na área fiscal.</p>
+              <div class="video-links">
+                <a href="https://www.youtube.com/results?search_query=direito+tributario+para+sefaz+completo" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Direito Tributário do Zero — Playlist Geral
+                </a>
+                <a href="https://www.youtube.com/results?search_query=saber+direito+direito+tributario" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Saber Direito (TV Justiça) — Aulas Completas
+                </a>
+                <a href="https://www.youtube.com/results?search_query=direito+tributario+fgv+questoes" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Questões Resolvidas — Foco em Bancas Fiscais
+                </a>
+              </div>
+            </div>
+
+            <div class="card video-category-card">
+              <h3><i class="fa-solid fa-calculator"></i> Contabilidade Geral</h3>
+              <p>Matéria essencial para ambos os cargos. Domine a escrituração e demonstrações.</p>
+              <div class="video-links">
+                <a href="https://www.youtube.com/results?search_query=contabilidade+geral+do+zero+area+fiscal" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Contabilidade Geral do Zero — Estratégia/Gran
+                </a>
+                <a href="https://www.youtube.com/results?search_query=demonstracoes+contabeis+dre+balanco+concursos" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Demonstrações Contábeis (Balanço, DRE, DFC)
+                </a>
+                <a href="https://www.youtube.com/results?search_query=contabilidade+de+custos+concurso+sefaz" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Contabilidade de Custos — Aulas Direcionadas
+                </a>
+              </div>
+            </div>
+
+            <div class="card video-category-card">
+              <h3><i class="fa-solid fa-laptop-code"></i> Tecnologia da Informação</h3>
+              <p>Conteúdo avançado para a trilha de Auditor Fiscal de TI.</p>
+              <div class="video-links">
+                <a href="https://www.youtube.com/results?search_query=governanca+de+ti+concurso+cobit+itil" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Governança de TI (COBIT e ITIL) para Fiscais
+                </a>
+                <a href="https://www.youtube.com/results?search_query=banco+de+dados+sql+concursos+ti" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Banco de Dados e Linguagem SQL
+                </a>
+                <a href="https://www.youtube.com/results?search_query=engenharia+de+software+concurso+ti" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Engenharia de Software e APIs REST
+                </a>
+              </div>
+            </div>
+
+            <div class="card video-category-card">
+              <h3><i class="fa-solid fa-landmark"></i> Legislação Tributária Estadual (LTE BA)</h3>
+              <p>O calcanhar de Aquiles do concurso. ICMS, IPVA, ITD e Regulamento do Processo Administrativo.</p>
+              <div class="video-links">
+                <a href="https://www.youtube.com/results?search_query=legislacao+tributaria+estadual+sefaz+bahia" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Legislação do ICMS da Bahia — Playlist
+                </a>
+                <a href="https://www.youtube.com/results?search_query=lei+kandir+concurso+fiscal" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Lei Kandir (LC 87/96) Descomplicada
+                </a>
+                <a href="https://www.youtube.com/results?search_query=processo+administrativo+fiscal+sefaz+ba" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> PAF (Processo Administrativo Fiscal) na Bahia
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card alert-card-info">
+            <div class="alert-icon-box">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="alert-text-box">
+              <h4>Dica de Estudo em Vídeo</h4>
+              <p>Utilize as videoaulas principalmente para sanar dúvidas em temas complexos (como Contabilidade de Custos ou Banco de Dados NoSQL) e foque a maior parte do tempo em leitura da lei seca, PDFs e resolução de questões de bancas anteriores.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- MATERIAIS TAB -->
+        <section id="materiais" class="tab-content">
+          <div class="card">
+            <div class="card-header-with-action">
+              <h3><i class="fa-solid fa-folder-open"></i> Arquivos da Pasta "Concurso SEFAZ"</h3>
+              <button class="btn btn-secondary" onclick="loadLocalFiles()"><i class="fa-solid fa-rotate"></i> Atualizar Lista</button>
+            </div>
+            <p class="section-desc">Estes são os arquivos PDF e guias localizados no seu diretório de estudos. Você pode baixá-los e abri-los diretamente a partir daqui.</p>
+            
+            <div class="file-list-container" id="file-list">
+              <div class="loading-state">
+                <i class="fa-solid fa-circle-notch fa-spin"></i> Carregando arquivos locais...
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CRONOGRAMA TAB -->
+        <section id="cronograma" class="tab-content">
+          <div class="card">
+            <h3><i class="fa-solid fa-calendar-days"></i> Proposta de Planejamento de Estudos Semanal</h3>
+            <p>Um cronograma balanceado para quem estuda em dupla (Irmão TI e Irmão Geral), dividindo as disciplinas básicas e as específicas de cada um.</p>
+            
+            <div class="table-responsive">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th>Dia</th>
+                    <th>Irmão TI (Auditor TI)</th>
+                    <th>Irmão Geral (Agente)</th>
+                    <th>Foco Compartilhado (Estudem Juntos!)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Segunda-feira</strong></td>
+                    <td>Governança de TI & Engenharia de Software</td>
+                    <td>Direito Administrativo & Constitucional</td>
+                    <td>Língua Portuguesa (Teoria + Questões)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Terça-feira</strong></td>
+                    <td>Banco de Dados & Big Data</td>
+                    <td>Legislação Tributária Estadual (ICMS BA)</td>
+                    <td>Direito Tributário (Impostos Estaduais)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Quarta-feira</strong></td>
+                    <td>Desenvolvimento & APIs & Segurança</td>
+                    <td>Auditoria Fiscal & Técnicas de Controle</td>
+                    <td>Contabilidade Geral (Escrituração/Lançamentos)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Quinta-feira</strong></td>
+                    <td>Ciência de Dados & Machine Learning</td>
+                    <td>Finanças Públicas (LRF, Orçamento)</td>
+                    <td>Estatística e Raciocínio Lógico (Resolução de Questões)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sexta-feira</strong></td>
+                    <td>Auditoria de Sistemas (TAACs)</td>
+                    <td>Regulamento do ICMS & PAF Bahia</td>
+                    <td>Legislação da Igualdade Racial e Gênero (BA)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sábado</strong></td>
+                    <td>Revisão Semanal + Simulado TI</td>
+                    <td>Revisão Semanal + Simulado Agente</td>
+                    <td>Alinhamento de Dúvidas & Correção do Simulado</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Domingo</strong></td>
+                    <td colspan="3" class="text-center text-muted"><em>DESCANSO ATIVO — Planejamento da Próxima Semana & Lazer</em></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SIMULADOS TAB -->
+        <section id="simulados" class="tab-content">
+          <div class="card">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Simulados Interativos</h3>
+            <p class="section-desc">Testem seus conhecimentos com questões reais ou adaptadas de concursos anteriores da área fiscal (FCC e FGV).</p>
+            
+            <!-- Inner Navigation: Múltipla Escolha vs Discursiva -->
+            <div class="inner-tab-selector">
+              <button class="inner-tab-btn active" id="btn-quiz-mc" onclick="switchQuizType('mc')">
+                <i class="fa-solid fa-list-check"></i> Múltipla Escolha
+              </button>
+              <button class="inner-tab-btn" id="btn-quiz-disc" onclick="switchQuizType('disc')">
+                <i class="fa-solid fa-file-signature"></i> Estudos de Caso (Discursivas)
+              </button>
+            </div>
+
+            <!-- Múltipla Escolha Container -->
+            <div id="mc-container" class="quiz-container-box">
+              <div class="trilha-header-selector" style="margin-bottom: 24px;">
+                <button class="trilha-selector-btn active" id="btn-simulado-ti" onclick="startSimulado('ti')">
+                  <i class="fa-solid fa-laptop-code"></i> Simulado Auditor TI
+                </button>
+                <button class="trilha-selector-btn" id="btn-simulado-brother" onclick="startSimulado('general')">
+                  <i class="fa-solid fa-scale-balanced"></i> Simulado Agente de Tributos
+                </button>
+              </div>
+
+              <!-- Quiz Play Area -->
+              <div class="quiz-question-card" id="quiz-card">
+                <!-- Question content dynamically rendered here -->
+              </div>
+            </div>
+
+            <!-- Discursiva Container -->
+            <div id="discursiva-container" class="quiz-container-box" style="display: none;">
+              <div class="trilha-header-selector" style="margin-bottom: 24px;">
+                <button class="trilha-selector-btn active" id="btn-discursiva-ti" onclick="startDiscursiva('ti')">
+                  <i class="fa-solid fa-laptop-code"></i> Caso de Estudo (TI)
+                </button>
+                <button class="trilha-selector-btn" id="btn-discursiva-brother" onclick="startDiscursiva('general')">
+                  <i class="fa-solid fa-scale-balanced"></i> Caso de Estudo (Agente)
+                </button>
+              </div>
+
+              <!-- Discursiva Play Area -->
+              <div class="quiz-question-card" id="discursiva-card">
+                <!-- Discursiva content dynamically rendered here -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>
