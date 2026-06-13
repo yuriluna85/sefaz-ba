@@ -47,19 +47,20 @@ def index():
 
 @app.route('/api/files')
 def list_sefaz_files():
-    """Lists files in the sibling Concurso SEFAZ directory."""
+    """Lists study booklets (Apostilas) in the sibling Concurso SEFAZ directory."""
     files_list = []
     if os.path.exists(SEFAZ_FILES_DIR):
         try:
             for filename in os.listdir(SEFAZ_FILES_DIR):
-                filepath = os.path.join(SEFAZ_FILES_DIR, filename)
-                if os.path.isfile(filepath):
-                    size_mb = os.path.getsize(filepath) / (1024 * 1024)
-                    files_list.append({
-                        "name": filename,
-                        "size": f"{size_mb:.2f} MB",
-                        "url": f"/files/{filename}"
-                    })
+                if filename.startswith("Apostila_") and filename.endswith(".pdf"):
+                    filepath = os.path.join(SEFAZ_FILES_DIR, filename)
+                    if os.path.isfile(filepath):
+                        size_mb = os.path.getsize(filepath) / (1024 * 1024)
+                        files_list.append({
+                            "name": filename,
+                            "size": f"{size_mb:.2f} MB",
+                            "url": f"/files/{filename}"
+                        })
         except Exception as e:
             return jsonify({"error": str(e)}), 500
     return jsonify(files_list)

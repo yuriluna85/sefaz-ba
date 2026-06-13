@@ -1016,7 +1016,53 @@ function checkQuizAnswer() {
     expTitle.className = "explanation-title text-wrong";
   }
 
-  expText.textContent = q.explanation;
+  if (q.option_explanations) {
+    let breakdownHtml = `
+      <div class="option-breakdown-title" style="margin-top: 14px; margin-bottom: 10px; font-weight: 600; font-size: 13.5px; color: #fff;">
+        Justificativa de cada alternativa:
+      </div>
+      <div class="option-breakdown-list" style="display: flex; flex-direction: column; gap: 8px;">
+    `;
+    
+    for (const [key, val] of Object.entries(q.option_explanations)) {
+      const isOptionCorrect = key === q.correct;
+      const isSelectedOption = key === selectedOption;
+      
+      let icon = isOptionCorrect 
+        ? 'fa-circle-check text-correct' 
+        : 'fa-circle-xmark text-wrong';
+        
+      let itemBg = isOptionCorrect 
+        ? 'rgba(16, 185, 129, 0.04)' 
+        : (isSelectedOption ? 'rgba(239, 68, 68, 0.04)' : 'rgba(255, 255, 255, 0.01)');
+        
+      let itemBorder = isOptionCorrect 
+        ? 'rgba(16, 185, 129, 0.15)' 
+        : (isSelectedOption ? 'rgba(239, 68, 68, 0.15)' : 'var(--border-color)');
+        
+      breakdownHtml += `
+        <div class="option-breakdown-item" style="background-color: ${itemBg}; border: 1px solid ${itemBorder}; padding: 10px 14px; border-radius: 6px; display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.5;">
+          <i class="fa-solid ${icon}" style="margin-top: 3px; font-size: 14px;"></i>
+          <div>
+            <strong style="color: #fff; margin-right: 4px;">Alternativa ${key}:</strong>
+            <span style="color: var(--text-muted);">${val}</span>
+          </div>
+        </div>
+      `;
+    }
+    
+    breakdownHtml += `
+      </div>
+      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+        <strong>Resumo da Questão:</strong> ${q.explanation}
+      </div>
+    `;
+    
+    expText.innerHTML = breakdownHtml;
+  } else {
+    expText.textContent = q.explanation;
+  }
+  
   expBox.style.display = "block";
 
   // Toggle button text
