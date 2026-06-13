@@ -2068,5 +2068,809 @@
             "D": "Incorreta. A presença de um laudo técnico emitido por especialista não isenta o auditor da execução de seus próprios testes de auditoria, do planejamento de riscos gerais ou da avaliação crítica dos dados de entrada que alimentaram as premissas do especialista.",
             "E": "Incorreta. O auditor deve analisar criticamente o laudo do especialista para atestar se as conclusões obtidas são lógicas, consistentes com as demais evidências colhidas no processo de auditoria e se os dados e hipóteses adotados são condizentes com a realidade."
         }
+    },
+    {
+        "id": "q_ti_added_1",
+        "category": "ti",
+        "subject": "Bancos de Dados NoSQL",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "O MongoDB é um sistema de gerenciamento de banco de dados NoSQL orientado a documentos. Em relação ao armazenamento físico dos documentos e à flexibilidade de esquemas, assinale a afirmativa correta:",
+        "options": {
+            "A": "Os documentos são armazenados internamente no formato XML padrão, exigindo validação DTD obrigatória antes de qualquer escrita.",
+            "B": "Utiliza o formato binário BSON (Binary JSON), permitindo esquemas dinâmicos onde documentos na mesma coleção podem ter estruturas de campos diferentes.",
+            "C": "Requer a definição prévia de um esquema rígido (DDL) para todas as colunas e índices antes de inserir o primeiro documento.",
+            "D": "O MongoDB não aceita estruturas de dados aninhadas ou arrays, forçando a normalização em tabelas separadas como em bancos relacionais.",
+            "E": "Embora seja NoSQL, o MongoDB armazena dados em tabelas relacionais clássicas, utilizando BSON apenas na camada de transporte."
+        },
+        "correct": "B",
+        "explanation": "O MongoDB armazena os registros como documentos BSON (extensão binária do JSON) que suporta tipos adicionais de dados. O modelo é 'schema-less' ou com esquema dinâmico, permitindo que uma mesma coleção armazene documentos com estruturas e campos variados.",
+        "option_explanations": {
+            "A": "Incorreta. O MongoDB não utiliza XML como formato de armazenamento interno ou externo, mas sim o BSON (Binary JSON), eliminando a necessidade de validações DTD ou XML Schema.",
+            "B": "Correta. O formato BSON permite codificação rápida, alta performance de varredura e suporte a tipos como datas e dados binários. A ausência de esquemas rígidos (schema-less) permite que documentos na mesma coleção possuam chaves e formatos de dados heterogêneos.",
+            "C": "Incorreta. Bancos relacionais exigem DDL estruturado antes do DML. No MongoDB, a inserção de um documento cria a coleção automaticamente com a estrutura fornecida no próprio documento, sem necessidade de esquema rígido prévio.",
+            "D": "Incorreta. Um dos maiores diferenciais do MongoDB é o suporte a documentos aninhados (subdocumentos) e arrays (listas) de forma nativa, permitindo desnormalizar o modelo para otimizar a leitura.",
+            "E": "Incorreta. O MongoDB é um banco Não-Relacional (NoSQL) nativo orientado a documentos; ele não utiliza tabelas relacionais de linhas e colunas por debaixo dos panos."
+        }
+    },
+    {
+        "id": "q_ti_added_2",
+        "category": "ti",
+        "subject": "Engenharia de Software - BPMN v2",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Na modelagem de processos de negócio com a notação BPMN v2, os desvios e convergências de fluxo são controlados por elementos chamados Gateways. Qual Gateway deve ser utilizado quando múltiplos caminhos alternativos podem ser selecionados simultaneamente com base em condições lógicas avaliadas?",
+        "options": {
+            "A": "Gateway Exclusivo (Exclusive Gateway - XOR)",
+            "B": "Gateway Paralelo (Parallel Gateway - AND)",
+            "C": "Gateway Inclusivo (Inclusive Gateway - OR)",
+            "D": "Gateway Baseado em Eventos (Event-Based Gateway)",
+            "E": "Gateway Complexo (Complex Gateway)"
+        },
+        "correct": "C",
+        "explanation": "O Gateway Inclusivo (OR) avalia condições nas ramificações de saída. Todas as ramificações cujas condições forem verdadeiras são executadas. Pode ativar uma, várias ou todas as saídas ao mesmo tempo.",
+        "option_explanations": {
+            "A": "Incorreta. O Gateway Exclusivo (XOR) restringe o fluxo a exatamente uma única ramificação de saída (a primeira condição verdadeira avaliada). Não permite a ativação de múltiplos fluxos simultâneos.",
+            "B": "Incorreta. O Gateway Paralelo (AND) ativa todas as ramificações de saída de forma síncrona e obrigatória, sem avaliar qualquer condição lógica ou expressão nas saídas.",
+            "C": "Correta. O Gateway Inclusivo (representado por um losango com um círculo dentro) permite que um ou mais caminhos sejam ativados com base em condições lógicas. Ele também funciona como sincronizador no fluxo de convergência (join).",
+            "D": "Incorreta. O Gateway Baseado em Eventos direciona o fluxo com base em qual evento (como o recebimento de uma mensagem ou expiração de timer) ocorre primeiro, e não avaliando condições internas de dados do processo.",
+            "E": "Incorreta. O Gateway Complexo é utilizado para situações de sincronização complexas (como 'aguardar 3 de 5 fluxos concorrentes') e não é o padrão adequado para ramificações condicionais simples multi-caminho."
+        }
+    },
+    {
+        "id": "q_ti_added_3",
+        "category": "ti",
+        "subject": "Ciência de Dados - Machine Learning",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No treinamento de algoritmos de aprendizado supervisionado, o fenômeno do Overfitting (sobreajuste) representa um obstáculo à capacidade de generalização do modelo. Assinale a alternativa que descreve corretamente a característica do Overfitting no conjunto de dados:",
+        "options": {
+            "A": "Alto erro no conjunto de treinamento e baixo erro no conjunto de teste, indicando alta tendência (bias) do modelo.",
+            "B": "Baixo erro no conjunto de treinamento e alto erro no conjunto de teste, indicando que o modelo decorou ruídos dos dados de treino.",
+            "C": "Erros altos em ambos os conjuntos (treinamento e teste), decorrente de um modelo simples demais para representar a complexidade dos dados.",
+            "D": "Aumento progressivo da taxa de erro de treino à medida que o número de épocas de treinamento aumenta.",
+            "E": "Completa equivalência de acurácia entre treino e validação, atestando o equilíbrio perfeito entre viés e variância."
+        },
+        "correct": "B",
+        "explanation": "Overfitting ocorre quando o modelo se ajusta excessivamente aos dados de treinamento, incluindo ruídos e flutuações aleatórias. O modelo apresenta excelente performance no treino (baixo erro), mas falha ao receber dados novos de teste (alto erro).",
+        "option_explanations": {
+            "A": "Incorreta. Alto erro no treino e baixo no teste é um comportamento logicamente improvável em condições normais de treinamento e não define Overfitting.",
+            "B": "Correta. O principal sintoma do Overfitting (alta variância) é a perda de capacidade de generalização. O modelo descreve quase perfeitamente o treino, mas performa mal em dados inéditos de teste.",
+            "C": "Incorreta. Erros altos em ambos os conjuntos definem o Underfitting (subajuste), que ocorre quando o algoritmo é muito simples ou rígido (alto viés) para aprender as relações dos dados.",
+            "D": "Incorreta. No Overfitting, o erro de treinamento costuma diminuir continuamente tendendo a zero, enquanto o erro de teste começa a subir após atingir um ponto ideal de parada.",
+            "E": "Incorreta. Equivalência de acurácia em níveis saudáveis indica que o modelo está generalizando bem (ajuste ideal), sendo o oposto do sobreajuste catastrófico."
+        }
+    },
+    {
+        "id": "q_ti_added_4",
+        "category": "ti",
+        "subject": "Governança de TI - COBIT 2019",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "O COBIT 2019 introduz o conceito de Fatores de Design (Design Factors), que são parâmetros que influenciam o desenho de um sistema de governança adaptado às necessidades da organização. Qual das opções a seguir constitui um Fator de Design oficial do COBIT 2019?",
+        "options": {
+            "A": "Arquitetura Corporativa Orientada a Serviços (SOA)",
+            "B": "Perfil de Risco (Risk Profile)",
+            "C": "Grau de Utilização de Bibliotecas Open Source",
+            "D": "Nível de Salário Médio dos Analistas de Sistemas",
+            "E": "Quantidade de Servidores Físicos na Nuvem Privada"
+        },
+        "correct": "B",
+        "explanation": "Os Fatores de Design do COBIT 2019 incluem: Estratégia Corporativa, Metas Corporativas, Perfil de Risco (Risk Profile), Problemas de TI, Cenário de Ameaças, Requisitos de Conformidade, Papel da TI, Modelo de Origem, Métodos de Implementação, Estratégia de Adoção de Tecnologia e Tamanho da Empresa.",
+        "option_explanations": {
+            "A": "Incorreta. SOA é um padrão arquitetural de engenharia de software e não consta na lista de Fatores de Design definidos pela ISACA no COBIT 2019.",
+            "B": "Correta. O Perfil de Risco (Risk Profile) é um Fator de Design crítico. Ele analisa os tipos de risco aos quais a empresa está exposta e sua tolerância a eles, ajudando a customizar quais objetivos de governança e gestão exigem maior nível de maturidade.",
+            "C": "Incorreta. O uso de código aberto é uma decisão tecnológica interna detalhada e não representa um fator de design global estruturado de governança.",
+            "D": "Incorreta. Questões de folha salarial individual de analistas não entram no escopo conceitual e metodológico dos Fatores de Design.",
+            "E": "Incorreta. A quantidade física de servidores na infraestrutura é uma métrica operacional e não um fator estratégico de design para governança de TI."
+        }
+    },
+    {
+        "id": "q_ti_added_5",
+        "category": "ti",
+        "subject": "Governança de TI - ITIL v4",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No framework ITIL v4, as práticas de gerenciamento de serviços são fundamentais para agregar valor. Considere a diferença entre a prática de Central de Serviço (Service Desk) e a prática de Gerenciamento de Incidentes (Incident Management). Assinale a alternativa correta:",
+        "options": {
+            "A": "A Central de Serviço é uma atividade puramente reativa focada em achar a causa raiz de falhas no hardware, enquanto o Gerenciamento de Incidentes é um canal físico.",
+            "B": "A Central de Serviço fornece o ponto de comunicação único (SPOC) para os usuários relatarem problemas e requisições, enquanto o Gerenciamento de Incidentes foca em restaurar a operação normal do serviço o mais rápido possível.",
+            "C": "Ambos possuem exatamente o mesmo escopo e são nomenclaturas alternativas para a mesma equipe operacional dentro da TI.",
+            "D": "O Gerenciamento de Incidentes lida apenas com requisições de novos serviços e acessos, ao passo que a Central de Serviço cuida exclusivamente de bugs em código de produção.",
+            "E": "A Central de Serviço é uma prática de infraestrutura de rede, enquanto o Gerenciamento de Incidentes pertence às práticas de finanças e governança corporativa."
+        },
+        "correct": "B",
+        "explanation": "Na ITIL v4, a Central de Serviço (Service Desk) é o canal de contato de entrada (SPOC - Single Point of Contact) que atende usuários. O Gerenciamento de Incidentes é a prática que tem por objetivo minimizar o impacto negativo de interrupções de serviços restaurando-os o mais rapidamente possível.",
+        "option_explanations": {
+            "A": "Incorreta. Identificar causas raiz de falhas persistentes é o propósito do Gerenciamento de Problemas (Problem Management), não do Service Desk, que funciona de forma muito mais abrangente como interface de atendimento.",
+            "B": "Correta. A Central de Serviço capta demandas e gerencia a percepção dos usuários. O Gerenciamento de Incidentes foca na resolução rápida de falhas para restabelecer a operação normal dos serviços fazendários ou organizacionais.",
+            "C": "Incorreta. São práticas separadas e distintas na ITIL v4. O Service Desk é uma prática de contato/portal, enquanto o Gerenciamento de Incidentes é uma prática técnica de processo de resolução de falhas.",
+            "D": "Incorreta. O gerenciamento de requisições de serviço (Service Request Management) lida com novos serviços/acessos. O Gerenciamento de Incidentes foca na resolução de falhas de indisponibilidade.",
+            "E": "Incorreta. Ambas são práticas de Gerenciamento de Serviços no portfólio da ITIL v4, focadas em suporte operacional direto de tecnologia, e não em finanças corporativas ou cabeamento de rede."
+        }
+    },
+    {
+        "id": "q_ti_added_6",
+        "category": "ti",
+        "subject": "Segurança da Informação - ICP-Brasil",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil) viabiliza a emissão de certificados digitais para identificação e assinatura digital. Para garantir a propriedade de não-repúdio (irretratabilidade) de um documento eletrônico assinado, qual chave deve ser utilizada pelo remetente para gerar a assinatura?",
+        "options": {
+            "A": "A chave pública do destinatário.",
+            "B": "A chave privada do remetente.",
+            "C": "A chave pública da Autoridade Certificadora Raiz (ITI).",
+            "D": "Uma chave simétrica compartilhada previamente gerada por canal físico.",
+            "E": "A chave pública do próprio remetente."
+        },
+        "correct": "B",
+        "explanation": "Na criptografia assimétrica de assinaturas digitais, o remetente calcula o hash do documento e o cifra com sua chave privada (que é de seu controle exclusivo). Qualquer um pode descriptografar a assinatura usando a chave pública do remetente, garantindo a autenticidade e o não-repúdio, pois apenas o dono da chave privada poderia ter realizado a cifragem.",
+        "option_explanations": {
+            "A": "Incorreta. A chave pública do destinatário é utilizada para garantir a Confidencialidade (criptografar dados sensíveis que apenas o destinatário deve ler), pois apenas a chave privada do destinatário poderá decifrar.",
+            "B": "Correta. Como a chave privada é de conhecimento e controle exclusivo do seu titular, a geração de uma assinatura por meio dela garante o não-repúdio e a autoria do documento. Se o destinatário consegue decifrá-la usando a chave pública correspondente do remetente, prova-se a autoria.",
+            "C": "Incorreta. A chave pública da AC Raiz serve para validar o certificado do remetente na cadeia de confiança, mas não para assinar o documento individual em si.",
+            "D": "Incorreta. Chaves simétricas não oferecem nativamente a propriedade de não-repúdio técnico a terceiros, pois ambas as partes possuem a mesma chave e qualquer uma delas poderia ter criado o arquivo.",
+            "E": "Incorreta. A chave pública do remetente é divulgada para que os outros validem a assinatura, mas se o remetente a usasse para cifrar, qualquer um que possui a chave pública poderia fazê-lo, quebrando a prova de autoria exclusiva."
+        }
+    },
+    {
+        "id": "q_ti_added_7",
+        "category": "ti",
+        "subject": "DAMA-DMBOK v2 - Metadados",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "O framework DAMA-DMBOK v2 divide o conhecimento em disciplinas de dados. Sobre a disciplina de Gerenciamento de Metadados, como são classificados os metadados que descrevem o significado conceitual dos dados de negócio, regras tributárias e termos de dicionários de dados da empresa?",
+        "options": {
+            "A": "Metadados Técnicos",
+            "B": "Metadados de Processo",
+            "C": "Metadados Operacionais",
+            "D": "Metadados de Negócio",
+            "E": "Metadados de Infraestrutura"
+        },
+        "correct": "D",
+        "explanation": "Segundo o DAMA-DMBOK v2, os metadados são classificados essencialmente em: de Negócio (definições conceituais, regras de negócio, glossários), Técnicos (esquemas físicos de tabelas, tipos de dados, chaves) e Operacionais (logs de execução, linhagem de ETL, estatísticas de uso).",
+        "option_explanations": {
+            "A": "Incorreta. Metadados Técnicos descrevem os detalhes físicos dos bancos de dados, como nomes físicos de tabelas, tipos de dados (VARCHAR, INT), chaves estrangeiras, restrições e mapeamento físico.",
+            "B": "Incorreta. Metadados de Processo não constituem uma categoria padrão primária do DAMA. O foco de processo geralmente recai nas regras corporativas documentadas como negócio ou fluxos de ETL operacionais.",
+            "C": "Incorreta. Metadados Operacionais descrevem a execução dos sistemas de processamento, incluindo carimbos de data/hora de execução do ETL, logs de auditoria, volume de registros processados e erros de execução.",
+            "D": "Correta. Os Metadados de Negócio dão contexto interpretativo humano e corporativo para os dados. Eles garantem que o termo 'Alíquota de ICMS' signifique o mesmo para auditores fiscais em diferentes divisões da SEFAZ.",
+            "E": "Incorreta. Metadados de Infraestrutura não é um termo oficial adotado pela DAMA para classificação fundamental de metadados em bancos de dados."
+        }
+    },
+    {
+        "id": "q_ti_added_8",
+        "category": "ti",
+        "subject": "Engenharia de Software - APIs REST",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No design de APIs HTTP RESTful, a Idempotência é uma propriedade fundamental que dita o comportamento de requisições repetidas. Qual das alternativas indica a classificação correta de idempotência dos métodos HTTP padrão?",
+        "options": {
+            "A": "POST e PUT são idempotentes, enquanto GET e DELETE não são.",
+            "B": "GET, PUT e DELETE são idempotentes, enquanto POST não é.",
+            "C": "GET é o único método idempotente; todos os demais (POST, PUT, DELETE, PATCH) alteram o estado e por isso não são idempotentes.",
+            "D": "POST é idempotente, pois criar um recurso duas vezes gera apenas uma entrada de log no servidor.",
+            "E": "Nenhum método HTTP é idempotente, visto que a resposta depende sempre da carga de rede no instante da requisição."
+        },
+        "correct": "B",
+        "explanation": "Um método HTTP é idempotente se múltiplas requisições idênticas produzem o mesmo efeito colateral no servidor. O GET apenas lê dados (sem efeito colateral). O PUT atualiza um recurso específico (atualizar o mesmo recurso 1 ou 10 vezes gera o mesmo estado final). O DELETE remove o recurso (remover algo que já foi removido mantém o estado de ausência). O POST cria um recurso novo, logo, enviar 2 POSTs gera 2 recursos diferentes (não é idempotente).",
+        "option_explanations": {
+            "A": "Incorreta. O POST não é idempotente, e o DELETE e o GET são comprovadamente métodos idempotentes.",
+            "B": "Correta. GET (leitura), PUT (substituição total) e DELETE (remoção) são idempotentes por especificação do protocolo HTTP/1.1 (RFC 7231). O POST cria novos recursos em série e, portanto, não garante idempotência.",
+            "C": "Incorreta. PUT e DELETE também são idempotentes por especificação. O fato de alterar o estado não impede um método de ser idempotente (a modificação do estado para um valor fixo repetidamente gera o mesmo resultado).",
+            "D": "Incorreta. O método POST é a definição clássica de método não-idempotente, pois submeter dois formulários de compra idênticos gera duas transações fiscais diferentes.",
+            "E": "Incorreta. A idempotência é uma propriedade conceitual ligada ao estado do servidor (dados persistidos) e efeitos colaterais lógicos, não ao desempenho físico ou velocidade de resposta de rede."
+        }
+    },
+    {
+        "id": "q_ti_added_9",
+        "category": "ti",
+        "subject": "Redes de Computadores - TCP/IP",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "O protocolo TCP (Transmission Control Protocol) garante a entrega confiável e ordenada de dados na camada de transporte. O estabelecimento de uma conexão TCP ativa entre cliente e servidor é realizado por meio de qual mecanismo?",
+        "options": {
+            "A": "UDP 2-way Handshake (ACK e NACK)",
+            "B": "TCP 3-way Handshake (SYN, SYN-ACK, ACK)",
+            "C": "Criptografia SSL/TLS assimétrica de canal",
+            "D": "Envio direto de pacotes de dados sem confirmação prévia",
+            "E": "Mapeamento ARP de endereços MAC físicos"
+        },
+        "correct": "B",
+        "explanation": "O protocolo TCP exige que as duas pontas estabeleçam parâmetros de sincronização de sequência antes de enviar dados. Isso é feito pelo aperto de mão de três vias (3-way handshake) usando os flags SYN (Synchronize) e ACK (Acknowledge).",
+        "option_explanations": {
+            "A": "Incorreta. O protocolo UDP não é orientado a conexão e não realiza handshakes nem confirmações de entrega, enviando pacotes de forma direta e sem garantia.",
+            "B": "Correta. No 3-way handshake: 1) O cliente envia um segmento com flag SYN (sincronizar número de sequência); 2) O servidor responde com SYN-ACK (confirma a recepção do SYN e envia seu próprio número de sequência); 3) O cliente envia um segmento ACK para confirmar e a conexão é estabelecida (ESTABLISHED).",
+            "C": "Incorreta. O TLS/SSL roda em camadas superiores para segurança (criptografia) e ocorre *após* a conexão TCP básica de transporte já estar estabelecida.",
+            "D": "Incorreta. O envio direto de dados sem confirmação é característica de protocolos não orientados a conexão, como o UDP, o que inviabiliza a confiabilidade do TCP.",
+            "E": "Incorreta. O protocolo ARP opera na camada de enlace/rede para descobrir o endereço físico MAC correspondente a um endereço IP, não tendo relação com conexões TCP de transporte."
+        }
+    },
+    {
+        "id": "q_ti_added_10",
+        "category": "ti",
+        "subject": "Auditoria de TI - TAACs",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No planejamento de uma auditoria fiscal digital, o auditor utiliza as Técnicas de Auditoria Assistida por Computador (TAACs). Qual das seguintes ações descreve uma aplicação direta de TAACs para detecção de fraudes no faturamento de mercadorias?",
+        "options": {
+            "A": "Contagem física manual das caixas de mercadorias presentes no depósito do contribuinte.",
+            "B": "Execução de consultas SQL parametrizadas em bases de Notas Fiscais Eletrônicas (NF-e) para identificar quebras de sequência numérica no faturamento e notas com valores discrepantes.",
+            "C": "Assinatura física em papel do termo de início de fiscalização pelo representante legal da empresa.",
+            "D": "Instalação de roteadores adicionais no escritório da SEFAZ para melhorar o sinal da rede Wi-Fi.",
+            "E": "Entrevista verbal estruturada com os operadores do caixa de saída da empresa fiscalizada."
+        },
+        "correct": "B",
+        "explanation": "TAACs (ou CAATs - Computer Assisted Audit Techniques) envolvem o uso de softwares, scripts e ferramentas eletrônicas (como ACL, IDEA ou queries SQL avançadas) para processar grandes volumes de dados de forma automatizada em busca de anomalias, duplicidades ou omissões.",
+        "option_explanations": {
+            "A": "Incorreta. A contagem física é um procedimento tradicional clássico de auditoria substantiva (Inspeção Física) realizado presencialmente, sem auxílio computacional automatizado de dados eletrônicos.",
+            "B": "Correta. O uso de ferramentas de software ou scripts SQL para varrer, ordenar e cruzar milhões de registros de NF-e na base de dados do fisco é a aplicação perfeita e típica de TAACs para otimizar a fiscalização.",
+            "C": "Incorreta. A assinatura física em termos legais é um procedimento burocrático e jurídico administrativo, não uma técnica assistida por computador para análise de dados fiscais.",
+            "D": "Incorreta. Instalação física de hardware de rede é uma atividade operacional de suporte e infraestrutura de TI, e não uma técnica de auditoria aplicada sobre dados de contribuintes.",
+            "E": "Incorreta. Entrevistas constituem a técnica de Indagação Oral, um procedimento de auditoria qualitativo e independente do uso direto de ferramentas de computação ou análise de bases."
+        }
+    },
+    {
+        "id": "q_gen_added_1",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Constituição Federal de 1988 estabelece imunidades tributárias que limitam a competência impositiva dos entes federados. Sobre a Imunidade Recíproca (Art. 150, VI, 'a' da CF/88), assinale a afirmativa correta em relação às autarquias públicas:",
+        "options": {
+            "A": "Aplica-se apenas ao patrimônio imobiliário de autarquias, devendo estas pagar impostos normalmente sobre qualquer renda obtida em suas atividades.",
+            "B": "Estende-se a autarquias e fundações instituídas e mantidas pelo Poder Público, mas apenas no que se refere ao patrimônio, à renda e aos serviços vinculados a suas finalidades essenciais ou às delas decorrentes.",
+            "C": "Cessa completamente se a autarquia cobrar taxas ou mensalidades dos usuários de seus serviços, passando a pagar IPTU e Imposto de Renda irrestritamente.",
+            "D": "Garante imunidade total contra impostos, taxas e contribuições de melhoria, independentemente da atividade desempenhada.",
+            "E": "Não se aplica a autarquias federais quando situadas em território do Estado da Bahia, por razões de autonomia estadual."
+        },
+        "correct": "B",
+        "explanation": "A imunidade recíproca impede a instituição de impostos sobre patrimônio, renda e serviços de entes federados. Para autarquias e fundações (Art. 150, § 2º, CF), essa imunidade aplica-se estritamente ao patrimônio, à renda e aos serviços associados às suas finalidades essenciais.",
+        "option_explanations": {
+            "A": "Incorreta. A imunidade das autarquias não se limita a bens imóveis (patrimônio imobiliário); ela cobre também a renda e os serviços, desde que vinculados às finalidades essenciais da entidade autárquica.",
+            "B": "Correta. O texto da CF/88 (art. 150, § 2º) é taxativo ao estender a imunidade recíproca às autarquias e fundações públicas, desde que vinculada a finalidades essenciais. Rendas obtidas para custeio das próprias atividades essenciais continuam imunes (Súmula 724 do STF).",
+            "C": "Incorreta. A cobrança de contraprestação (mensalidades de cursos em universidade pública autárquica, por exemplo) não afasta a imunidade, desde que a receita seja revertida na sua atividade de educação (finalidade essencial).",
+            "D": "Incorreta. A imunidade recíproca constitucional abrange exclusivamente Impostos. Taxas e Contribuições de Melhoria não fazem parte da imunidade e podem ser cobradas das autarquias.",
+            "E": "Incorreta. A imunidade recíproca é um princípio constitucional federal e os Estados não podem instituir impostos sobre autarquias federais sob nenhuma hipótese de autonomia fiscal local."
+        }
+    },
+    {
+        "id": "q_gen_added_2",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual - ICMS",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Lei Kandir (LC nº 87/1996) e a Constituição Federal disciplinam o ICMS. No que tange à incidência do imposto sobre a entrada de mercadoria ou bem importado do exterior, assinale a afirmativa correta:",
+        "options": {
+            "A": "O ICMS incide apenas se o importador for pessoa jurídica que explore atividade comercial habitual.",
+            "B": "Incide o ICMS sobre a entrada de bem importado do exterior por pessoa física ou jurídica, ainda que não seja contribuinte habitual do imposto, qualquer que seja a sua finalidade.",
+            "C": "A incidência de ICMS em importações de pessoas físicas para consumo próprio é inconstitucional, restando apenas a cobrança do Imposto de Importação (II) federal.",
+            "D": "Exige-se que o desembaraço aduaneiro ocorra fisicamente no Estado de destino para que este ente possa cobrar o imposto.",
+            "E": "O fato gerador do ICMS na importação ocorre no momento da assinatura do contrato de compra internacional com o fornecedor estrangeiro."
+        },
+        "correct": "B",
+        "explanation": "Após a Emenda Constitucional nº 33/2001, a redação do Art. 155, § 2º, IX, 'a', da CF/88 ficou consolidada no sentido de autorizar a incidência de ICMS sobre bens importados por pessoas físicas ou jurídicas, mesmo que não sejam contribuintes habituais e independentemente da finalidade (comercial, consumo próprio ou ativo permanente).",
+        "option_explanations": {
+            "A": "Incorreta. O imposto incide também sobre pessoas físicas e entidades não comerciais que importam bens avulsos, conforme previsão expressa na Lei Kandir.",
+            "B": "Correta. Conforme a literalidade constitucional pós-EC 33/01, a importação por pessoa física para uso pessoal constitui fato gerador do ICMS. O sujeito ativo da obrigação tributária é o Estado do destinatário físico do bem.",
+            "C": "Incorreta. O STF já pacificou a constitucionalidade da cobrança de ICMS sobre importação realizada por pessoa física para uso próprio após a edição da EC 33/2001 e de lei local compatível.",
+            "D": "Incorreta. O ICMS é devido ao Estado onde estiver situado o estabelecimento destinatário da mercadoria ou o domicílio do importador, independentemente de onde ocorra o desembaraço físico (desembaraço no porto de outro estado).",
+            "E": "Incorreta. O fato gerador do ICMS na importação ocorre no momento do desembaraço aduaneiro da mercadoria ou bem importado do exterior (momento da liberação alfandegária)."
+        }
+    },
+    {
+        "id": "q_gen_added_3",
+        "category": "general",
+        "subject": "Legislação da Bahia - Igualdade Racial",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "O Estatuto da Igualdade Racial do Estado da Bahia (Lei Estadual nº 13.182/2014) institui mecanismos de ações afirmativas para a população negra. Em relação aos concursos públicos para cargos da administração pública estadual, o estatuto prevê a reserva obrigatória de vagas no percentual de:",
+        "options": {
+            "A": "10% (dez por cento) das vagas oferecidas.",
+            "B": "20% (vinte por cento) das vagas oferecidas.",
+            "C": "30% (trinta por cento) das vagas oferecidas.",
+            "D": "40% (quarenta por cento) das vagas oferecidas.",
+            "E": "50% (cinquenta por cento) das vagas oferecidas."
+        },
+        "correct": "C",
+        "explanation": "O Art. 49 da Lei Estadual nº 13.182/2014 (Estatuto da Igualdade Racial da Bahia) assegura a reserva de no mínimo 30% (trinta por cento) das vagas em concursos públicos e processos seletivos promovidos pelo poder público do Estado da Bahia para a população negra.",
+        "option_explanations": {
+            "A": "Incorreta. 10% é inferior ao mínimo de 30% exigido por lei na Bahia, sendo um valor incorreto perante o estatuto baiano.",
+            "B": "Incorreta. 20% é a porcentagem federal (Lei Federal nº 12.990/2014). O Estado da Bahia, pela Lei nº 13.182/2014, elevou a cota para 30%.",
+            "C": "Correta. O Estatuto da Igualdade Racial da Bahia inovou ao definir um dos maiores percentuais de reserva do país (30%), aplicável a cargos efetivos e em comissão de todos os poderes e entidades estaduais.",
+            "D": "Incorreta. 40% extrapola a previsão legal mínima de 30% do estatuto estadual baiano, constituindo alternativa incorreta.",
+            "E": "Incorreta. Embora a Bahia tenha uma alta população autodeclarada negra, a cota legal obrigatória fixada em concurso não é de 50%, mas sim de 30%."
+        }
+    },
+    {
+        "id": "q_gen_added_4",
+        "category": "general",
+        "subject": "Legislação Tributária Estadual - PAF Bahia",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "No âmbito do Processo Administrativo Fiscal do Estado da Bahia (Decreto Estadual nº 7.629/1999), o sujeito passivo que não concordar com os termos lançados em Auto de Infração poderá apresentar sua peça de impugnação escrita no prazo peremptório de:",
+        "options": {
+            "A": "10 (dez) dias, contados da data da ciência da autuação.",
+            "B": "15 (quinze) dias, contados da data da ciência da autuação.",
+            "C": "20 (vinte) dias, contados da data da ciência da autuação.",
+            "D": "30 (trinta) dias, contados da data da ciência da autuação.",
+            "E": "45 (quarenta e cinco) dias, contados da data da ciência da autuação."
+        },
+        "correct": "D",
+        "explanation": "De acordo com o PAF da Bahia (Decreto nº 7.629/1999), o prazo para a apresentação de defesa (impugnação/reclamação) contra lançamento de tributo ou aplicação de penalidade é de 30 dias contados a partir da ciência da notificação/auto de infração.",
+        "option_explanations": {
+            "A": "Incorreta. O prazo de 10 dias é excessivamente curto e não reflete os prazos de contencioso fiscal ordinário previstos na regulamentação da Bahia.",
+            "B": "Incorreta. O prazo de 15 dias é comum em regras processuais civis judiciais, mas a legislação do PAF da Bahia assegura um prazo maior (30 dias).",
+            "C": "Incorreta. 20 dias não é o prazo de defesa estabelecido no decreto baiano para início do contencioso de autos de infração.",
+            "D": "Correta. O Decreto nº 7.629/1999 fixa expressamente em seu texto o prazo de 30 dias para o contribuinte exercer o contraditório e apresentar sua reclamação administrativa escrita.",
+            "E": "Incorreta. Embora alguns procedimentos complexos tenham prazos alargados, o prazo padrão da impugnação no PAF da Bahia é de 30 dias, e não de 45."
+        }
+    },
+    {
+        "id": "q_gen_added_5",
+        "category": "general",
+        "subject": "Direito Administrativo - Licitações",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Lei Federal nº 14.133/2021 (Nova Lei de Licitações) cataloga os critérios de julgamento de propostas. Qual critério é prioritariamente utilizado em contratos de eficiência energética ou redução de custos, onde a remuneração do contratado é vinculada ao percentual de economia gerado para o cofre público?",
+        "options": {
+            "A": "Menor Preço",
+            "B": "Melhor Técnica ou Conteúdo Artístico",
+            "C": "Maior Lance (apenas para leilão)",
+            "D": "Maior Retorno Econômico",
+            "E": "Técnica e Preço combinados"
+        },
+        "correct": "D",
+        "explanation": "O critério de julgamento por 'Maior Retorno Econômico' é uma inovação da Lei 14.133/2021, aplicável aos chamados contratos de eficiência, onde a proposta vencedora é aquela que gera a maior economia (retorno) estimada para a administração pública, sendo a remuneração baseada em um percentual do ganho.",
+        "option_explanations": {
+            "A": "Incorreta. O critério de 'Menor Preço' busca o menor dispêndio tarifário fixo imediato do serviço, e não está estruturado para medir o percentual de ganho de eficiência variável gerado ao longo do tempo.",
+            "B": "Incorreta. 'Melhor Técnica ou Conteúdo Artístico' avalia a qualidade técnica de projetos, estudos ou trabalhos específicos de natureza predominantemente intelectual, sem vinculação financeira com eficiência.",
+            "C": "Incorreta. O 'Maior Lance' é o critério exclusivo para a modalidade de Leilão, visando a alienação (venda) de bens do Estado.",
+            "D": "Correta. O julgamento por Maior Retorno Econômico baseia-se na apresentação de propostas de trabalho contendo a redução de despesas operacionais correntes projetada. O licitante recebe com base no sucesso da economia gerada.",
+            "E": "Incorreta. 'Técnica e Preço' é um critério híbrido focado em obter um produto ou serviço com alto padrão técnico por um preço adequado (como projetos de TI complexos), sem basear-se no conceito de ganho ou remuneração de eficiência de despesas."
+        }
+    },
+    {
+        "id": "q_gen_added_6",
+        "category": "general",
+        "subject": "Direito Constitucional - Repartição de Receitas",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Constituição Federal de 1988 prevê a repartição das receitas tributárias do ICMS arrecadado pelos Estados com os Municípios. De acordo com o Art. 158, IV, da CF/88, qual percentual da arrecadação estadual do ICMS pertence aos Municípios?",
+        "options": {
+            "A": "10% (dez por cento)",
+            "B": "15% (quinze por cento)",
+            "C": "20% (vinte por cento)",
+            "D": "25% (vinte e cinco por cento)",
+            "E": "50% (cinquenta por cento)"
+        },
+        "correct": "D",
+        "explanation": "Conforme o Art. 158, IV, da CF/88, pertence aos Municípios 25% (vinte e cinco por cento) do produto da arrecadação do ICMS realizado pelo Estado em que estejam situados. A distribuição desse montante segue regras constitucionais de valor adicionado e índices de desempenho locais (educação, etc.).",
+        "option_explanations": {
+            "A": "Incorreta. 10% é um percentual incorreto e muito baixo, desrespeitando o pacto federativo financeiro previsto na Constituição.",
+            "B": "Incorreta. 15% não corresponde ao repasse constitucional do ICMS para os cofres municipais.",
+            "C": "Incorreta. 20% é o repasse do Imposto de Renda Retido na Fonte (IRRF) dos servidores do próprio município, não sendo a regra do ICMS.",
+            "D": "Correta. Os Estados arrecadam o ICMS e têm a obrigação constitucional de transferir um quarto (25%) do total líquido arrecadado para os municípios de seu território de forma regular e automática.",
+            "E": "Incorreta. 50% é o percentual de repasse do IPVA arrecadado (onde metade pertence ao município de licenciamento do veículo) e do ITR federal repassado ao município."
+        }
+    },
+    {
+        "id": "q_gen_added_7",
+        "category": "general",
+        "subject": "Contabilidade Geral - DVA",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Demonstração do Valor Adicionado (DVA) evidencia a riqueza gerada por uma companhia e como essa riqueza foi distribuída. Na estrutura padrão da DVA recomendada pelo CPC 09, a remuneração paga a terceiros sob a forma de aluguel e arrendamentos operacionais deve ser classificada como:",
+        "options": {
+            "A": "Distribuição de Valor Adicionado a Pessoal",
+            "B": "Distribuição de Valor Adicionado a Impostos, Taxas e Contribuições",
+            "C": "Distribuição de Valor Adicionado a Financiadores (Aluguéis)",
+            "D": "Distribuição de Valor Adicionado a Acionistas sob forma de Juros sobre Capital Próprio",
+            "E": "Valor Adicionado Recebido em Transferência"
+        },
+        "correct": "C",
+        "explanation": "A riqueza gerada pela DVA é distribuída basicamente em quatro grandes grupos: Pessoal (salários, benefícios), Impostos (governo), Financiadores (juros, aluguéis) e Acionistas (lucro retido, dividendos). O aluguel pago a terceiros representa distribuição para Financiadores de capital de terceiros (proprietários do imóvel).",
+        "option_explanations": {
+            "A": "Incorreta. A distribuição a Pessoal compreende apenas as remunerações de funcionários diretos da empresa, incluindo salários, férias, encargos sociais e FGTS.",
+            "B": "Incorreta. A distribuição ao governo (Impostos) abrange apenas tributos diretos e indiretos incidentes sobre a receita, folha e lucros corporativos.",
+            "C": "Correta. Aluguéis pagos a terceiros são classificados no grupo 'Remuneração de Capitais de Terceiros' (Financiadores), visto que representa o pagamento pela utilização de ativos fornecidos por agentes externos à sociedade.",
+            "D": "Incorreta. Juros sobre Capital Próprio (JCP) e dividendos representam distribuição aos detentores de capital próprio da entidade (Acionistas/Sócios), não a locadores externos.",
+            "E": "Incorreta. O grupo 'Recebidos em Transferência' representa entradas de valor adicionado obtidos de outras entidades (como equivalência patrimonial, receitas de juros ativos ou dividendos de investimentos), figurando na geração da riqueza, e não na sua distribuição."
+        }
+    },
+    {
+        "id": "q_gen_added_8",
+        "category": "general",
+        "subject": "Finanças Públicas - LRF",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A Lei de Responsabilidade Fiscal (LC nº 101/2000) impõe limites rígidos de gastos fiscais. Em relação à despesa total com pessoal dos Estados da Federação, qual o limite máximo global fixado por lei para a soma dos gastos com folha de pagamento do Poder Executivo e do Legislativo (incluindo Tribunal de Contas) e Judiciário?",
+        "options": {
+            "A": "50% da Receita Corrente Líquida (RCL)",
+            "B": "60% da Receita Corrente Líquida (RCL)",
+            "C": "70% da Receita Corrente Líquida (RCL)",
+            "D": "80% da Receita Corrente Líquida (RCL)",
+            "E": "90% da Receita Corrente Líquida (RCL)"
+        },
+        "correct": "B",
+        "explanation": "Nos termos do Art. 19, II, da LRF, a despesa total com pessoal, em cada período de apuração, nos Estados, não poderá exceder a 60% (sessenta por cento) de sua Receita Corrente Líquida (RCL). Esse limite de 60% é repartido internamente entre os poderes (Executivo: 49%, Judiciário: 6%, Legislativo: 3% e Ministério Público: 2%).",
+        "option_explanations": {
+            "A": "Incorreta. 50% é o limite global de despesa com pessoal da União (Art. 19, I, da LRF). O limite estadual é maior devido às demandas de pessoal de segurança, educação e saúde públicas.",
+            "B": "Correta. O limite global estadual consolidado de gastos de pessoal é de 60% da RCL. A ultrapassagem desse limite dispara vedações imediatas na contratação de pessoal e exigências de redução de cargos comissionados.",
+            "C": "Incorreta. 70% excede o limite fiscal legal imposto pela LRF e geraria um desequilíbrio estrutural de caixa grave no orçamento estadual.",
+            "D": "Incorreta. A LRF impede gastos tão elevados com folha de pessoal, de forma a preservar recursos fiscais mínimos para investimentos em infraestrutura e serviços.",
+            "E": "Incorreta. 90% é um percentual fictício e ilegal para despesas com pessoal segundo as normas nacionais de responsabilidade fiscal."
+        }
+    },
+    {
+        "id": "q_gen_added_9",
+        "category": "general",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "A contabilidade de custos utiliza diferentes métodos de apropriação de despesas para valoração de estoques e medição de resultados. Qual a principal diferença entre o Custeio por Absorção e o Custeio Variável?",
+        "options": {
+            "A": "O Custeio por Absorção apropria aos produtos apenas os custos variáveis, enquanto o Custeio Variável lança todos os custos ao estoque.",
+            "B": "O Custeio por Absorção apropria todos os custos de produção (fixos e variáveis) aos produtos fabricados, enquanto o Custeio Variável considera apenas os custos variáveis como custos do produto, lançando os custos fixos diretamente para o resultado como despesas do período.",
+            "C": "O Custeio Variável é o único método aceito pela legislação fiscal brasileira para fins de apuração de Imposto de Renda e contribuição social.",
+            "D": "O Custeio por Absorção ignora a existência de custos variáveis, tratando-os como despesas indiretas sem apropriação.",
+            "E": "Não há diferença no resultado final líquido apurado por ambos os métodos se houver estocagem parcial da produção do período."
+        },
+        "correct": "B",
+        "explanation": "No Custeio por Absorção (método legal exigido pelo fisco e contabilidade societária), os custos fixos industriais entram no custo do produto e ficam retidos no estoque ativo até a venda. No Custeio Variável (foco gerencial), apenas custos variáveis são ativados no produto; todos os custos fixos são descarregados imediatamente como despesas do período na DRE.",
+        "option_explanations": {
+            "A": "Incorreta. A afirmação inverteu os conceitos dos métodos. O Custeio por Absorção absorve custos fixos e variáveis, e o Custeio Variável foca apenas nas parcelas variáveis.",
+            "B": "Correta. O Custeio por Absorção é abrangente na alocação fabril, enquanto o Custeio Variável isola os custos fixos de produção, tratando-os como custos periódicos gerais do negócio por não se alterarem com o volume produzido.",
+            "C": "Incorreta. A legislação fiscal brasileira (RIR - Regulamento do Imposto de Renda) proíbe expressamente o Custeio Variável para cálculo do lucro real, exigindo o uso do Custeio por Absorção para valorização de estoques fiscais.",
+            "D": "Incorreta. O Custeio por Absorção não ignora os custos variáveis; ele engloba tanto os variáveis quanto os fixos no custo unitário final do produto.",
+            "E": "Incorreta. Se houver estocagem (produção maior que a venda), o Custeio por Absorção apresentará um lucro líquido maior que o Custeio Variável, pois parte dos custos fixos de fabricação fica retida no ativo circulante (estoque) em vez de ir para o resultado do exercício."
+        }
+    },
+    {
+        "id": "q_gen_added_10",
+        "category": "general",
+        "subject": "Direito Administrativo - Atos Administrativos",
+        "source": "Inédita - Foco SEFAZ-BA",
+        "question": "Os atos administrativos possuem atributos que os diferenciam dos atos de direito privado. Qual atributo confere à administração pública a faculdade de compelir materialmente o administrado ao cumprimento de uma obrigação legalmente imposta, sem necessidade de autorização judicial prévia?",
+        "options": {
+            "A": "Presunção de Legitimidade",
+            "B": "Imperatividade",
+            "C": "Autoexecutoriedade",
+            "D": "Tipicidade",
+            "E": "Motivação"
+        },
+        "correct": "C",
+        "explanation": "A Autoexecutoriedade é o atributo do ato administrativo que permite à Administração Pública executar materialmente suas decisões diretamente, usando inclusive o uso moderado da força se necessário (como fechar um estabelecimento sanitário ou apreender mercadorias contrabandeadas), sem pedir anuência prévia do Judiciário.",
+        "option_explanations": {
+            "A": "Incorreta. A Presunção de Legitimidade (ou de Veracidade) significa que os atos administrativos nascem presumidamente válidos e baseados em fatos verdadeiros, invertendo o ônus da prova para o particular que queira questioná-los.",
+            "B": "Incorreta. A Imperatividade impõe a vontade unilateral da Administração Pública sobre o particular, gerando uma obrigação de obediência de forma abstrata, mas não se confunde com a execução material e física forçada direta.",
+            "C": "Correta. A Autoexecutoriedade engloba a exigibilidade (meios indiretos de coação, como multa) e a executoriedade (meios diretos de coação física, como reboque de carro). O judiciário só intervém a posteriori se provada ilegalidade.",
+            "D": "Incorreta. A Tipicidade é a garantia de que o ato administrativo deve corresponder a figuras previamente definidas em lei, impedindo a criação de atos totalmente inominados ou arbitrários.",
+            "E": "Incorreta. A Motivação é a justificativa escrita dos pressupostos de fato e de direito que fundamentaram a prática do ato, figurando como princípio e requisito de validade formal, não como poder de coação física."
+        }
+    },
+    {
+        "id": "q_ti_added_11",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Cloud Computing",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No modelo de responsabilidade compartilhada adotado pelos principais provedores de nuvem pública (como AWS, Azure e GCP), qual das seguintes atribuições de segurança é de responsabilidade EXCLUSIVA do cliente da nuvem em um modelo de Infraestrutura como Serviço (IaaS)?",
+        "options": {
+            "A": "Segurança física dos servidores e controle de acesso biométrico aos data centers.",
+            "B": "Manutenção preventiva, refrigeração e fornecimento de energia elétrica redundante para o hardware físico.",
+            "C": "Criação de políticas de controle de acesso de identidades (IAM), segurança do sistema operacional convidado e criptografia dos dados do cliente.",
+            "D": "Atualização e correção de patches de firmware da camada de hipervisor de virtualização física.",
+            "E": "Descarte seguro e desmagnetização de discos rígidos físicos danificados."
+        },
+        "correct": "C",
+        "explanation": "No modelo IaaS, o provedor é responsável pela segurança 'da' nuvem (infraestrutura física, rede de borda, hipervisor). O cliente é responsável pela segurança 'na' nuvem, que inclui dados, sistemas operacionais das instâncias criadas, configurações de rede lógica (firewalls) e IAM.",
+        "option_explanations": {
+            "A": "Incorreta. A segurança física das instalações e controle biométrico nos prédios de servidores é de responsabilidade exclusiva do provedor de nuvem (AWS/Azure/GCP).",
+            "B": "Incorreta. A manutenção de hardware, energia e climatização dos servidores físicos constitui a base física da nuvem e é de responsabilidade total do provedor.",
+            "C": "Correta. Sob o modelo IaaS (como instâncias EC2 ou VMs brutas), o cliente recebe o controle do sistema operacional convidado. Logo, cabe a ele atualizar os patches do OS, configurar chaves, permissões de usuários (IAM) e ativar criptografia sobre seus dados.",
+            "D": "Incorreta. O hipervisor de virtualização é a camada de software rodando diretamente no hardware físico do provedor, sendo de responsabilidade técnica deste mantê-lo atualizado e seguro.",
+            "E": "Incorreta. O descarte físico e trituração de mídias de armazenamento fisicamente danificadas em seus data centers é executada estritamente pelo provedor sob normas rígidas de segurança."
+        }
+    },
+    {
+        "id": "q_ti_added_12",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - Cloud Computing",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A arquitetura Serverless (Computação sem Servidor) permite executar código em resposta a eventos sem gerenciar servidores. Qual das seguintes alternativas descreve corretamente a característica e o comportamento dessa tecnologia?",
+        "options": {
+            "A": "O cliente paga uma taxa mensal fixa pelo servidor reservado, independentemente de haver execuções de funções ou tráfego.",
+            "B": "As funções serverless rodam de forma persistente e ininterrupta, mantendo seu estado de memória RAM indefinidamente por semanas.",
+            "C": "Ocorre o fenômeno do 'Cold Start' (partida a frio), que representa o atraso inicial de latência para instanciar o contêiner de execução da função na primeira chamada após inatividade.",
+            "D": "Não suporta integração com gatilhos de eventos assíncronos como filas de mensagens (SQS) ou uploads de arquivos em buckets (S3).",
+            "E": "Garante segurança total contra ataques de injeção de código devido à ausência de infraestrutura computacional subjacente."
+        },
+        "correct": "C",
+        "explanation": "Funções Serverless (FaaS, como AWS Lambda) são efêmeras e escalam sob demanda. Quando uma função está inativa, o provedor encerra seus recursos. Uma nova requisição exige provisionar um novo contêiner de execução física, o que causa uma latência conhecida como 'Cold Start'.",
+        "option_explanations": {
+            "A": "Incorreta. O modelo de cobrança do Serverless é estritamente baseado no consumo real (tempo de execução em milissegundos e número de requisições). Se não houver chamadas, o custo é zero.",
+            "B": "Incorreta. Funções serverless são stateless (sem estado persistente) e possuem tempo limite curto de execução por chamada (geralmente máximo de 15 minutos). O contêiner de execução é destruído após a inatividade.",
+            "C": "Correta. O 'Cold Start' ocorre porque o ambiente de execução precisa baixar o código da função, iniciar o runtime (como Node.js ou Python) e carregar as dependências antes de responder ao primeiro evento.",
+            "D": "Incorreta. O modelo serverless é nativamente orientado a eventos e integra-se perfeitamente com filas de mensagens, alterações em bancos de dados (DynamoDB Streams) e uploads de arquivos.",
+            "E": "Incorreta. Embora o usuário não gerencie a infraestrutura do servidor, vulnerabilidades de nível de aplicação (como SQL Injection, injeção de comandos, ou pacotes dependentes maliciosos) continuam existindo nas funções."
+        }
+    },
+    {
+        "id": "q_ti_added_13",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - DevSecOps",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "O uso de contêineres Docker e orquestradores Kubernetes (K8s) revolucionou a infraestrutura moderna de microserviços. Do ponto de vista de arquitetura, qual a diferença técnica primordial de isolamento entre uma Máquina Virtual (VM) tradicional e um Contêiner?",
+        "options": {
+            "A": "O contêiner virtualiza o hardware físico completo (incluindo BIOS e placa-mãe simulada), enquanto a VM não isola hardware.",
+            "B": "A VM compartilha o núcleo (kernel) do sistema operacional do hospedeiro físico diretamente, ao passo que o contêiner exige um hipervisor tipo 1 instalado.",
+            "C": "A VM exige um sistema operacional convidado (Guest OS) completo rodando sobre um hipervisor, enquanto o contêiner compartilha o mesmo kernel do SO hospedeiro e isola processos em nível de software.",
+            "D": "Contêineres são mais pesados que as VMs em termos de consumo de memória RAM devido ao uso obrigatório de sistemas de arquivos físicos separados.",
+            "E": "O contêiner não possui isolamento de rede ou namespaces, expondo diretamente todas as suas portas ao barramento físico da máquina."
+        },
+        "correct": "C",
+        "explanation": "Máquinas Virtuais são isoladas via hardware por um Hipervisor e cada uma possui seu próprio Guest OS pesado. Contêineres virtualizam o sistema operacional, compartilhando o kernel do Host e isolando a execução dos processos usando recursos nativos do kernel Linux como namespaces e cgroups.",
+        "option_explanations": {
+            "A": "Incorreta. Quem virtualiza o hardware completo é a VM tradicional. O contêiner é apenas um processo isolado que compartilha o kernel do sistema operacional subjacente.",
+            "B": "Incorreta. É exatamente o oposto: o contêiner compartilha o kernel do host, enquanto a VM necessita de um hipervisor para mediar o acesso ao hardware físico.",
+            "C": "Correta. Pelo fato de não inicializarem um Guest OS completo e compartilharem o kernel hospedeiro, contêineres são leves, iniciam em frações de segundo e possuem menor overhead de CPU e memória do que VMs.",
+            "D": "Incorreta. Contêineres são significativamente mais leves que VMs, consumindo megabytes em vez de gigabytes de RAM e iniciando muito mais rapidamente.",
+            "E": "Incorreta. O Docker utiliza Namespaces do kernel Linux para fornecer isolamento total de rede, processos (PID), sistema de arquivos (MNT) e usuários para cada contêiner executado."
+        }
+    },
+    {
+        "id": "q_ti_added_14",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - DevSecOps",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Na esteira de Integração e Entrega Contínuas (CI/CD) sob a cultura DevSecOps, o auditor de sistemas deve validar a segurança das ferramentas. Qual técnica de teste de segurança foca em analisar o código-fonte estático de forma automatizada sem executar a aplicação, identificando falhas de injeção ou chaves expostas?",
+        "options": {
+            "A": "DAST (Dynamic Application Security Testing)",
+            "B": "Penetration Testing (Pentest Manual)",
+            "C": "SAST (Static Application Security Testing)",
+            "D": "Fuzzing (Teste de Fuzzing de Entrada)",
+            "E": "IAST (Interactive Application Security Testing)"
+        },
+        "correct": "C",
+        "explanation": "SAST (Static Application Security Testing) analisa o código-fonte estático, bytecode ou binário antes da compilação e execução, varrendo a árvore de sintaxe do código à procura de padrões de vulnerabilidades conhecidos e segredos expostos no repositório.",
+        "option_explanations": {
+            "A": "Incorreta. O DAST analisa o comportamento da aplicação em tempo de execução (teste dinâmico), enviando payloads simulando ataques pela rede sobre a aplicação ativa.",
+            "B": "Incorreta. Pentest Manual envolve analistas de segurança humanos tentando invadir ativamente a aplicação rodando, e não um teste estático automatizado inserido na esteira de CI/CD.",
+            "C": "Correta. O SAST é uma técnica 'white-box' que analisa o código de dentro para fora, permitindo encontrar erros logo no início do desenvolvimento (Shift-Left Security), antes do build.",
+            "D": "Incorreta. Fuzzing consiste em enviar entradas de dados aleatórias ou inválidas em massa para testar a robustez e provocar travamento de um programa em execução.",
+            "E": "Incorreta. O IAST combina análises SAST e DAST por meio de sensores (agentes) rodando dentro do servidor da aplicação para inspecionar a execução do código de forma interativa."
+        }
+    },
+    {
+        "id": "q_ti_added_15",
+        "category": "ti",
+        "subject": "Fluência em Dados - Pandas",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Em projetos de mineração de dados na SEFAZ-BA, um analista precisa agrupar contribuintes por seu regime tributário ('Simples', 'Lucro Presumido' ou 'Lucro Real') e calcular a média do imposto recolhido em cada regime. Utilizando Python e Pandas, qual instrução executa essa operação sobre um DataFrame 'df_sefaz'?",
+        "options": {
+            "A": "df_sefaz.groupby('regime').mean('imposto')",
+            "B": "df_sefaz.groupby('regime')['imposto'].mean()",
+            "C": "df_sefaz.filter('regime').avg('imposto')",
+            "D": "df_sefaz.select('regime', 'imposto').groupby('regime')",
+            "E": "df_sefaz.aggregate(by='regime').mean('imposto')"
+        },
+        "correct": "B",
+        "explanation": "No Pandas, a operação de agrupamento é realizada chamando `.groupby()`. O resultado é agrupado por chaves de uma coluna e, em seguida, seleciona-se a coluna numérica de interesse (`['imposto']`) para aplicar a função agregadora `.mean()`.",
+        "option_explanations": {
+            "A": "Incorreta. `groupby('regime').mean('imposto')` é inválida, pois `.mean()` não aceita o nome da coluna de agregação diretamente dessa forma em versões estáveis do Pandas sem filtrar a coluna previamente ou chamar a média para todas as numéricas do DF.",
+            "B": "Correta. `.groupby('regime')` agrupa o DataFrame e o indexa pela coluna especificada. O sufixo `['imposto']` restringe a análise à coluna desejada e `.mean()` calcula a média dos valores numéricos contidos nela.",
+            "C": "Incorreta. O Pandas não possui um método `.filter()` que funcione de forma semelhante à agregação SQL do tipo GROUP BY / AVG.",
+            "D": "Incorreta. Apenas selecionar as colunas e agrupá-las sem chamar uma função de agregação posterior (como `.mean()`, `.sum()`, `.count()`) não calcula os resultados, retornando apenas um objeto temporário DataFrameGroupBy.",
+            "E": "Incorreta. A sintaxe de `.aggregate()` e parâmetros sugeridos não condizem com a API nativa e documentada do Pandas para agrupamentos estatísticos."
+        }
+    },
+    {
+        "id": "q_ti_added_16",
+        "category": "ti",
+        "subject": "Ciência de Dados - Machine Learning",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A validação cruzada K-Fold (K-Fold Cross-Validation) é uma técnica amplamente utilizada para avaliar a capacidade de generalização de modelos de Machine Learning. Em relação ao seu funcionamento, assinale a afirmativa correta:",
+        "options": {
+            "A": "Divide os dados em K conjuntos de treinamento idênticos e executa o teste apenas no primeiro conjunto.",
+            "B": "Elimina a necessidade de ter um conjunto de teste separado dividindo os dados ao meio K vezes.",
+            "C": "Divide aleatoriamente o conjunto de dados em K partições (folds) disjuntas, treinando o modelo K vezes. A cada iteração, uma partição diferente é usada para teste e as K-1 restantes para treino, calculando-se a média das métricas obtidas.",
+            "D": "É aplicada exclusivamente a modelos de aprendizagem não supervisionada, como agrupamento por K-Means.",
+            "E": "Garante que o modelo não sofra de Underfitting devido ao uso recursivo da mesma partição de validação."
+        },
+        "correct": "C",
+        "explanation": "O K-Fold visa evitar a dependência de uma divisão arbitrária única entre treino e teste. Dividindo a base em K partes, o algoritmo treina K vezes, garantindo que todo dado seja usado exatamente uma vez para validação e K-1 vezes para treino, gerando uma estimativa de performance robusta.",
+        "option_explanations": {
+            "A": "Incorreta. Se os conjuntos de treino fossem idênticos, perderíamos o benefício da validação cruzada. As partições de teste devem ser rotacionadas a cada passo.",
+            "B": "Incorreta. O K-Fold é uma técnica de validação interna de treinamento para ajuste de hiperparâmetros; não elimina a boa prática de separar uma amostra cega de teste final.",
+            "C": "Correta. Ao realizar a rotação dos K subconjuntos de teste a cada ciclo de treino, o K-Fold garante que todos os dados participem das etapas de validação, reduzindo o viés de amostragem na medição de acurácia.",
+            "D": "Incorreta. A validação cruzada K-Fold aplica-se fundamentalmente no contexto de modelos de aprendizado supervisionado (Regressão e Classificação) para avaliar erros de predição em relação a rótulos conhecidos.",
+            "E": "Incorreta. K-Fold avalia a estabilidade e ajuda a detectar Overfitting. O Underfitting é corrigido com aumento da complexidade do modelo ou novos atributos, não pela forma de validação."
+        }
+    },
+    {
+        "id": "q_ti_added_17",
+        "category": "ti",
+        "subject": "Segurança - Desenvolvimento Seguro",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A injeção de SQL (SQL Injection - SQLi) figura historicamente na lista do OWASP Top 10 como um risco crítico para aplicações web. Qual das seguintes técnicas de codificação constitui o mecanismo de defesa mais eficaz para prevenir essa vulnerabilidade?",
+        "options": {
+            "A": "Utilização de consultas SQL dinâmicas concatenando strings diretamente na query.",
+            "B": "Uso de Consultas Parametrizadas (Prepared Statements) ou frameworks ORM modernos que tratam parâmetros como literais, e não como código executável.",
+            "C": "Criptografia de ponta a ponta dos bancos de dados relacionais e backups diários comprimidos.",
+            "D": "Conversão compulsória de todas as entradas do usuário em letras maiúsculas através de JavaScript no lado do cliente.",
+            "E": "Desativação completa do uso de índices e gatilhos (triggers) nas tabelas do banco de dados."
+        },
+        "correct": "B",
+        "explanation": "Prepared Statements separam o código SQL dos dados fornecidos pelo usuário. O SGBD compila a estrutura da query primeiro com espaços vazios (placeholders) e depois insere as strings do usuário estritamente como literais de dados, impedindo que trechos como 'OR 1=1' alterem a semântica da consulta.",
+        "option_explanations": {
+            "A": "Incorreta. Concatenar strings diretamente no texto SQL (`'SELECT * FROM users WHERE name = ' + user_input`) é exatamente a origem física da vulnerabilidade de SQL Injection.",
+            "B": "Correta. Consultas parametrizadas forçam o banco de dados a tratar parâmetros estritamente como valores textuais ou numéricos. Mesmo que o invasor envie comandos maliciosos, eles serão tratados apenas como um valor de campo inofensivo.",
+            "C": "Incorreta. Criptografia e backups são cruciais para confidencialidade e integridade, mas não impedem que um atacante explore a aplicação para obter dados indevidamente em tempo de execução via injeção SQL.",
+            "D": "Incorreta. A validação de entrada no cliente com JS é facilmente contornada interceptando requisições com proxies. Defesas contra injeção devem ser tratadas e consolidadas no servidor.",
+            "E": "Incorreta. Índices e triggers otimizam consultas e executam automações no banco, não possuindo qualquer relação lógica ou capacidade de mitigar SQL Injection."
+        }
+    },
+    {
+        "id": "q_ti_added_18",
+        "category": "ti",
+        "subject": "Segurança - Desenvolvimento Seguro",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A vulnerabilidade de CSRF (Cross-Site Request Forgery - Falsificação de Requisição entre Sites) ocorre quando um site malicioso força o navegador de um usuário autenticado a enviar uma requisição indesejada para um site legítimo. Para mitigar o CSRF, a melhor prática recomendada é:",
+        "options": {
+            "A": "Exigir que todas as páginas web utilizem apenas imagens estáticas em SVG.",
+            "B": "Implementar Tokens Anti-CSRF (tokens exclusivos, secretos e imprevisíveis gerados pelo servidor no formulário e validados no envio).",
+            "C": "Implementar criptografia simétrica com chave AES pública nos cabeçalhos HTTP do navegador.",
+            "D": "Substituir todas as consultas de leitura (GET) por requisições de gravação (POST) com JSON.",
+            "E": "Aumentar o tempo de expiração do cookie de sessão do usuário para 180 dias."
+        },
+        "correct": "B",
+        "explanation": "Tokens Anti-CSRF (ou Synchronizer Tokens) garantem que a requisição partiu de um formulário legítimo do próprio site da aplicação. Como sites de terceiros maliciosos não conseguem ler o token confidencial gerado na sessão do usuário, qualquer requisição forjada por eles falhará na validação do servidor.",
+        "option_explanations": {
+            "A": "Incorreta. O tipo de imagem exibida na página (SVG, PNG) é um aspecto visual de interface e não confere proteção contra ataques de falsificação de chamadas.",
+            "B": "Correta. O token anti-CSRF é gerado na renderização do formulário e associado à sessão atual. Quando a requisição é submetida, o servidor valida se o token enviado corresponde ao guardado na sessão, bloqueando requisições cruzadas não autorizadas.",
+            "C": "Incorreta. Chaves criptográficas simétricas requerem confidencialidade compartilhada e o conceito de 'AES público' no cabeçalho não mitiga a falsificação de envio de requisições autenticadas.",
+            "D": "Incorreta. Apenas mudar métodos HTTP não previne o CSRF, visto que formulários HTML maliciosos conseguem forjar chamadas do tipo POST com a mesma facilidade aproveitando cookies de sessão ativos.",
+            "E": "Incorreta. Aumentar a expiração da sessão para longos períodos aumenta a janela de exposição e o risco de o cookie ser interceptado, piorando a segurança global."
+        }
+    },
+    {
+        "id": "q_ti_added_19",
+        "category": "ti",
+        "subject": "Engenharia de Software - APIs REST",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No projeto de APIs RESTful integradas a parceiros externos, o protocolo OAuth 2.0 é padrão de autorização da indústria. Qual fluxo de concessão (grant type) do OAuth 2.0 é recomendado para autenticação máquina para máquina (Machine-to-Machine - M2M), como um sistema de arrecadação bancário e a API da SEFAZ, onde não há intervenção de um usuário final?",
+        "options": {
+            "A": "Fluxo de Código de Autorização (Authorization Code Grant)",
+            "B": "Fluxo Implícito (Implicit Grant)",
+            "C": "Fluxo de Credenciais do Cliente (Client Credentials Grant)",
+            "D": "Fluxo de Senha do Proprietário do Recurso (Resource Owner Password Credentials)",
+            "E": "Fluxo de Autorização Baseada em Token Físico (Device Flow)"
+        },
+        "correct": "C",
+        "explanation": "No fluxo Client Credentials, a aplicação cliente autentica-se diretamente perante o servidor de autorização enviando seu Client ID e Client Secret. Por envolver estritamente comunicação direta entre duas aplicações (sem login ou autorização de um humano), esse fluxo gera diretamente o token de acesso.",
+        "option_explanations": {
+            "A": "Incorreta. O Authorization Code é o fluxo mais seguro para aplicações web tradicionais com usuários humanos, onde um código temporário é gerado no navegador e trocado por tokens no backend.",
+            "B": "Incorreta. O Implicit Grant é um fluxo obsoleto e desencorajado pela comunidade por retornar tokens diretamente no navegador do cliente (risco de interceptação), não sendo aplicável a conexões M2M corporativas.",
+            "C": "Correta. Para integrações B2B (Business-to-Business) ou M2M, as credenciais da própria aplicação solicitante (Client Credentials) são validadas de forma direta contra o Identity Provider para liberar o acesso.",
+            "D": "Incorreta. O Resource Owner Password exige que o usuário digite seu usuário e senha pessoais na aplicação cliente, o que viola o princípio de não compartilhar credenciais e não se aplica a integrações autônomas.",
+            "E": "Incorreta. O Device Flow é destinado a aparelhos conectados com limitação de teclado (como Smart TVs), onde o usuário realiza a autenticação lendo um QR Code com seu celular."
+        }
+    },
+    {
+        "id": "q_ti_added_20",
+        "category": "ti",
+        "subject": "Engenharia de Software - APIs",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Arquiteturas orientadas a eventos (Event-Driven) garantem desacoplamento e resiliência a sistemas críticos de alto tráfego. Utilizando corretores de mensagens (como Apache Kafka ou RabbitMQ), qual a diferença conceitual e de consumo de mensagens entre um modelo de Fila (Queue) tradicional e um modelo Pub-Sub (Publish-Subscribe)?",
+        "options": {
+            "A": "No modelo de Fila, cada mensagem enviada é consumida por exatamente um único consumidor; no modelo Pub-Sub, a mensagem é distribuída (copiada) para todos os assinantes interessados no canal/tópico.",
+            "B": "A fila clássica descarta mensagens se não houver consumidores conectados ativamente; o Pub-Sub retém os pacotes para sempre na memória.",
+            "C": "Filas são exclusivas para protocolos assíncronos em nuvem proprietária; o modelo Pub-Sub opera apenas de forma síncrona sobre HTTP REST.",
+            "D": "Pub-Sub garante que as mensagens sejam reprocessadas na ordem inversa da criação, diferentemente do FIFO adotado pelas filas.",
+            "E": "No Pub-Sub, o produtor de dados precisa conhecer fisicamente o endereço IP e a porta de todos os consumidores cadastrados."
+        },
+        "correct": "A",
+        "explanation": "No modelo de Fila (ex: JMS Queue clássico), múltiplos consumidores competem pelas mensagens da fila, mas cada mensagem individual é entregue a apenas um trabalhador (load balancer). No Pub-Sub (ex: Tópicos do Kafka), a mensagem é transmitida simultaneamente para múltiplos grupos de consumidores inscritos no tópico.",
+        "option_explanations": {
+            "A": "Correta. Essa diferença é essencial para design de mensageria: filas clássicas distribuem o trabalho entre consumidores redundantes (processadores de fila), enquanto o Pub-Sub propaga o mesmo evento para múltiplos subsistemas distintos (ex: atualizar estoque e enviar e-mail ao mesmo tempo).",
+            "B": "Incorreta. As filas são projetadas justamente para persistir mensagens e guardá-las com segurança até que um consumidor esteja disponível para processá-las.",
+            "C": "Incorreta. Ambos os modelos são assíncronos por definição e operam de forma agnóstica em relação a arquiteturas de nuvens públicas ou privadas.",
+            "D": "Incorreta. A ordenação FIFO (First-In, First-Out) é um objetivo de integridade comum em mensageria tanto para filas quanto para tópicos segmentados por chaves (partições no Kafka).",
+            "E": "Incorreta. O desacoplamento é absoluto: o produtor envia dados apenas ao broker/corretor (como o tópico do Kafka), sem saber quem ou quantos sistemas estão consumindo a informação na outra ponta."
+        }
+    },
+    {
+        "id": "q_ti_added_21",
+        "category": "ti",
+        "subject": "Segurança da Informação",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A norma ABNT NBR ISO/IEC 27002 fornece recomendações para controles de segurança da informação baseados nas melhores práticas do mercado. Na versão atualizada da norma, os controles de segurança são estruturados em quatro domínios organizacionais principais. Quais são esses domínios?",
+        "options": {
+            "A": "Físico, Lógico, Humano e Redes.",
+            "B": "Organizacional, Pessoas, Físico e Tecnológico.",
+            "C": "Hardware, Software, Banco de Dados e Criptografia.",
+            "D": "Planejamento, Implementação, Monitoramento e Melhoria Contínua.",
+            "E": "Políticas, Processos, Ativos de TI e Auditoria Externa."
+        },
+        "correct": "B",
+        "explanation": "A atualização recente das normas ISO/IEC 27002 e 27001 simplificou a estrutura de categorias, agrupando os 93 controles de segurança em 4 temas organizacionais: Controles Organizacionais, Controles de Pessoas, Controles Físicos e Controles Tecnológicos.",
+        "option_explanations": {
+            "A": "Incorreta. Embora termos como Lógico ou Redes representem tópicos técnicos de segurança, eles não correspondem aos domínios formais da taxonomia recente adotada pela ISO 27002.",
+            "B": "Correta. A nova taxonomia da ISO/IEC 27002 organiza os controles sob essas quatro categorias abrangentes, facilitando o gerenciamento integrado de ativos e processos de segurança física e digital.",
+            "C": "Incorreta. Hardware, Software e Criptografia são elementos tratados dentro dos controles tecnológicos específicos, não constituindo domínios estruturantes principais da norma.",
+            "D": "Incorreta. Planejamento, Implementação, Monitoramento e Melhoria correspondem ao ciclo PDCA de melhoria de processos adotado globalmente no SGSI (ISO 27001), e não à divisão de controles da ISO 27002.",
+            "E": "Incorreta. Esses itens descrevem componentes de um framework geral de segurança, mas não são os domínios de agrupamento oficiais dos controles na ISO 27002."
+        }
+    },
+    {
+        "id": "q_ti_added_22",
+        "category": "ti",
+        "subject": "Banco de Dados - SQL",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "A otimização de consultas (Query Tuning) em bancos de dados relacionais depende do uso adequado de índices. Sobre o funcionamento e a aplicação de índices do tipo Árvore B (B-Tree) e Hash em colunas de tabelas do SGBD, assinale a afirmativa correta:",
+        "options": {
+            "A": "Índices Hash são extremamente eficientes para consultas de intervalo (como buscar datas entre um período X e Y), enquanto índices B-Tree falham nesse tipo de busca.",
+            "B": "Índices B-Tree suportam buscas de igualdade (operador '=') e de intervalos (operadores '>', '<', 'BETWEEN'), ao passo que índices Hash suportam apenas buscas de igualdade exata devido à sua função de mapeamento de chaves.",
+            "C": "Um índice B-Tree exige a reordenação física de todas as linhas de dados da tabela no disco magnético a cada nova inserção de registro.",
+            "D": "Índices do tipo Hash utilizam estruturas hierárquicas balanceadas de árvore para armazenar chaves em blocos de páginas encadeadas.",
+            "E": "A exclusão de um registro da tabela não causa nenhum impacto nos índices associados, permanecendo estes inalterados até um rebuild manual."
+        },
+        "correct": "B",
+        "explanation": "Índices B-Tree armazenam dados de forma ordenada em uma estrutura balanceada de nós, o que possibilita navegação rápida para correspondência exata e varredura de faixas de valores de forma sequencial pelas folhas da árvore. Índices Hash aplicam uma função hash no valor da coluna e geram uma chave física direta, sendo excelentes apenas para igualdades exatas (operador '='), pois as chaves hash não preservam ordenação.",
+        "option_explanations": {
+            "A": "Incorreta. É o oposto: índices Hash não possuem capacidade de tratar intervalos, pois chaves hash geradas para valores sucessivos ficam dispersas aleatoriamente na estrutura, e não em sequência ordenada.",
+            "B": "Correta. Pelo fato de a B-Tree manter suas chaves folha encadeadas e ordenadas, o SGBD consegue executar buscas de intervalo de forma eficiente. O índice Hash só atende busca exata e pontual.",
+            "C": "Incorreta. O índice B-Tree é gravado em blocos separados das tabelas originais e aponta por ponteiros (como o ROWID) para as linhas da tabela, que permanecem na mesma ordem física do disco.",
+            "D": "Incorreta. Estruturas de árvore balanceada são a base dos índices B-Tree. Índices Hash utilizam baldes de dados (buckets) e mapeamento direto de índices aritméticos de matrizes.",
+            "E": "Incorreta. O SGBD atualiza automaticamente todos os índices afetados em tempo de execução durante transações de escrita (INSERT, UPDATE, DELETE), para garantir consistência imediata da leitura."
+        }
+    },
+    {
+        "id": "q_ti_added_23",
+        "category": "ti",
+        "subject": "Ciência de Dados - Machine Learning",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Na modelagem preditiva de fraudes fiscais utilizando Machine Learning, o analista decide aplicar o algoritmo de Regressão Logística (Logistic Regression). Qual o tipo de problema de modelagem preditiva e o formato de saída típico desse algoritmo?",
+        "options": {
+            "A": "Problema de agrupamento não supervisionado, retornando grupos de registros semelhantes com base em centróides espaciais.",
+            "B": "Problema de regressão linear simples, retornando um valor numérico contínuo ilimitado no eixo dos números reais.",
+            "C": "Problema de classificação (geralmente binária), fornecendo como resultado a probabilidade (entre 0 e 1) de um registro pertencer a uma determinada classe discreta.",
+            "D": "Mineração de regras de associação comercial, calculando coeficientes de suporte e confiança entre itens de notas fiscais.",
+            "E": "Previsão de séries temporais não estacionárias, gerando gráficos de auto-correlação sazonal futura."
+        },
+        "correct": "C",
+        "explanation": "Apesar do nome 'Regressão', a Regressão Logística é aplicada para problemas de Classificação. Ela estima a relação entre variáveis explicativas e a probabilidade de ocorrência de um evento binário (ex: 'Fraude' = 1 ou 'Regular' = 0) utilizando a função sigmóide que comprime a saída em um intervalo entre 0 e 1.",
+        "option_explanations": {
+            "A": "Incorreta. Agrupamento (clustering) por centróides é executado por modelos não supervisionados como K-Means, sem necessidade de treinamento de alvos conhecidos.",
+            "B": "Incorreta. A regressão linear prevê valores reais contínuos e infinitos (como faturamento futuro em reais), sem limitação de intervalo sigmoidal de 0 a 1.",
+            "C": "Correta. A Regressão Logística utiliza a transformação sigmóide de uma combinação linear de variáveis preditoras para estimar a probabilidade de ocorrência de uma classe de interesse (ex: chance de sonegação).",
+            "D": "Incorreta. A mineração de regras de associação (market basket analysis) é executada por algoritmos de aprendizado não supervisionado como o Apriori ou FP-Growth.",
+            "E": "Incorreta. Previsões de séries temporais históricas utilizam modelos estatísticos de previsão específicos como ARIMA, SARIMAX ou redes neurais do tipo LSTM."
+        }
+    },
+    {
+        "id": "q_ti_added_24",
+        "category": "ti",
+        "subject": "DAMA-DMBOK v2 - Qualidade",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "Na governança de dados alinhada ao DAMA-DMBOK v2, as dimensões de qualidade de dados (Data Quality Dimensions) fornecem métricas para avaliar a adequação do uso das informações. Qual dimensão de qualidade mede se os dados cadastrais estão em conformidade com as regras de integridade de negócios e regras de domínio predefinidas?",
+        "options": {
+            "A": "Tempestividade (Timeliness)",
+            "B": "Consistência (Consistency)",
+            "C": "Completude (Completeness)",
+            "D": "Validade (Validity)",
+            "E": "Acurácia (Accuracy)"
+        },
+        "correct": "D",
+        "explanation": "A Validade (Validity) indica se um dado está em conformidade com as regras de formato, regras de domínio e restrições sintáticas ou semânticas especificadas para aquele campo (por exemplo: um CPF possuir exatamente 11 dígitos numéricos válidos e atender aos dígitos verificadores).",
+        "option_explanations": {
+            "A": "Incorreta. A Tempestividade mede o tempo decorrido entre a ocorrência de um evento real e a disponibilização da informação nos sistemas para tomada de decisão (atualidade do dado).",
+            "B": "Incorreta. A Consistência garante que dados em locais ou sistemas distintos representem o mesmo valor lógico de forma uniforme (ex: o endereço de um contribuinte ser igual no cadastro fazendário e de trânsito).",
+            "C": "Incorreta. A Completude afere se todas as informações e registros obrigatórios esperados estão devidamente preenchidos e presentes no banco (se há registros nulos em campos cruciais).",
+            "D": "Correta. Validade refere-se à adesão sintática ou regras de dados documentadas (como formatos de e-mail, faixa de valores permitidos para alíquotas de ICMS entre 0% e 22%).",
+            "E": "Incorreta. A Acurácia (ou Exatidão) mede o quanto a informação gravada no sistema físico representa com precisão a realidade do mundo real (se o nome do contribuinte cadastrado está escrito corretamente e sem erros ortográficos)."
+        }
+    },
+    {
+        "id": "q_ti_added_25",
+        "category": "ti",
+        "subject": "Tecnologia da Informação - DevSecOps",
+        "source": "Inédita - Foco SEFAZ-BA (TI)",
+        "question": "No ecossistema Kubernetes (K8s), a segurança de execução de cargas de trabalho em contêineres é gerenciada por políticas aplicadas aos Pods. Qual das seguintes medidas de segurança constitui a melhor prática para mitigar riscos de invasores e escalada de privilégios dentro de contêineres em produção?",
+        "options": {
+            "A": "Executar todos os contêineres obrigatoriamente como usuário ROOT para evitar bloqueio de comandos do kernel.",
+            "B": "Configurar o parâmetro 'allowPrivilegeEscalation: false' nas especificações do container e rodar a aplicação sob um UID não-root (não priviliegiado).",
+            "C": "Desabilitar completamente o isolamento de rede interna do cluster, abrindo portas de debug SSH no Kubernetes API Server.",
+            "D": "Montar a pasta de sistema do host hospedeiro (/lib e /etc) com permissão de escrita irrestrita dentro de todos os contêineres.",
+            "E": "Rodar os pods em modo de compartilhamento total de namespaces de rede com o nó hospedeiro (hostNetwork: true)."
+        },
+        "correct": "B",
+        "explanation": "Contêineres devem rodar sob o princípio de menor privilégio. Permitir a execução como root e a escalada de privilégios facilita o ataque de 'Container Breakout', onde um invasor que obtém acesso ao shell do contêiner consegue invadir e comprometer o sistema operacional hospedeiro (nó físico).",
+        "option_explanations": {
+            "A": "Incorreta. Executar contêineres como ROOT é um risco de segurança crítico, pois se o contêiner for comprometido, o atacante herdará acesso administrativo que facilita a invasão do nó host.",
+            "B": "Correta. Impedir a escalada de privilégios ('allowPrivilegeEscalation: false') e rodar o contêiner sob um usuário comum e não privilegiado (UID > 1000) restringe o poder de ação e contenção de qualquer ataque interno.",
+            "C": "Incorreta. Desabilitar políticas de rede e expor portas administrativas do Kubernetes a conexões desconhecidas facilita enormemente ataques externos de invasão de infraestrutura.",
+            "D": "Incorreta. Montar pastas do sistema operacional hospedeiro com permissão de escrita dentro do contêiner abre brechas imediatas de comprometimento e destruição do próprio nó físico de virtualização.",
+            "E": "Incorreta. Compartilhar a rede física do host (`hostNetwork: true`) permite que o contêiner intercepte tráfego de outros pods e acesse serviços locais do nó, eliminando o isolamento de rede nativo de microsserviços."
+        }
     }
 ]

@@ -861,6 +861,11 @@ function loadQuestions() {
 }
 
 // Start simulated exam for a specific category ('ti' or 'general')
+// Global configuration options for quiz
+let quizSize = '10'; // Default size
+let quizOrder = 'random'; // Default order
+
+// Start simulated exam for a specific category ('ti' or 'general')
 function startSimulado(category) {
   quizCategory = category;
   
@@ -875,9 +880,103 @@ function startSimulado(category) {
     btnBrother.classList.add("active");
   }
 
-  // Filter questions
-  activeQuizQuestions = allQuestions.filter(q => q.category === category);
-  
+  // Filter base questions:
+  // - If category is 'ti', include both 'ti' (P2) and 'general' (P1) questions!
+  // - If category is 'general', include only 'general' questions.
+  if (category === 'ti') {
+    activeQuizQuestions = allQuestions.filter(q => q.category === 'ti' || q.category === 'general');
+  } else {
+    activeQuizQuestions = allQuestions.filter(q => q.category === 'general');
+  }
+
+  // Render setup configuration screen
+  renderQuizSetup();
+}
+
+// Render the quiz configuration setup screen
+function renderQuizSetup() {
+  const container = document.getElementById("quiz-card");
+  const isBrother = quizCategory === 'brother' || quizCategory === 'general';
+  const cargoName = quizCategory === 'ti' ? "Auditor Fiscal (TI)" : "Agente de Tributos";
+  const numAvailable = activeQuizQuestions.length;
+
+  container.innerHTML = `
+    <div class="quiz-setup-card ${isBrother ? 'setup-brother' : ''}">
+      <div class="setup-header">
+        <i class="fa-solid fa-sliders setup-icon"></i>
+        <h3>Configurar Simulado: ${cargoName}</h3>
+      </div>
+      <p class="setup-desc">
+        ${quizCategory === 'ti' 
+          ? "Este simulado mescla <strong>Conhecimentos Gerais (P1)</strong> e <strong>Específicos de TI (P2)</strong> para simular o edital completo." 
+          : "Este simulado foca nas disciplinas de <strong>Conhecimentos Gerais e Específicos</strong> comuns ao cargo."}
+        <br>Total de questões disponíveis no banco: <strong>${numAvailable}</strong>.
+      </p>
+
+      <div class="setup-section">
+        <label><i class="fa-solid fa-list-ol"></i> Quantidade de Questões:</label>
+        <div class="setup-options">
+          <button class="setup-opt-btn ${quizSize === '10' ? 'active' : ''}" onclick="selectQuizSize('10')">10 Questões</button>
+          <button class="setup-opt-btn ${quizSize === '20' ? 'active' : ''}" onclick="selectQuizSize('20')">20 Questões</button>
+          <button class="setup-opt-btn ${quizSize === '40' ? 'active' : ''}" onclick="selectQuizSize('40')">40 Questões</button>
+          <button class="setup-opt-btn ${quizSize === 'all' ? 'active' : ''}" onclick="selectQuizSize('all')">Todas (${numAvailable})</button>
+        </div>
+      </div>
+
+      <div class="setup-section">
+        <label><i class="fa-solid fa-shuffle"></i> Ordem das Questões:</label>
+        <div class="setup-options">
+          <button class="setup-opt-btn ${quizOrder === 'random' ? 'active' : ''}" onclick="selectQuizOrder('random')">Aleatória (Embaralhar)</button>
+          <button class="setup-opt-btn ${quizOrder === 'sequence' ? 'active' : ''}" onclick="selectQuizOrder('sequence')">Padrão do Banco</button>
+        </div>
+      </div>
+
+      <button class="start-quiz-btn" onclick="launchSimuladoWithConfig()">
+        <i class="fa-solid fa-play"></i> Iniciar Simulado
+      </button>
+    </div>
+  `;
+}
+
+// Select size configuration
+function selectQuizSize(size) {
+  quizSize = size;
+  renderQuizSetup();
+}
+
+// Select order configuration
+function selectQuizOrder(order) {
+  quizOrder = order;
+  renderQuizSetup();
+}
+
+// Launch the quiz with current configurations
+function launchSimuladoWithConfig() {
+  // Apply filtering again (just to be safe)
+  let baseQuestions = [];
+  if (quizCategory === 'ti') {
+    baseQuestions = allQuestions.filter(q => q.category === 'ti' || q.category === 'general');
+  } else {
+    baseQuestions = allQuestions.filter(q => q.category === 'general');
+  }
+
+  // Handle Order
+  if (quizOrder === 'random') {
+    // Fisher-Yates Shuffle
+    for (let i = baseQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [baseQuestions[i], baseQuestions[j]] = [baseQuestions[j], baseQuestions[i]];
+    }
+  }
+
+  // Handle Size
+  if (quizSize !== 'all') {
+    const sizeNum = parseInt(quizSize, 10);
+    activeQuizQuestions = baseQuestions.slice(0, sizeNum);
+  } else {
+    activeQuizQuestions = baseQuestions;
+  }
+
   // Reset quiz state
   currentQuestionIdx = 0;
   selectedOption = null;
@@ -887,6 +986,7 @@ function startSimulado(category) {
 
   renderQuestion();
 }
+
 
 // Render the current question card
 function renderQuestion() {

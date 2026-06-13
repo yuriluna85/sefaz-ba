@@ -1541,4 +1541,122 @@ a:hover {
   color: var(--accent-purple);
 }
 
+/* Quiz Setup Screen Styles */
+.quiz-setup-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setup-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.setup-icon {
+  font-size: 24px;
+  color: var(--accent-cyan);
+}
+
+.quiz-setup-card.setup-brother .setup-icon {
+  color: var(--accent-purple);
+}
+
+.setup-header h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.setup-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.setup-section label {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setup-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.setup-opt-btn {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.setup-opt-btn:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.setup-opt-btn.active {
+  color: #fff;
+  background-color: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.05);
+}
+
+.quiz-setup-card.setup-brother .setup-opt-btn.active {
+  background-color: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.05);
+}
+
+.start-quiz-btn {
+  margin-top: 12px;
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--accent-cyan);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-fast);
+}
+
+.start-quiz-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.quiz-setup-card.setup-brother .start-quiz-btn {
+  background: var(--accent-purple);
+  color: #fff;
+}
 
