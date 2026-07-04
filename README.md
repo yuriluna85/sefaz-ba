@@ -1,4 +1,6 @@
 # SEFAZ-BA 2026 — Hub de Estudos e Novidades
+> **Projeto desenvolvido sob a chancela 🔬 YLuna85 LABs**
+
 
 Um painel interativo desenvolvido em Python (Flask) e HTML/CSS/JS (com design moderno e responsivo) para organizar e gerenciar a preparação de dois irmãos para o concurso da **SEFAZ-BA 2026**.
 
@@ -88,3 +90,11 @@ Para ativar o GitHub Pages no seu repositório:
 
 > [!NOTE]  
 > Quando acessado pelo link do GitHub Pages (modo estático), o painel salvará todo o progresso dos checklists de forma independente no **localStorage** do navegador de cada usuário. Os simulados de múltipla escolha (60 questões) e discursivos (6 casos de estudo) funcionam de forma integral e responsiva. Apenas a aba de materiais locais (varredura da pasta física local do computador) não exibirá os arquivos, pois este recurso de varredura depende do servidor local em Python (`python app.py`) estar ativo na máquina.
+
+
+## 📜 Log de Atualizações (Changelog)
+
+### 📅 30/06/2026 - Estruturação de SEO & Monetização
+- 🌐 **Otimização de SEO (White Hat)**: Inclusão de meta tags de indexação, dados estruturados JSON-LD e tags Open Graph (OG) para melhorar a relevância e indexação orgânica no Google.
+- 💵 **Estrutura de Monetização**: Adicionados slots de publicidade responsivos (banner horizontal e lateral) compatíveis com o modo de alto contraste para Google AdSense e AdMob.
+

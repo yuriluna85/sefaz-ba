@@ -2872,5 +2872,120 @@
             "D": "Incorreta. Montar pastas do sistema operacional hospedeiro com permissão de escrita dentro do contêiner abre brechas imediatas de comprometimento e destruição do próprio nó físico de virtualização.",
             "E": "Incorreta. Compartilhar a rede física do host (`hostNetwork: true`) permite que o contêiner intercepte tráfego de outros pods e acesse serviços locais do nó, eliminando o isolamento de rede nativo de microsserviços."
         }
+    },
+    {
+        "id": "q_real_pdf_1",
+        "category": "general",
+        "subject": "Administração Financeira e LRF",
+        "source": "FCC - Prefeitura de Recife / Analista (2019)",
+        "question": "A Lei de Responsabilidade Fiscal (LC nº 101/2000), além de contemplar a fixação de limites máximos de comprometimento da receita com despesas de pessoal, estabelece vedações específicas, pautadas pelo conceito de gestão fiscal responsável, entre as quais, a:",
+        "options": {
+            "A": "Limitação do percentual de cargos em comissão a, no máximo, 10% do quadro efetivo, exceto para as empresas não dependentes.",
+            "B": "Proibição de contratação de pessoal temporário no âmbito da administração direta, autárquica e fundacional, salvo para reposição de aposentadorias.",
+            "C": "Vedação, sob pena de nulidade, da expedição de atos que gerem aumento de despesa com pessoal nos 180 dias que antecedem o final do mandato do titular do poder ou órgão.",
+            "D": "Proibição de contratação de pessoal e abertura de concursos públicos nos 90 dias que antecedem a eleição para o Poder Executivo, salvo nas áreas essenciais.",
+            "E": "Vedação à manutenção de regime próprio de previdência para servidores públicos cujo equilíbrio atuarial não possa ser assegurado com contribuições."
+        },
+        "correct": "C",
+        "explanation": "Conforme o art. 21, parágrafo único (e incisos) da LRF (LC 101/2000), é nulo de pleno direito o ato de que resulte aumento da despesa com pessoal expedido nos 180 dias anteriores ao final do mandato do titular do respectivo Poder ou órgão.",
+        "option_explanations": {
+            "A": "A LRF não estabelece um limite percentual fixo de 10% de cargos em comissão para todos os entes na LRF em si, sendo isso regulado por leis específicas de cargos de cada ente.",
+            "B": "A LRF não proíbe a contratação de temporários de forma absoluta, mas sim impõe que tais despesas respeitem os limites globais de despesa com pessoal do ente.",
+            "C": "Item correto de acordo com o art. 21 da LRF. A vedação visa impedir que gestores em fim de mandato gerem despesas permanentes de pessoal para seus sucessores sem o devido custeio.",
+            "D": "Essa vedação de 90 dias antes das eleições decorre da Lei das Eleições (Lei nº 9.504/1997), e não da Lei de Responsabilidade Fiscal.",
+            "E": "A LRF não veda a manutenção de RPPS em caso de desequilíbrio atuarial, mas estabelece regras e relatórios para buscar a convergência e o equilíbrio das contas."
+        }
+    },
+    {
+        "id": "q_real_pdf_2",
+        "category": "general",
+        "subject": "Administração Financeira e LRF",
+        "source": "FCC - Prefeitura de Recife / Analista (2019)",
+        "question": "Suponha que o Município tenha contratado serviços de recapeamento de vias públicas e, ao final do exercício, tendo ocorrido o empenho dos recursos destinados às despesas correspondentes bem como a medição e atestação dos serviços realizados, não logrou efetuar o pagamento devido ao contratado. Considerando o regime constitucional e legal vigente para execução das despesas públicas, o Município deverá:",
+        "options": {
+            "A": "Anular a liquidação de tais despesas, a qual deverá ser repetida no exercício seguinte.",
+            "B": "Providenciar o cancelamento do empenho, em observância ao princípio da anualidade.",
+            "C": "Inscrever tais despesas, que pertencem ao exercício findo, em restos a pagar.",
+            "D": "Incluir dotação para pagamento de tais despesas na Lei Orçamentária do próximo exercício.",
+            "E": "Anular as dotações que davam suporte a tais despesas e providenciar a abertura de crédito especial."
+        },
+        "correct": "C",
+        "explanation": "Como a despesa passou pelas fases de empenho e liquidação (atestação dos serviços realizados), mas não foi paga até 31 de dezembro, configura restos a pagar processados (despesas liquidadas e não pagas), conforme art. 36 da Lei nº 4.320/1964.",
+        "option_explanations": {
+            "A": "A liquidação não deve ser anulada, pois os serviços foram efetivamente prestados e atestados, gerando direito adquirido para o credor.",
+            "B": "O empenho de despesas liquidadas não pode ser cancelado unilateralmente sob pena de enriquecimento sem causa da administração.",
+            "C": "Opção correta. Despesas empenhadas e liquidadas que não foram pagas dentro do exercício financeiro são inscritas em Restos a Pagar Processados.",
+            "D": "Não há necessidade de incluir nova dotação na LOA seguinte, pois a despesa já consumiu a dotação do exercício de origem e será paga com os recursos financeiros correspondentes à inscrição em Restos a Pagar.",
+            "E": "A anulação das dotações originais e abertura de crédito especial não se aplicam a despesas já regularmente empenhadas e liquidadas."
+        }
+    },
+    {
+        "id": "q_real_pdf_3",
+        "category": "general",
+        "subject": "Administração Financeira e LRF",
+        "source": "FCC - Prefeitura de Recife / Analista (2019)",
+        "question": "As receitas públicas denominadas extraorçamentárias correspondem a:",
+        "options": {
+            "A": "Ingressos obtidos pelas empresas estatais não dependentes, que, embora não integrem a LOA, são geridas pelo poder público.",
+            "B": "Recursos financeiros de caráter temporário, que não integram a LOA, sobre os quais o Estado é mero depositário e cuja devolução não se sujeita à autorização legislativa.",
+            "C": "Ingressos tributários decorrentes de taxas de polícia cuja cobrança não estava prevista na estimativa inicial de receitas da LOA.",
+            "D": "Empréstimos públicos autorizados na LOA por meio de créditos suplementares adicionais.",
+            "E": "Transferências voluntárias da União para estados e municípios destinadas à cobertura de calamidades públicas."
+        },
+        "correct": "B",
+        "explanation": "Receita extraorçamentária é o ingresso de recursos de caráter temporário que não se incorpora ao patrimônio público. O Estado atua como mero depositário (ex: cauções, depósitos judiciais, consignações de folha). A devolução não exige autorização legislativa.",
+        "option_explanations": {
+            "A": "As receitas de empresas estatais independentes não transitam no caixa da administração direta como receitas extraorçamentárias.",
+            "B": "Opção correta. A principal característica do ingresso extraorçamentário é a transitoriedade e a obrigação de devolução (passivo financeiro), não necessitando de autorização legislativa.",
+            "C": "Taxas de polícia são receitas tributárias correntes e, portanto, orçamentárias, mesmo que arrecadadas além da previsão inicial da LOA.",
+            "D": "Empréstimos (operações de crédito) autorizados são classificados como receitas de capital, integrando o orçamento (receitas orçamentárias).",
+            "E": "As transferências voluntárias constituem receitas correntes orçamentárias da entidade beneficiada."
+        }
+    },
+    {
+        "id": "q_real_pdf_4",
+        "category": "general",
+        "subject": "Contabilidade Geral",
+        "source": "FCC - Prefeitura de Recife / Analista (2019)",
+        "question": "Em 31/12/2017, a Cia. Santa Joana adquiriu 40% de participação na Cia. São João pelo valor de R$ 2.000.000,00. O patrimônio líquido da Cia. São João era composto apenas pelo Capital social, formado por 2.000 ações ordinárias. No período de 1º/1/2018 a 30/6/2018, a Cia. São João reconheceu as seguintes mutações em seu PL: - Lucro líquido: R$ 700.000,00. - Distribuição de dividendos: R$ 200.000,00. - Ajustes de conversão de investida no exterior (devedor): R$ 100.000,00. O valor reconhecido na DRE da Cia. Santa Joana, no primeiro semestre de 2018, referente ao Investimento na Cia. São João foi, em reais:",
+        "options": {
+            "A": "200.000,00.",
+            "B": "160.000,00.",
+            "C": "280.000,00.",
+            "D": "80.000,00.",
+            "E": "240.000,00."
+        },
+        "correct": "C",
+        "explanation": "Pelo Método de Equivalência Patrimonial (MEP), o resultado do período é afetado aplicando a participação (40%) sobre o Lucro Líquido da coligada (R$ 700.000,00). 40% de R$ 700.000,00 = R$ 280.000,00. Dividendos reduzem a conta de investimento no ativo e os outros resultados abrangentes afetam o PL via Ajustes de Avaliação Patrimonial (AAP).",
+        "option_explanations": {
+            "A": "O valor de R$ 200.000,00 corresponde aos dividendos distribuídos pela coligada, que reduzem o saldo da conta de investimentos e não afetam a DRE do investidor.",
+            "B": "Corresponderia a 40% sobre o lucro líquido menos dividendos, cálculo incorreto para o impacto na DRE sob o Método de Equivalência Patrimonial.",
+            "C": "Opção correta. A receita de equivalência patrimonial reconhecida na DRE é estritamente a fração do lucro líquido gerado pela investida (40% de R$ 700.000,00 = R$ 280.000,00).",
+            "D": "O valor de R$ 80.000,00 é a parcela dos dividendos recebidos pelo investidor (40% de R$ 200.000,00), que entra no caixa e debita a conta de investimento.",
+            "E": "Cálculo incorreto envolvendo ajustes cambiais diretamente na demonstração de resultado."
+        }
+    },
+    {
+        "id": "q_real_pdf_5",
+        "category": "general",
+        "subject": "Administração Financeira e LRF",
+        "source": "IF-PA - Auditor (2019)",
+        "question": "Considere a definição da seguinte função da política fiscal pública: 'aplicação de políticas com o fim de promover o emprego, o desenvolvimento e o equilíbrio econômico, dada a incapacidade de o mercado assegurar o atingimento desses objetivos'. Esta é a definição da função:",
+        "options": {
+            "A": "Distributiva.",
+            "B": "Alocativa.",
+            "C": "Estabilizadora.",
+            "D": "Reguladora.",
+            "E": "Planejadora."
+        },
+        "correct": "C",
+        "explanation": "A função estabilizadora visa manter a estabilidade macroeconômica, combatendo o desemprego, controlando os preços (inflação) e garantindo o desenvolvimento sustentável da economia frente aos ciclos econômicos.",
+        "option_explanations": {
+            "A": "A função distributiva tem como objetivo a redistribuição de renda e riqueza entre classes sociais ou regiões, principalmente por meio de impostos progressivos e programas de transferência de renda.",
+            "B": "A função alocativa destina-se ao fornecimento de bens públicos (como segurança, saúde e educação) que o mercado privado não oferece ou oferece de forma insuficiente.",
+            "C": "Opção correta. O foco no equilíbrio econômico, controle inflacionário e promoção do pleno emprego é a definição clássica de estabilização econômica de Musgrave.",
+            "D": "A função reguladora não faz parte da divisão clássica trifuncional do orçamento público proposta por Richard Musgrave (Alocativa, Distributiva, Estabilizadora).",
+            "E": "Função planejadora refere-se genericamente ao planejamento orçamentário geral, não sendo uma das três funções fiscais clássicas."
+        }
     }
 ]

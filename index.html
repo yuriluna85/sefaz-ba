@@ -12,11 +12,136 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="static/css/style.css">
+<style>
+/* ==========================================================================
+   WEB ACCESSIBILITY & A11Y STYLES (web-accessibility-a11y)
+   ========================================================================== */
+.a11y-floating-bar {
+  position: fixed; top: 12px; right: 12px; z-index: 999999;
+  display: flex; align-items: center; gap: 4px;
+  background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+  padding: 4px 8px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.a11y-btn {
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;
+  cursor: pointer; transition: 0.2s; font-family: sans-serif;
+}
+.a11y-btn:hover { background: #fff; color: #000; }
+
+body.high-contrast {
+  background: #000000 !important; color: #ffffff !important;
+}
+body.high-contrast header, body.high-contrast footer, body.high-contrast section, body.high-contrast div, body.high-contrast table, body.high-contrast tr, body.high-contrast td, body.high-contrast th, body.high-contrast aside, body.high-contrast nav, body.high-contrast main {
+  background: #000000 !important; color: #ffffff !important; border-color: #ffd700 !important;
+}
+body.high-contrast a, body.high-contrast h1, body.high-contrast h2, body.high-contrast h3, body.high-contrast h4, body.high-contrast p, body.high-contrast span, body.high-contrast i, body.high-contrast label, body.high-contrast button {
+  color: #ffffff !important; text-shadow: none !important;
+}
+body.high-contrast button, body.high-contrast input, body.high-contrast select {
+  background: #111111 !important; color: #ffd700 !important; border: 2px solid #ffd700 !important;
+}
+</style>
+  <!-- Meta Tags de SEO e Indexação (White Hat SEO) -->
+  <meta name="description" content="Acesse o portal SEFAZ-BA 2026 — Hub de Estudos e Novidades. Ferramenta desenvolvida para consulta, monitoramento e utilidade pública sob a chancela YLuna85 LABs.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Concurso SEFAZ Dashboard, sefaz-ba 2026 — hub de estudos e novidades, yluna85 labs, almeidaluna">
+  <link rel="canonical" href="https://labs.almeidaluna.tech/Concurso SEFAZ Dashboard/">
+
+  <!-- Protocolo Open Graph (Redes Sociais) -->
+  <meta property="og:title" content="SEFAZ-BA 2026 — Hub de Estudos e Novidades">
+  <meta property="og:description" content="Acesse o portal SEFAZ-BA 2026 — Hub de Estudos e Novidades. Ferramenta desenvolvida para consulta, monitoramento e utilidade pública sob a chancela YLuna85 LABs.">
+  <meta property="og:image" content="https://labs.almeidaluna.tech/Concurso SEFAZ Dashboard/assets/og-image.png">
+  <meta property="og:url" content="https://labs.almeidaluna.tech/Concurso SEFAZ Dashboard/">
+  <meta property="og:type" content="website">
+
+  <!-- Dados Estruturados JSON-LD (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SEFAZ-BA 2026 — Hub de Estudos e Novidades",
+    "url": "https://labs.almeidaluna.tech/Concurso SEFAZ Dashboard/",
+    "description": "Acesse o portal SEFAZ-BA 2026 — Hub de Estudos e Novidades. Ferramenta desenvolvida para consulta, monitoramento e utilidade pública sob a chancela YLuna85 LABs."
+  }
+  </script>
+
+  <!-- Estilos de Monetização (AdSense & AdMob) -->
+  <style>
+    .ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.02);
+      border: 1.5px dashed rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .ad-placeholder {
+      font-size: 0.75rem;
+      color: var(--text-muted, #555555);
+      font-weight: 700;
+      text-align: center;
+      padding: 1rem;
+      pointer-events: none;
+    }
+    .ad-banner-horizontal {
+      width: 100%;
+      margin: 1.5rem 0;
+      display: block;
+    }
+    .ad-banner-horizontal .ad-container {
+      min-height: 90px;
+    }
+    .ad-slot-sidebar {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .ad-slot-sidebar .ad-container {
+      min-height: 250px;
+    }
+    .ad-container ins[data-ad-status="filled"] + .ad-placeholder {
+      display: none;
+    }
+    body.high-contrast .ad-container {
+      background: #000000 !important;
+      border-color: #ffd700 !important;
+    }
+    body.high-contrast .ad-placeholder {
+      color: #ffffff !important;
+    }
+  </style>
 </head>
 <body>
   <div class="app-container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
+
+    <!-- BOX DE MONETIZAÇÃO LATERAL (ADSENSE / ADMOB) -->
+    <div class="sidebar-box ad-slot-sidebar" role="complementary" aria-label="Espaço Publicitário Lateral">
+      <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1.5px solid var(--border-glow, #eee); padding-bottom: 8px; margin-bottom: 12px; border-left: 3.5px solid var(--accent, #b45309); padding-left: 6px;">📢 Patrocinado</div>
+      <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="YYYYYYYYYY"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <div class="ad-placeholder">
+          Espaço Publicitário<br>
+          <span style="font-size: 0.65rem; font-weight: 500;">Google AdSense / AdMob</span>
+        </div>
+      </div>
+    </div>
+
       <div class="sidebar-header">
         <div class="logo">
           <i class="fa-solid fa-chart-line logo-icon"></i>
@@ -43,6 +168,9 @@
         </button>
         <button class="nav-item" data-tab="simulados">
           <i class="fa-solid fa-pen-to-square"></i> Simulados
+        </button>
+        <button class="nav-item" data-tab="glossario">
+          <i class="fa-solid fa-book-bookmark"></i> Glossário de Siglas
         </button>
       </nav>
 
@@ -81,6 +209,23 @@
           </div>
         </div>
       </header>
+
+  <!-- BANNER HORIZONTAL DE MONETIZAÇÃO (ADSENSE) -->
+  <div class="ad-banner-horizontal" role="complementary" aria-label="Espaço Publicitário">
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <div class="ad-placeholder">
+        Anúncio Patrocinado · Google AdSense
+      </div>
+    </div>
+  </div>
+
 
       <!-- TAB SECTIONS -->
       <div class="tab-wrapper">
@@ -440,11 +585,80 @@
           </div>
         </section>
 
+        <!-- GLOSSARIO TAB -->
+        <section id="glossario" class="tab-content">
+          <div class="card">
+            <h3><i class="fa-solid fa-book-bookmark"></i> Glossário e Tradutor de Siglas (Contabilidade & Auditoria)</h3>
+            <p class="section-desc">Consultem rapidamente o significado extenso e explicativo das siglas que aparecem nas apostilas e edital da SEFAZ-BA.</p>
+            
+            <div style="margin-bottom: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <input type="text" id="glossario-search" placeholder="Buscar sigla ou termo (ex: NBC, CPC, CIAP, PAF)..." style="flex: 1; min-width: 250px; padding: 12px 16px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 14px;" onkeyup="filterGlossario()">
+              <button onclick="clearGlossarioSearch()" style="padding: 12px 20px; background: #64748b; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;"><i class="fa-solid fa-eraser"></i> Limpar</button>
+            </div>
+
+            <div id="glossario-list" class="glossario-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+              <!-- Termos preenchidos dinamicamente ou estaticamente -->
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #65a30d; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #ecfdf5; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">NBC TA</span> Norma Brasileira de Contabilidade Técnica de Auditoria</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Normas emitidas pelo CFC aplicáveis aos auditores independentes/externos. O sufixo "TA" indica Auditoria Técnica (ex: NBC TA 300, 320, 315).</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">NBC TI</span> Norma Brasileira de Contabilidade Técnica de Auditoria Interna</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Regras aplicáveis à atuação dos auditores internos pertencentes aos quadros próprios das organizações ou órgãos públicos.</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #8b5cf6; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #f3e8ff; color: #6b21a8; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CPC</span> Comitê de Pronunciamentos Contábeis</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Órgão que alinha e converge as normas de contabilidade do Brasil com o padrão internacional IFRS (International Financial Reporting Standards).</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #f59e0b; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CIAP</span> Controle de Crédito de ICMS do Ativo Permanente</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Sistemática fiscal para aproveitamento do crédito de ICMS referente à aquisição de bens do ativo imobilizado (máquinas, equipamentos), fracionado à razão de 1/48 por mês.</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #ef4444; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">PAF-BA</span> Processo Administrativo Fiscal do Estado da Bahia</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Regulamento contencioso estadual (Lei nº 3.956/1981) que disciplina autuações, defesas, recursos e julgamentos administrativos de tributos na SEFAZ-BA.</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CFC</span> Conselho Federal de Contabilidade</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Autarquia federal responsável por regulamentar e fiscalizar a profissão contábil e emitir as NBCs no território nacional.</p>
+              </div>
+
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #6366f1; padding: 16px; border-radius: 8px;">
+                <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">RICMS-BA</span> Regulamento do ICMS do Estado da Bahia</h4>
+                <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Decreto estadual que disciplina a incidência, isenções, substituição tributária e obrigações acessórias relativas ao ICMS baiano.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
   </div>
 
   <!-- Main JavaScript File -->
   <script src="static/js/main.js"></script>
+
+<!-- A11Y TOOLBAR & SCRIPT -->
+<div class="a11y-floating-bar">
+  <button class="a11y-btn" onclick="ajustarFonteGlobal(5)" title="Aumentar Fonte" aria-label="Aumentar Fonte">A+</button>
+  <button class="a11y-btn" onclick="ajustarFonteGlobal(-5)" title="Diminuir Fonte" aria-label="Diminuir Fonte">A-</button>
+  <button class="a11y-btn" onclick="toggleContrasteGlobal()" title="Alto Contraste" aria-label="Alto Contraste">☯ Contraste</button>
+</div>
+<script>
+  let __fontScale = 100;
+  function ajustarFonteGlobal(delta) {
+    __fontScale = Math.min(135, Math.max(90, __fontScale + delta));
+    document.documentElement.style.fontSize = __fontScale + '%';
+  }
+  function toggleContrasteGlobal() {
+    document.body.classList.toggle('high-contrast');
+  }
+</script>
+
 </body>
 </html>
