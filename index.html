@@ -67,80 +67,12 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
   }
   </script>
 
-  <!-- Estilos de Monetização (AdSense & AdMob) -->
-  <style>
-    .ad-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.02);
-      border: 1.5px dashed rgba(0, 0, 0, 0.08);
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-      transition: all 0.3s ease;
-      width: 100%;
-      margin: 1rem 0;
-    }
-    .ad-placeholder {
-      font-size: 0.75rem;
-      color: var(--text-muted, #555555);
-      font-weight: 700;
-      text-align: center;
-      padding: 1rem;
-      pointer-events: none;
-    }
-    .ad-banner-horizontal {
-      width: 100%;
-      margin: 1.5rem 0;
-      display: block;
-    }
-    .ad-banner-horizontal .ad-container {
-      min-height: 90px;
-    }
-    .ad-slot-sidebar {
-      margin-top: 1rem;
-      width: 100%;
-    }
-    .ad-slot-sidebar .ad-container {
-      min-height: 250px;
-    }
-    .ad-container ins[data-ad-status="filled"] + .ad-placeholder {
-      display: none;
-    }
-    body.high-contrast .ad-container {
-      background: #000000 !important;
-      border-color: #ffd700 !important;
-    }
-    body.high-contrast .ad-placeholder {
-      color: #ffffff !important;
-    }
-  </style>
+
 </head>
 <body>
   <div class="app-container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
-
-    <!-- BOX DE MONETIZAÇÃO LATERAL (ADSENSE / ADMOB) -->
-    <div class="sidebar-box ad-slot-sidebar" role="complementary" aria-label="Espaço Publicitário Lateral">
-      <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1.5px solid var(--border-glow, #eee); padding-bottom: 8px; margin-bottom: 12px; border-left: 3.5px solid var(--accent, #b45309); padding-left: 6px;">📢 Patrocinado</div>
-      <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="YYYYYYYYYY"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <div class="ad-placeholder">
-          Espaço Publicitário<br>
-          <span style="font-size: 0.65rem; font-weight: 500;">Google AdSense / AdMob</span>
-        </div>
-      </div>
-    </div>
 
       <div class="sidebar-header">
         <div class="logo">
@@ -148,6 +80,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
           <span>SEFAZ-BA <span class="accent-text">2026</span></span>
         </div>
         <p class="tagline">Guia de Estudos Fiscais</p>
+        <p style="font-size: 10px; color: var(--accent-cyan); font-weight: 700; letter-spacing: 1px; margin-top: 4px; text-transform: uppercase;">Chancela YLuna85 LABs</p>
       </div>
 
       <nav class="sidebar-nav">
@@ -210,21 +143,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
         </div>
       </header>
 
-  <!-- BANNER HORIZONTAL DE MONETIZAÇÃO (ADSENSE) -->
-  <div class="ad-banner-horizontal" role="complementary" aria-label="Espaço Publicitário">
-    <div class="ad-container">
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      <div class="ad-placeholder">
-        Anúncio Patrocinado · Google AdSense
-      </div>
-    </div>
-  </div>
+
 
 
       <!-- TAB SECTIONS -->

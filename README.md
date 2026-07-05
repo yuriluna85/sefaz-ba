@@ -94,6 +94,12 @@ Para ativar o GitHub Pages no seu repositório:
 
 ## 📜 Log de Atualizações (Changelog)
 
+### 📅 04/07/2026 - Restauração e Enriquecimento das Apostilas Didáticas
+- 📚 **Restauração de Conteúdo Completo (Anti-Nerf)**: Reconstruído o script [build_all_apostilas_ptbr.py](file:///G:/Meu%20Drive/APP/2.%20Projetos%20e%20Aplica%C3%A7%C3%B5es/2.2%20Aplica%C3%A7%C3%B5es%20e%20C%C3%B3digos%20(GitHub)/YLuna85%20LABs%20APPs/Concurso%20SEFAZ%20Dashboard/build_all_apostilas_ptbr.py) para gerar PDFs a partir do banco de dados estruturado [apostilas_conteudo.json](file:///G:/Meu%20Drive/APP/2.%20Projetos%20e%20Aplica%C3%A7%C3%B5es/2.2%20Aplica%C3%A7%C3%B5es%20e%20C%C3%B3digos%20(GitHub)/YLuna85%20LABs%20APPs/Concurso%20SEFAZ%20Dashboard/apostilas_conteudo.json). Isso recuperou o conteúdo completo de 10 a 11 páginas de cada uma das 15 apostilas originais que haviam sido sobrescritas por um modelo simplificado de 3 páginas.
+- ✍️ **Enriquecimento de Língua Portuguesa**: Adicionados os conceitos de **Denotação**, **Conotação** e uma nova seção dedicada a **Figuras de Sintaxe** (com conceitos como Elipse, Zeugma, Hipérbato, Silepse, entre outros) na apostila de Língua Portuguesa, resultando em uma versão estendida de 11 páginas.
+- ⚙️ **Automação**: Criados os scripts auxiliares [extract_all_to_json.py](file:///G:/Meu%20Drive/APP/_Scripts/extract_all_to_json.py) e [update_portuguese_and_generate.py](file:///G:/Meu%20Drive/APP/_Scripts/update_portuguese_and_generate.py) para automatizar a manutenção e o processo de regeneração segura.
+- 🐛 **Correção de Busca**: Ajustado o script [update_portuguese_and_generate.py](file:///G:/Meu%20Drive/APP/_Scripts/update_portuguese_and_generate.py) para suportar busca de arquivos com acentuação, corrigindo a divergência de `'Apostila_Língua_Portuguesa.pdf'` vs `'Apostila_Lingua_Portuguesa.pdf'` e garantindo a perfeita compilação em lote das 15 apostilas.
+
 ### 📅 30/06/2026 - Estruturação de SEO & Monetização
 - 🌐 **Otimização de SEO (White Hat)**: Inclusão de meta tags de indexação, dados estruturados JSON-LD e tags Open Graph (OG) para melhorar a relevância e indexação orgânica no Google.
 - 💵 **Estrutura de Monetização**: Adicionados slots de publicidade responsivos (banner horizontal e lateral) compatíveis com o modo de alto contraste para Google AdSense e AdMob.
