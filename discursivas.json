@@ -111,5 +111,19 @@
             "item2": "Classificar a conduta como Evasão Fiscal/Simulação. Explicar que a criação de filial fictícia sem estrutura física (sem substância econômica) caracteriza negócio simulado. O Fisco pode desconsiderar o negócio formal com base no parágrafo único do art. 116 do CTN, tributando a operação real no estado de origem. (Valor: 50%)"
         },
         "sample_answer": "1) A elisão fiscal é o planejamento tributário lícito, realizado preventivamente (antes da ocorrência do fato gerador), no qual o contribuinte se vale de lacunas ou opções legais para reduzir sua carga fiscal. A evasão fiscal, por outro lado, é uma conduta ilícita, adotada no momento ou após o fato gerador, com o intuito de ocultá-lo da autoridade tributária através de fraude, simulação, omissão ou sonegação.\n\n2) No caso da Distribuidora Norte S/A, a conduta caracteriza-se como Evasão Fiscal (simulação de ato jurídico). A abertura de filial fictícia sem substância econômica (sem depósito físico, funcionários ou logística local) com o único escopo de obter vantagem tributária constitui um negócio simulado nulo. Amparado pelo parágrafo único do artigo 116 do CTN e no princípio da primazia da realidade sobre a forma, o Fisco da Bahia pode desconsiderar essa filial formal e reclassificar as operações como saídas internas diretas da matriz baiana, efetuando o lançamento de ICMS devido com alíquota cheia, juros e multas por infração."
+    },
+    {
+        "id": "d_rfb_2023_1",
+        "category": "general",
+        "subject": "Direito Tributário",
+        "banca": "FGV",
+        "title": "Suspensão do Crédito Tributário e Mandado de Segurança (Receita Federal 2023)",
+        "context": "Um contribuinte impetrou Mandado de Segurança com pedido de liminar para suspender a exigibilidade de crédito tributário de IRPJ lançado pela Receita Federal, alegando inconstitucionalidade da cobrança. O juiz deferiu a liminar. Posteriormente, a sentença denegou a segurança, revogando a liminar. O contribuinte apelou da sentença e questiona se a apelação mantém a suspensão da exigibilidade.",
+        "question": "Com base no Código Tributário Nacional (CTN) e na Lei do Mandado de Segurança (Lei nº 12.016/2009), responda:\n\n1) Quais são as hipóteses de suspensão da exigibilidade do crédito tributário aplicáveis ao caso, citando os dispositivos do CTN.\n2) Explique os efeitos do recurso de apelação interposto contra a sentença que denega a segurança sobre a exigibilidade do crédito tributário.",
+        "criteria": {
+            "item1": "Hipóteses do CTN: Mencionar o art. 151 do CTN. Apontar que a concessão de medida liminar em mandado de segurança suspende a exigibilidade do crédito tributário (Art. 151, IV, CTN). (Valor: 50% da nota)",
+            "item2": "Efeitos da Apelação: Esclarecer que o recurso de apelação contra sentença que denega a segurança é recebido apenas no efeito devolutivo, conforme art. 14, § 3º, da Lei nº 12.016/2009 e Súmula 405 do STF. Logo, a revogação da liminar produz efeitos imediatos, restabelecendo a exigibilidade do crédito tributário. (Valor: 50% da nota)"
+        },
+        "sample_answer": "1) As hipóteses de suspensão da exigibilidade do crédito tributário constam no art. 151 do CTN. No caso concreto, aplica-se o inciso IV do art. 151, que estabelece que a concessão de medida liminar em mandado de segurança suspende a exigibilidade do imposto cobrado.\n\n2) De acordo com o entendimento pacificado e a Lei nº 12.016/2009, a apelação contra sentença denegatória de mandado de segurança é recebida apenas no efeito devolutivo. A sentença de improcedência revoga a liminar concedida. Consequentemente, o Fisco pode cobrar imediatamente o crédito tributário e iniciar os procedimentos de execução, não subsistindo qualquer efeito suspensivo automático decorrente do recurso."
     }
 ]

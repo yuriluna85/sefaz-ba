@@ -107,6 +107,9 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
         <button class="nav-item" data-tab="glossario">
           <i class="fa-solid fa-book-bookmark"></i> Glossário de Siglas
         </button>
+        <button class="nav-item" data-tab="remuneracoes">
+          <i class="fa-solid fa-money-bill-wave"></i> Tabela Remunerações
+        </button>
       </nav>
 
       <div class="profile-card">
@@ -249,12 +252,22 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
 
         <!-- TRILHAS DE ESTUDO TAB -->
         <section id="trilhas" class="tab-content">
+          <!-- Certame Selector Bar -->
+          <div class="certame-selector-bar">
+            <span class="certame-selector-label"><i class="fa-solid fa-filter"></i> Selecionar Concurso:</span>
+            <div class="certame-btn-group">
+              <button class="certame-btn active" id="btn-certame-sefaz" onclick="switchCertame('sefaz')">SEFAZ-BA</button>
+              <button class="certame-btn" id="btn-certame-rfb" onclick="switchCertame('rfb')">Receita Federal</button>
+              <button class="certame-btn" id="btn-certame-bacen" onclick="switchCertame('bacen')">Banco Central</button>
+            </div>
+          </div>
+
           <div class="trilha-header-selector">
             <button class="trilha-selector-btn active" id="btn-trilha-ti" onclick="switchTrilha('ti')">
-              <i class="fa-solid fa-laptop-code"></i> Trilha Auditor Fiscal (Tecnologia da Informação)
+              <i class="fa-solid fa-laptop-code"></i> <span id="label-trilha-ti">Trilha Auditor Fiscal (Tecnologia da Informação)</span>
             </button>
             <button class="trilha-selector-btn" id="btn-trilha-brother" onclick="switchTrilha('brother')">
-              <i class="fa-solid fa-scale-balanced"></i> Trilha Agente de Tributos (Qualquer Formação)
+              <i class="fa-solid fa-scale-balanced"></i> <span id="label-trilha-brother">Trilha Agente de Tributos (Qualquer Formação)</span>
             </button>
           </div>
 
@@ -262,8 +275,8 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
           <div id="trilha-ti-content" class="trilha-details active">
             <div class="trilha-summary-bar">
               <div class="trilha-info-text">
-                <h3>Trilha de Estudos: Auditor Fiscal - TI</h3>
-                <p>Contempla as disciplinas de conhecimentos gerais (peso fiscal) e as específicas de TI.</p>
+                <h3 id="heading-trilha-ti">Trilha de Estudos: Auditor Fiscal - TI</h3>
+                <p id="desc-trilha-ti">Contempla as disciplinas de conhecimentos gerais (peso fiscal) e as específicas de TI.</p>
               </div>
               <div class="trilha-pct-circle">
                 <span id="ti-trilha-pct">0%</span> Concluído
@@ -279,8 +292,8 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
           <div id="trilha-brother-content" class="trilha-details">
             <div class="trilha-summary-bar">
               <div class="trilha-info-text">
-                <h3>Trilha de Estudos: Agente de Tributos Estaduais</h3>
-                <p>Focada em qualquer formação acadêmica, com forte peso em Legislação Tributária da Bahia (LTE) e Auditoria.</p>
+                <h3 id="heading-trilha-brother">Trilha de Estudos: Agente de Tributos Estaduais</h3>
+                <p id="desc-trilha-brother">Focada em qualquer formação acadêmica, com forte peso em Legislação Tributária da Bahia (LTE) e Auditoria.</p>
               </div>
               <div class="trilha-pct-circle color-purple">
                 <span id="brother-trilha-pct">0%</span> Concluído
@@ -552,6 +565,126 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
               <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #6366f1; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">RICMS-BA</span> Regulamento do ICMS do Estado da Bahia</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Decreto estadual que disciplina a incidência, isenções, substituição tributária e obrigações acessórias relativas ao ICMS baiano.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- REMUNERACOES TAB -->
+        <section id="remuneracoes" class="tab-content">
+          <div class="card">
+            <h3><i class="fa-solid fa-money-bill-wave"></i> Comparativo Completo de Remunerações e Benefícios (Tabelas de 2026)</h3>
+            <p class="section-desc">Comparação detalhada da estrutura remuneratória inicial e final dos três certames (SEFAZ-BA, Receita Federal e Banco Central).</p>
+            
+            <h4 style="color:#fff; margin-top:24px; margin-bottom:12px; font-family:var(--font-display);"><i class="fa-solid fa-user-tie text-cyan"></i> 1. Cargos de Nível Superior (Auditor)</h4>
+            <div class="table-responsive">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th>Instituição</th>
+                    <th>Cargo</th>
+                    <th>Ref. / Legislação</th>
+                    <th>Vencimento Básico</th>
+                    <th>Gratificações / Prêmios</th>
+                    <th>Benefícios Principais</th>
+                    <th>Total Inicial Bruto</th>
+                    <th>Teto da Carreira</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>SEFAZ-BA</strong></td>
+                    <td>Auditor Fiscal</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px;">Ref. 2026</span></td>
+                    <td>R$ 2.791,29</td>
+                    <td>GF (R$ 12.839,93) + PDF (R$ 7.502,99) + CET (R$ 5.470,93)</td>
+                    <td>Planserv (Plano de Saúde) + Auxílio-Alimentação</td>
+                    <td><strong class="text-cyan">R$ 33.820,39</strong></td>
+                    <td>R$ 40.000,00+</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Receita Federal</strong></td>
+                    <td>Auditor-Fiscal</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px; color:var(--accent-cyan); border-color:rgba(6, 182, 212, 0.3);">Lei 15.367/2026</span></td>
+                    <td>R$ 22.921,71</td>
+                    <td>Bônus de Eficiência (Até R$ 11.500,00)</td>
+                    <td>Auxílio-Alimentação (R$ 1.192,00) + Auxílio-Saúde</td>
+                    <td><strong class="text-cyan">R$ 35.613,71</strong></td>
+                    <td>R$ 44.004,91</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Banco Central (BACEN)</strong></td>
+                    <td>Auditor</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px; color:var(--accent-purple); border-color:rgba(139, 92, 246, 0.3);">Ref. 2026</span></td>
+                    <td>R$ 20.000,00 (Subsídio)</td>
+                    <td>Sem gratificações (Subsídio em parcela única)</td>
+                    <td>Auxílio-Alimentação (R$ 1.192,00) + Auxílio-Saúde</td>
+                    <td><strong class="text-cyan">R$ 21.192,00</strong></td>
+                    <td>R$ 37.886,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="color:#fff; margin-top:32px; margin-bottom:12px; font-family:var(--font-display);"><i class="fa-solid fa-user-gear text-purple"></i> 2. Cargos de Apoio / Técnicos / Agentes</h4>
+            <div class="table-responsive">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th>Instituição</th>
+                    <th>Cargo</th>
+                    <th>Ref. / Legislação</th>
+                    <th>Vencimento Básico</th>
+                    <th>Gratificações / Prêmios</th>
+                    <th>Benefícios Principais</th>
+                    <th>Total Inicial Bruto</th>
+                    <th>Teto da Carreira</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>SEFAZ-BA</strong></td>
+                    <td>Agente de Tributos Estaduais</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px;">Ref. 2026</span></td>
+                    <td>R$ 2.009,75</td>
+                    <td>GF (R$ 9.244,85) + PDF (R$ 5.402,21) + CET (R$ 3.939,11)</td>
+                    <td>Planserv (Plano de Saúde) + Auxílio-Alimentação</td>
+                    <td><strong class="text-purple">R$ 24.102,21</strong></td>
+                    <td>R$ 30.000,00+</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Receita Federal</strong></td>
+                    <td>Analista-Tributário</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px; color:var(--accent-cyan); border-color:rgba(6, 182, 212, 0.3);">Lei 15.367/2026</span></td>
+                    <td>R$ 12.735,99</td>
+                    <td>Bônus de Eficiência (Até R$ 6.900,00)</td>
+                    <td>Auxílio-Alimentação (R$ 1.192,00) + Auxílio-Saúde</td>
+                    <td><strong class="text-purple">R$ 20.827,99</strong></td>
+                    <td>R$ 26.276,60</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Banco Central (BACEN)</strong></td>
+                    <td>Técnico</td>
+                    <td><span class="quiz-badge badge-source" style="font-size:10px; color:var(--accent-purple); border-color:rgba(139, 92, 246, 0.3);">Ref. 2026</span></td>
+                    <td>R$ 8.300,00 (Subsídio)</td>
+                    <td>Sem gratificações (Subsídio em parcela única)</td>
+                    <td>Auxílio-Alimentação (R$ 1.192,00) + Auxílio-Saúde</td>
+                    <td><strong class="text-purple">R$ 9.492,00</strong></td>
+                    <td>R$ 18.106,70</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card alert-card-info" style="margin-top:28px;">
+              <div class="alert-icon-box">
+                <i class="fa-solid fa-circle-info"></i>
+              </div>
+              <div class="alert-text-box">
+                <h4>Nota Explicativa sobre a Remuneração e Regimes Salariais</h4>
+                <p style="font-size:13px; line-height:1.5; color:var(--text-muted);">
+                  <strong>Subvenções e Gratificações:</strong> Os cargos da Receita Federal e da SEFAZ-BA possuem remuneração composta (Vencimento Básico + Gratificações Variáveis de Desempenho/Eficiência), fazendo com que a remuneração final dependa de metas institucionais e produtividade individual. Já o Banco Central do Brasil adota o regime de <strong>Subsídio</strong>, no qual o servidor recebe uma parcela única fixa mensal, vedado o acréscimo de qualquer gratificação, adicional ou prêmio (conforme Art. 39, § 4º da CF/88), mantendo-se apenas os auxílios indenizatórios.
+                </p>
               </div>
             </div>
           </div>

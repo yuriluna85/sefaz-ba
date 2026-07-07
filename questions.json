@@ -2987,5 +2987,97 @@
             "D": "A função reguladora não faz parte da divisão clássica trifuncional do orçamento público proposta por Richard Musgrave (Alocativa, Distributiva, Estabilizadora).",
             "E": "Função planejadora refere-se genericamente ao planejamento orçamentário geral, não sendo uma das três funções fiscais clássicas."
         }
+    },
+    {
+        "id": "q_rfb_2023_1",
+        "category": "general",
+        "subject": "Legislação Aduaneira",
+        "source": "FGV - Receita Federal (2023)",
+        "question": "Com base no Regulamento Aduaneiro brasileiro (Decreto nº 6.759/2009), o regime aduaneiro especial que permite a entrada no país de certas mercadorias, com suspensão do pagamento de tributos, para serem submetidas a processo de industrialização e posterior exportação é denominado:",
+        "options": {
+            "A": "Trânsito Aduaneiro",
+            "B": "Admissão Temporária",
+            "C": "Drawback",
+            "D": "Entreposto Aduaneiro",
+            "E": "Depósito Afiançado"
+        },
+        "correct": "C",
+        "explanation": "O Drawback é um regime aduaneiro especial (Art. 383 do Regulamento Aduaneiro) que consiste na suspensão, isenção ou restituição de tributos incidentes sobre insumos importados para serem utilizados em produto exportado.",
+        "option_explanations": {
+            "A": "O Trânsito Aduaneiro permite apenas o transporte de mercadoria sob controle aduaneiro de um ponto a outro do território aduaneiro, sem sofrer processo de industrialização.",
+            "B": "A Admissão Temporária permite a entrada de bens com suspensão de tributos para permanecerem no país por prazo fixado e com finalidade específica (ex: feiras, testes), devendo ser reexportados no mesmo estado.",
+            "C": "O Drawback incentiva a exportação suspendendo ou isentando os impostos de insumos estrangeiros que passam por beneficiamento, montagem ou transformação no Brasil antes de serem exportados.",
+            "D": "O Entreposto Aduaneiro permite a armazenagem de mercadoria importada ou a exportar, em recinto alfandegado, com suspensão do pagamento dos impostos incidentes na importação, sem transformação industrial obrigatória.",
+            "E": "O Depósito Afiançado destina-se estritamente à estocagem de provisões, peças de reposição e materiais de manutenção para embarcações ou aeronaves de transporte comercial internacional."
+        }
+    },
+    {
+        "id": "q_rfb_2023_2",
+        "category": "ti",
+        "subject": "Fluência em Dados",
+        "source": "FGV - Receita Federal (2023)",
+        "question": "Em sistemas de gerência de bancos de dados relacionais e analíticos, o conceito de 'Data Lake' distingue-se de um 'Data Warehouse' tradicional principalmente porque no Data Lake os dados são armazenados:",
+        "options": {
+            "A": "Apenas em formato XML e JSON compactados.",
+            "B": "Em seu formato bruto (Raw Data), sem necessidade de modelagem estrutural prévia (Schema-on-Read), enquanto o Data Warehouse exige dados estruturados e modelados (Schema-on-Write).",
+            "C": "Temporariamente em memória RAM de servidores virtuais (In-Memory Processing).",
+            "D": "Estritamente em formato criptografado usando algoritmos de chaves públicas.",
+            "E": "Apenas após a passagem por processos de limpeza e padronização (Data Cleaning)."
+        },
+        "correct": "B",
+        "explanation": "A diferença fundamental reside na abordagem de armazenamento. O Data Lake armazena dados em seu estado nativo e bruto (estruturados, semiestruturados ou não estruturados) utilizando a abordagem Schema-on-Read. O Data Warehouse armazena dados altamente estruturados e transformados com base em um esquema pré-definido (Schema-on-Write).",
+        "option_explanations": {
+            "A": "O Data Lake suporta qualquer tipo de arquivo (CSV, PDFs, binários, imagens), não se limitando a formatos semiestruturados como XML e JSON.",
+            "B": "No Data Lake adota-se a política 'Schema-on-Read', onde a estrutura é definida apenas no momento de ler os dados para processamento. No Data Warehouse, a estrutura deve estar pronta no armazenamento (Schema-on-Write).",
+            "C": "Tanto o Data Lake quanto o Data Warehouse podem utilizar processamento em memória, mas essa característica física de hardware não define a diferença conceitual entre eles.",
+            "D": "A segurança e criptografia são aplicáveis a ambos os ecossistemas, não servindo como distinção arquitetônica primária.",
+            "E": "A limpeza rigorosa de dados é característica obrigatória de entrada do Data Warehouse (processo de ETL). O Data Lake aceita dados sem limpeza ou tratamento prévio."
+        }
+    },
+    {
+        "id": "q_bacen_2024_1",
+        "category": "general",
+        "subject": "Macroeconomia",
+        "source": "Cebraspe - Banco Central do Brasil (2024)",
+        "question": "No modelo IS-LM clássico de economia aberta (Mundell-Fleming), sob o regime de taxas de câmbio flutuantes e mobilidade perfeita de capitais, a aplicação de uma política fiscal expansionista resulta em:",
+        "options": {
+            "A": "Aumento substancial do Produto Interno Bruto (PIB) real e elevação da taxa de juros doméstica acima do nível internacional.",
+            "B": "Nenhuma variação do Produto Interno Bruto (PIB) real, visto que a taxa de câmbio se valoriza e reduz as exportações líquidas (crowding-out cambial total).",
+            "C": "Aumento das exportações líquidas devido à desvalorização cambial provocada pelo ingresso de capital estrangeiro.",
+            "D": "Deslocamento permanente da curva LM para a direita devido ao aumento do meio circulante físico.",
+            "E": "Redução da taxa de juros de equilíbrio doméstico e depreciação das divisas nacionais."
+        },
+        "correct": "B",
+        "explanation": "No modelo Mundell-Fleming com câmbio flutuante e livre mobilidade de capitais, a política fiscal expansionista desloca a curva IS para a direita, elevando a taxa de juros. Isso atrai capitais, valoriza o câmbio nominal e reduz as exportações líquidas, retornando a curva IS para a posição original. Assim, a política fiscal é totalmente ineficaz para alterar o produto (crowding-out cambial total).",
+        "option_explanations": {
+            "A": "O produto real não se altera e a taxa de juros doméstica retorna ao patamar internacional por conta do fluxo de capitais e do ajuste cambial.",
+            "B": "A valorização do câmbio desestimula as exportações e estimula as importações, compensando integralmente o aumento dos gastos governamentais ou corte de tributos.",
+            "C": "O ingresso de capitais causa valorização (apreciação) da taxa de câmbio, o que prejudica a balança comercial e reduz as exportações líquidas.",
+            "D": "A curva LM se desloca apenas por mudanças na oferta real de moeda, as quais dependem da política monetária, não da política fiscal.",
+            "E": "A taxa de juros de curto prazo tenta subir antes do fluxo de captação e o câmbio aprecia-se, não havendo depreciação monetária."
+        }
+    },
+    {
+        "id": "q_bacen_2024_2",
+        "category": "ti",
+        "subject": "Engenharia de Software",
+        "source": "Cebraspe - Banco Central do Brasil (2024)",
+        "question": "No contexto do desenvolvimento de aplicações web baseadas em microsserviços, o padrão de design denominado 'API Gateway' atua como ponto único de entrada para todas as requisições de clientes. Assinale a opção que descreve corretamente uma das atribuições do API Gateway:",
+        "options": {
+            "A": "Persistir o estado da sessão de usuário em bancos de dados NoSQL de forma descentralizada.",
+            "B": "Roteamento de requisições, balanceamento de carga, terminação SSL, autenticação/autorização e limitação de taxa (Rate Limiting).",
+            "C": "Compilar o código-fonte de novos microsserviços no pipeline de CI/CD em tempo real.",
+            "D": "Armazenar arquivos de logs de depuração de microsserviços fora do servidor web.",
+            "E": "Gerenciar as réplicas físicas de instâncias de bancos de dados relacionais."
+        },
+        "correct": "B",
+        "explanation": "O API Gateway funciona como um proxy reverso que intercepta todas as requisições dos clientes e as redireciona para os microsserviços adequados. Ele centraliza responsabilidades transversais (cross-cutting concerns) como roteamento, balanceamento de carga, segurança (autenticação/SSL), controle de tráfego e cache.",
+        "option_explanations": {
+            "A": "A persistência de estados é de responsabilidade de serviços específicos de sessão ou dos próprios microsserviços, não do gateway, que opera preferencialmente sem estado (stateless).",
+            "B": "Centralizar estas tarefas de infraestrutura alivia os microsserviços internos de implementar essas lógicas repetidamente.",
+            "C": "A compilação e deploy pertencem ao servidor de CI/CD (ex: Jenkins, GitHub Actions), operando em tempo de build, não em tempo de execução de requisições de rede.",
+            "D": "O armazenamento de logs consolidados é feito por ferramentas dedicadas (como ELK Stack ou Splunk), coletando logs que os microsserviços geram de forma assíncrona.",
+            "E": "A replicação e sincronia de bancos relacionais é gerida pelo próprio SGBD ou por ferramentas de orquestração de banco, não pelo API Gateway."
+        }
     }
 ]
