@@ -52,7 +52,7 @@ def list_sefaz_files():
     if os.path.exists(SEFAZ_FILES_DIR):
         try:
             for filename in os.listdir(SEFAZ_FILES_DIR):
-                if filename.startswith("Apostila_") and filename.endswith(".pdf"):
+                if filename.endswith(".pdf"):
                     filepath = os.path.join(SEFAZ_FILES_DIR, filename)
                     if os.path.isfile(filepath):
                         size_mb = os.path.getsize(filepath) / (1024 * 1024)

@@ -96,9 +96,11 @@ Para ativar o GitHub Pages no seu repositório:
 
 ### 📅 06/07/2026 - Integração de Certames e Comparativo de Remunerações
 - 💵 **Tabela Comparativa de Remunerações**: Criada aba com dados salariais de Auditor e cargos de apoio dos três órgãos (SEFAZ-BA, Receita Federal, BACEN).
-- 🎯 **Seleção Dinâmica de Concurso**: Implementada barra de filtragem na aba de Trilhas. O usuário alterna dinamicamente entre ementas da SEFAZ-BA, Receita Federal e Banco Central.
+- 🎯 **Seleção Dinâmica Global**: Movido o seletor de certame para a topbar. O card principal, vagas, salários, status e cronômetro agora atualizam-se dinamicamente.
 - ⚙️ **Preservação de Progresso**: Reestruturado o controle de checkboxes usando IDs prefixados por certame. A lógica calcula percentuais de forma isolada.
 - 📝 **Banco de Questões**: Adicionadas questões reais e discursivas da Receita Federal (2023) e Banco Central (2024) ao simulador.
+- 📂 **Listagem de Materiais**: Ajustado o filtro da API em `app.py` para listar qualquer arquivo `.pdf` da pasta de estudos no painel.
+- 📰 **Automação de Notícias**: Criado script de coleta de notícias via RSS e workflow do GitHub Actions para atualização periódica no painel sem duplicados.
 
 ### 📅 05/07/2026 - Correção Ortográfica, Regeração das Apostilas e Favicon
 - ✍️ **Revisão Sistemática - Lote 5 (Apostilas 13 a 15)**: Concluída a revisão e correção ortográfica/acentuação das apostilas de `Língua Portuguesa`, `Finanças Públicas` e `Contabilidade Geral` em [apostilas_conteudo.json](file:///G:/Meu%20Drive/APP/2.%20Projetos%20e%20Aplica%C3%A7%C3%B5es/2.2%20Aplica%C3%A7%C3%B5es%20e%20C%C3%B3digos%20(GitHub)/YLuna85%20LABs%20APPs/Concurso%20SEFAZ%20Dashboard/apostilas_conteudo.json), saneando mais de 300 erros e desvios de escrita (ex: `relação`, `indivíduo`, `exercício`, `prévia`, `ação`, `repartição`, `áreas`, `mudanças`, `esforços`, `caráter`, `autônomos`, `Balanço`, `depreciação`, `Provisões`, `Contingências`, `Superávit`, `Mnemônico`, `líquido`, `crédito`, `décimo`, `exclusão`, `integralização`, `captação`, `absorção`, `demonstrações` e substituições semânticas/gramaticais de `é` vs `e`).

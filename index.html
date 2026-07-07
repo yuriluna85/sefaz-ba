@@ -140,10 +140,19 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
         <div class="page-title-area">
           <h1 id="page-title">Painel Geral</h1>
         </div>
+        <!-- Certame Selector Bar (Global) -->
+        <div class="certame-selector-bar" style="margin-bottom: 0; padding: 6px 12px; border-radius: 8px; border: none; background: transparent; gap: 8px; flex-wrap: nowrap;">
+          <span class="certame-selector-label" style="font-size: 12px;"><i class="fa-solid fa-filter"></i> Concurso:</span>
+          <div class="certame-btn-group">
+            <button class="certame-btn active" id="btn-certame-sefaz" onclick="switchCertame('sefaz')" style="padding: 5px 12px; font-size: 12px;">SEFAZ-BA</button>
+            <button class="certame-btn" id="btn-certame-rfb" onclick="switchCertame('rfb')" style="padding: 5px 12px; font-size: 12px;">Receita Federal</button>
+            <button class="certame-btn" id="btn-certame-bacen" onclick="switchCertame('bacen')" style="padding: 5px 12px; font-size: 12px;">Banco Central</button>
+          </div>
+        </div>
         <div class="topbar-actions">
           <div class="status-pill">
             <span class="pulse-dot"></span>
-            <span class="status-text">Comissão Formada (Provas em datas distintas)</span>
+            <span class="status-text" id="status-pill-text">Comissão Formada (Provas em datas distintas)</span>
           </div>
         </div>
       </header>
@@ -159,32 +168,32 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
           <!-- HERO CARD -->
           <div class="hero-card">
             <div class="hero-info">
-              <h2>Rumo à SEFAZ-BA 2026</h2>
-              <p>Uma oportunidade histórica com <strong>200 vagas</strong> autorizadas no orçamento! Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).</p>
+              <h2 id="hero-title">Rumo à SEFAZ-BA 2026</h2>
+              <p id="hero-desc">Uma oportunidade histórica com <strong>200 vagas</strong> autorizadas no orçamento! Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).</p>
               <div class="hero-stats">
                 <div class="h-stat">
-                  <span class="h-val">100</span>
-                  <span class="h-lbl">Vagas Auditor (TI/Outros)</span>
+                  <span class="h-val" id="hero-stat-ti">100</span>
+                  <span class="h-lbl" id="hero-label-ti">Vagas Auditor (TI/Outros)</span>
                 </div>
                 <div class="h-stat">
-                  <span class="h-val">100</span>
-                  <span class="h-lbl">Vagas Agente (Qualquer Nível)</span>
+                  <span class="h-val" id="hero-stat-brother">100</span>
+                  <span class="h-lbl" id="hero-label-brother">Vagas Agente (Qualquer Nível)</span>
                 </div>
                 <div class="h-stat">
-                  <span class="h-val">R$ 23k+</span>
-                  <span class="h-lbl">Salário Auditores</span>
+                  <span class="h-val" id="hero-stat-salary">R$ 33,8k</span>
+                  <span class="h-lbl" id="hero-label-salary">Inicial Auditor</span>
                 </div>
               </div>
             </div>
             <div class="hero-countdown">
-              <div class="countdown-title">Estimativa do Edital</div>
+              <div class="countdown-title" id="countdown-title-el">Estimativa do Edital</div>
               <div class="countdown-timer">
                 <div class="time-block">
                   <span class="time-val" id="days-val">--</span>
                   <span class="time-lbl">Dias</span>
                 </div>
               </div>
-              <p class="countdown-desc">Baseado na previsão de provas no final de 2026.</p>
+              <p class="countdown-desc" id="countdown-desc-el">Baseado na previsão de provas no final de 2026.</p>
             </div>
           </div>
 
@@ -220,7 +229,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
             <!-- RECENT NEWS -->
             <div class="card news-card">
               <h3>Novidades do Concurso</h3>
-              <div class="timeline">
+              <div class="timeline" id="news-timeline-container">
                 <div class="timeline-item">
                   <div class="tl-badge active"><i class="fa-solid fa-check"></i></div>
                   <div class="tl-content">
@@ -252,16 +261,6 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
 
         <!-- TRILHAS DE ESTUDO TAB -->
         <section id="trilhas" class="tab-content">
-          <!-- Certame Selector Bar -->
-          <div class="certame-selector-bar">
-            <span class="certame-selector-label"><i class="fa-solid fa-filter"></i> Selecionar Concurso:</span>
-            <div class="certame-btn-group">
-              <button class="certame-btn active" id="btn-certame-sefaz" onclick="switchCertame('sefaz')">SEFAZ-BA</button>
-              <button class="certame-btn" id="btn-certame-rfb" onclick="switchCertame('rfb')">Receita Federal</button>
-              <button class="certame-btn" id="btn-certame-bacen" onclick="switchCertame('bacen')">Banco Central</button>
-            </div>
-          </div>
-
           <div class="trilha-header-selector">
             <button class="trilha-selector-btn active" id="btn-trilha-ti" onclick="switchTrilha('ti')">
               <i class="fa-solid fa-laptop-code"></i> <span id="label-trilha-ti">Trilha Auditor Fiscal (Tecnologia da Informação)</span>
