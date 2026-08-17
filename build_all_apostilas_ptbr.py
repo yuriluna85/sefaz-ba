@@ -239,7 +239,7 @@ def generate_all_booklets():
             pdf.add_section(sec["title"])
             pdf.add_paragraph(sec["content"])
             
-            for title, desc in sec["bullets"]:
+            for title, desc in sec.get("bullets", []):
                 pdf.add_bullet_point(title, desc)
                 
             if sec.get("tip"):
