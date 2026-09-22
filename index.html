@@ -197,6 +197,14 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
             </div>
           </div>
 
+          <!-- GAMIFICAÇÃO: NÍVEL, XP, SEQUÊNCIA E CONQUISTAS -->
+          <div class="card gamif-card">
+            <h3><i class="fa-solid fa-trophy"></i> Progresso Gamificado</h3>
+            <div id="gamificacao-widget">
+              <!-- Preenchido dinamicamente por gamificacao.js -->
+            </div>
+          </div>
+
           <!-- PROGRESS OVERVIEW -->
           <div class="grid-2-col">
             <div class="card progress-card">
@@ -345,6 +353,9 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
               <h3><i class="fa-solid fa-laptop-code"></i> Tecnologia da Informação</h3>
               <p>Conteúdo avançado sobre Governança de TI, Bancos de Dados e Engenharia de Software.</p>
               <div class="video-links">
+                <a href="https://www.youtube.com/watch?v=nLQRx6DDDeg" target="_blank" class="video-link-item" style="border-left: 3px solid #0d6efd; background: #f0f4fc;">
+                  <i class="fa-brands fa-youtube red-yt"></i> O que faz e como se tornar Auditor Fiscal de TI (Yuri do Carmo)
+                </a>
                 <a href="https://www.youtube.com/results?search_query=governanca+de+ti+concurso+cobit+itil" target="_blank" class="video-link-item">
                   <i class="fa-brands fa-youtube red-yt"></i> Governança de TI (COBIT e ITIL) para Fiscais
                 </a>
@@ -490,6 +501,9 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
                 </button>
                 <button class="trilha-selector-btn" id="btn-simulado-brother" onclick="startSimulado('general')">
                   <i class="fa-solid fa-scale-balanced"></i> Simulado Agente de Tributos
+                </button>
+                <button class="trilha-selector-btn gamif-review-tab-btn" id="btn-simulado-revisao" onclick="startRevisaoEspacada()">
+                  <i class="fa-solid fa-rotate"></i> Revisão Espaçada
                 </button>
               </div>
 
@@ -694,6 +708,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
   </div>
 
   <!-- Main JavaScript File -->
+  <script src="static/js/gamificacao.js"></script>
   <script src="static/js/main.js"></script>
 
 <!-- A11Y TOOLBAR & SCRIPT -->

@@ -159,6 +159,9 @@ const SYLLABUS_TI = [
     name: "Auditoria de TI",
     icon: "fa-magnifying-glass-chart",
     topics: [
+      "Carreira e Atribuições do Auditor Fiscal na Especialidade TI",
+      "Gestão e Fiscalização de Contratos de TI (Lei 14.133/2021)",
+      "Governança de Sistemas Críticos de Arrecadação e Benefícios Fiscais",
       "Técnicas de Auditoria Assistida por Computador (TAACs)",
       "Auditoria de Controles Gerais de TI e Segurança de Sistemas"
     ]
@@ -800,6 +803,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadLocalFiles();
   loadQuestions();
   loadNews();
+  if (typeof gamifOnAppOpen === "function") gamifOnAppOpen();
 });
 
 // Fetch and render Google News RSS items
@@ -1049,6 +1053,18 @@ function toggleTopicCheckbox(id) {
 function onCheckboxChange(e) {
   updatePercentages();
   saveProgress();
+
+  const chk = e.target;
+  if (chk && typeof gamifOnTopicToggle === "function") {
+    const materiaId = chk.dataset.subject || "geral";
+    gamifOnTopicToggle(chk.id, chk.checked, materiaId);
+    gamifProcessarEventosPendentes();
+
+    const pctEl = chk.classList.contains("ti-checkbox") ? document.getElementById("ti-trilha-pct") : document.getElementById("brother-trilha-pct");
+    if (pctEl && pctEl.textContent.trim() === "100%") {
+      if (typeof gamifOnTrilhaCompleta === "function") gamifOnTrilhaCompleta();
+    }
+  }
 }
 
 // Update study percentages on dashboard, sidebar, and subject counters
@@ -1356,21 +1372,27 @@ function loadLocalFiles() {
   `;
 
   const STATIC_FILES = [
-    { name: "Apostila_Auditoria_Fiscal.pdf", size: "22.8 KB", url: "Concurso SEFAZ/Apostila_Auditoria_Fiscal.pdf" },
-    { name: "Apostila_Banco_Dados_BI.pdf", size: "22.5 KB", url: "Concurso SEFAZ/Apostila_Banco_Dados_BI.pdf" },
-    { name: "Apostila_Ciencia_Dados_Big_Data.pdf", size: "22.3 KB", url: "Concurso SEFAZ/Apostila_Ciencia_Dados_Big_Data.pdf" },
-    { name: "Apostila_Contabilidade_Geral.pdf", size: "23.2 KB", url: "Concurso SEFAZ/Apostila_Contabilidade_Geral.pdf" },
-    { name: "Apostila_Direito_Administrativo.pdf", size: "23.2 KB", url: "Concurso SEFAZ/Apostila_Direito_Administrativo.pdf" },
-    { name: "Apostila_Direito_Constitucional.pdf", size: "25.3 KB", url: "Concurso SEFAZ/Apostila_Direito_Constitucional.pdf" },
-    { name: "Apostila_Direito_Tributário.pdf", size: "23.4 KB", url: "Concurso SEFAZ/Apostila_Direito_Tributário.pdf" },
-    { name: "Apostila_Engenharia_Software.pdf", size: "22.1 KB", url: "Concurso SEFAZ/Apostila_Engenharia_Software.pdf" },
-    { name: "Apostila_Estatistica_RLM.pdf", size: "22.8 KB", url: "Concurso SEFAZ/Apostila_Estatistica_RLM.pdf" },
-    { name: "Apostila_Finanças_Publicas.pdf", size: "23.1 KB", url: "Concurso SEFAZ/Apostila_Finanças_Publicas.pdf" },
-    { name: "Apostila_Gestão_Governança_TI.pdf", size: "21.9 KB", url: "Concurso SEFAZ/Apostila_Gestão_Governança_TI.pdf" },
-    { name: "Apostila_Igualdade_Racial_Gênero.pdf", size: "22.3 KB", url: "Concurso SEFAZ/Apostila_Igualdade_Racial_Gênero.pdf" },
-    { name: "Apostila_Legislação_Tributária_BA.pdf", size: "22.4 KB", url: "Concurso SEFAZ/Apostila_Legislação_Tributária_BA.pdf" },
-    { name: "Apostila_Língua_Portuguesa.pdf", size: "26.7 KB", url: "Concurso SEFAZ/Apostila_Língua_Portuguesa.pdf" },
-    { name: "Apostila_Segurança_Informação.pdf", size: "22.3 KB", url: "Concurso SEFAZ/Apostila_Segurança_Informação.pdf" }
+    { name: "Apostila_Auditoria_Fiscal.pdf", size: "46.6 KB", url: "Concurso SEFAZ/Apostila_Auditoria_Fiscal.pdf" },
+    { name: "Apostila_Auditoria_Fiscal_TI.pdf", size: "23.1 KB", url: "Concurso SEFAZ/Apostila_Auditoria_Fiscal_TI.pdf" },
+    { name: "Apostila_Banco_Dados_BI.pdf", size: "50.5 KB", url: "Concurso SEFAZ/Apostila_Banco_Dados_BI.pdf" },
+    { name: "Apostila_Ciencia_Dados_Big_Data.pdf", size: "51.8 KB", url: "Concurso SEFAZ/Apostila_Ciencia_Dados_Big_Data.pdf" },
+    { name: "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf", size: "39.1 KB", url: "Concurso SEFAZ/Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf" },
+    { name: "Apostila_Contabilidade_Geral.pdf", size: "30.1 KB", url: "Concurso SEFAZ/Apostila_Contabilidade_Geral.pdf" },
+    { name: "Apostila_Direito_Administrativo.pdf", size: "30.9 KB", url: "Concurso SEFAZ/Apostila_Direito_Administrativo.pdf" },
+    { name: "Apostila_Direito_Constitucional.pdf", size: "33.1 KB", url: "Concurso SEFAZ/Apostila_Direito_Constitucional.pdf" },
+    { name: "Apostila_Direito_Tributário.pdf", size: "32.3 KB", url: "Concurso SEFAZ/Apostila_Direito_Tributário.pdf" },
+    { name: "Apostila_Engenharia_Software.pdf", size: "56.3 KB", url: "Concurso SEFAZ/Apostila_Engenharia_Software.pdf" },
+    { name: "Apostila_Estatistica_RLM.pdf", size: "47.8 KB", url: "Concurso SEFAZ/Apostila_Estatistica_RLM.pdf" },
+    { name: "Apostila_Finanças_Publicas.pdf", size: "32.8 KB", url: "Concurso SEFAZ/Apostila_Finanças_Publicas.pdf" },
+    { name: "Apostila_Gestão_Governança_TI.pdf", size: "41.8 KB", url: "Concurso SEFAZ/Apostila_Gestão_Governança_TI.pdf" },
+    { name: "Apostila_Igualdade_Racial_Gênero.pdf", size: "25.9 KB", url: "Concurso SEFAZ/Apostila_Igualdade_Racial_Gênero.pdf" },
+    { name: "Apostila_Infraestrutura_Cloud_DevOps.pdf", size: "42.9 KB", url: "Concurso SEFAZ/Apostila_Infraestrutura_Cloud_DevOps.pdf" },
+    { name: "Apostila_Ingles_Tecnico_TI.pdf", size: "32.3 KB", url: "Concurso SEFAZ/Apostila_Ingles_Tecnico_TI.pdf" },
+    { name: "Apostila_Legislação_Tributária_BA.pdf", size: "29.3 KB", url: "Concurso SEFAZ/Apostila_Legislação_Tributária_BA.pdf" },
+    { name: "Apostila_Língua_Portuguesa.pdf", size: "30.3 KB", url: "Concurso SEFAZ/Apostila_Língua_Portuguesa.pdf" },
+    { name: "Apostila_Middleware_Mensageria_Observabilidade.pdf", size: "37.8 KB", url: "Concurso SEFAZ/Apostila_Middleware_Mensageria_Observabilidade.pdf" },
+    { name: "Apostila_Redes_Computadores_Telecom.pdf", size: "56.1 KB", url: "Concurso SEFAZ/Apostila_Redes_Computadores_Telecom.pdf" },
+    { name: "Apostila_Segurança_Informação.pdf", size: "44.1 KB", url: "Concurso SEFAZ/Apostila_Segurança_Informação.pdf" }
   ];
 
   const isStaticHost = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
@@ -1476,6 +1498,73 @@ let quizCategory = 'ti';
 let score = { correct: 0, total: 0 };
 let answerChecked = false;
 
+// Escapa HTML (enunciados trazem <main>, XML etc.) e preserva quebras de linha
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\n/g, "<br>");
+}
+
+// Questões disponíveis para o cargo: 'ti' = Auditor Fiscal (TI); qualquer outro valor = Agente de Tributos.
+// Itens marcados como indisponíveis (figura ausente, gabarito não verificado etc.) ficam de fora.
+function questionsForCargo(category) {
+  const cargo = category === 'ti' ? 'auditor_ti' : 'agente';
+  return allQuestions.filter(q => q.disponivel !== false && Array.isArray(q.cargos) && q.cargos.includes(cargo));
+}
+
+// Não embaralha questões cujo texto depende da posição das alternativas
+// ("todas as anteriores", "I e II", "alternativa B" na explicação etc.).
+const LETTER_REF = /(\b(alternativas?|op[cç][aã]o|op[cç][õo]es|letra|itens?)\s*\(?[A-E]\)?(?![a-zà-ú])|\([A-E]\)|\b(todas as (anteriores|alternativas)|nenhuma das (anteriores|alternativas)|as duas|ambas as alternativas|apenas [IV]+|somente [IV]+)\b|\b[IV]+ e [IV]+\b)/i;
+
+// Embaralha as alternativas A-E para que a posição do gabarito não seja previsível.
+// Remapeia gabarito e justificativas por alternativa. Certo/Errado nunca é embaralhado.
+function shuffleOptions(q) {
+  const keys = Object.keys(q.options);
+  if (keys.length < 3 || !keys.every(k => /^[A-H]$/.test(k))) return q;
+  const texts = keys.map(k => q.options[k]).join(' ');
+  const expl = [q.explanation || "", Object.values(q.option_explanations || {}).join(" ")].join(" ");
+  if (LETTER_REF.test(texts) || LETTER_REF.test(expl)) return q;
+  const order = keys.slice();
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  const letters = keys.slice().sort();
+  const options = {};
+  const optExp = q.option_explanations ? {} : undefined;
+  let correct = q.correct;
+  order.forEach((oldKey, i) => {
+    const newKey = letters[i];
+    options[newKey] = q.options[oldKey];
+    if (optExp) optExp[newKey] = q.option_explanations[oldKey];
+    if (oldKey === q.correct) correct = newKey;
+  });
+  const out = Object.assign({}, q, { options, correct });
+  if (optExp) out.option_explanations = optExp;
+  return out;
+}
+
+// Garante options como { "A": "texto", ... } mesmo se o JSON trouxer lista de strings
+// ou lista de { label, text } (formatos legados do banco de questões).
+function normalizeQuestions(data) {
+  if (!Array.isArray(data)) return [];
+  return data.filter(q => q && q.options).map(q => {
+    let opts = q.options;
+    if (Array.isArray(opts)) {
+      const letters = "ABCDEFGH";
+      const out = {};
+      opts.forEach((o, i) => {
+        if (o && typeof o === "object") out[o.label || letters[i]] = o.text;
+        else out[letters[i]] = o;
+      });
+      opts = out;
+    }
+    return Object.assign({}, q, { options: opts });
+  });
+}
+
 // Fetch questions from the Flask backend API
 function loadQuestions() {
   const isStaticHost = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
@@ -1488,7 +1577,7 @@ function loadQuestions() {
         return res.json();
       })
       .then(data => {
-        allQuestions = data;
+        allQuestions = normalizeQuestions(data);
       })
       .catch(err2 => console.error("Error loading static questions.json:", err2));
 
@@ -1517,7 +1606,7 @@ function loadQuestions() {
       return res.json();
     })
     .then(data => {
-      allQuestions = data;
+      allQuestions = normalizeQuestions(data);
     })
     .catch(err => {
       console.log("Using static fallback for questions.json");
@@ -1531,7 +1620,7 @@ function loadQuestions() {
           return res.json();
         })
         .then(data => {
-          allQuestions = data;
+          allQuestions = normalizeQuestions(data);
         })
         .catch(err2 => console.error("Error loading static questions.json:", err2));
     });
@@ -1592,11 +1681,7 @@ function startSimulado(category) {
   // Filter base questions:
   // - If category is 'ti', include both 'ti' (P2) and 'general' (P1) questions!
   // - If category is 'general', include only 'general' questions.
-  if (category === 'ti') {
-    activeQuizQuestions = allQuestions.filter(q => q.category === 'ti' || q.category === 'general');
-  } else {
-    activeQuizQuestions = allQuestions.filter(q => q.category === 'general');
-  }
+  activeQuizQuestions = questionsForCargo(category);
 
   // Render setup configuration screen
   renderQuizSetup();
@@ -1662,12 +1747,7 @@ function selectQuizOrder(order) {
 // Launch the quiz with current configurations
 function launchSimuladoWithConfig() {
   // Apply filtering again (just to be safe)
-  let baseQuestions = [];
-  if (quizCategory === 'ti') {
-    baseQuestions = allQuestions.filter(q => q.category === 'ti' || q.category === 'general');
-  } else {
-    baseQuestions = allQuestions.filter(q => q.category === 'general');
-  }
+  const baseQuestions = questionsForCargo(quizCategory).map(shuffleOptions);
 
   // Handle Order
   if (quizOrder === 'random') {
@@ -1696,6 +1776,35 @@ function launchSimuladoWithConfig() {
   renderQuestion();
 }
 
+
+// Inicia um simulado apenas com as questões vencidas na fila de revisão espaçada (gamificação)
+function startRevisaoEspacada() {
+  if (typeof gamifIdsParaRevisarHoje !== "function" || !Array.isArray(allQuestions)) return;
+
+  const idsHoje = gamifIdsParaRevisarHoje();
+  if (idsHoje.length === 0) {
+    if (typeof gamifMostrarToast === "function") gamifMostrarToast("Nenhuma questão pendente de revisão hoje.", "fa-circle-check");
+    return;
+  }
+
+  const questoesRevisao = allQuestions.filter(q => idsHoje.includes(q.id)).map(shuffleOptions);
+
+  document.querySelectorAll(".trilha-selector-btn[id^='btn-simulado-']").forEach(btn => btn.classList.remove("active"));
+  switchQuizType('mc');
+
+  quizCategory = 'revisao';
+  activeQuizQuestions = questoesRevisao;
+  currentQuestionIdx = 0;
+  selectedOption = null;
+  answerChecked = false;
+  score.correct = 0;
+  score.total = activeQuizQuestions.length;
+
+  const simuladosTab = document.querySelector('[data-tab="simulados"]');
+  if (simuladosTab) simuladosTab.click();
+
+  renderQuestion();
+}
 
 // Render the current question card
 function renderQuestion() {
@@ -1726,7 +1835,7 @@ function renderQuestion() {
            id="opt-${key}" 
            onclick="selectQuizOption('${key}')">
         <div class="option-letter">${key}</div>
-        <div class="option-text">${val}</div>
+        <div class="option-text">${escapeHtml(val)}</div>
       </div>
     `;
   }
@@ -1739,7 +1848,7 @@ function renderQuestion() {
     </div>
     
     <div class="quiz-question-text">
-      ${q.question}
+      ${escapeHtml(q.question)}
     </div>
     
     <div class="quiz-options-list">
@@ -1810,6 +1919,11 @@ function checkQuizAnswer() {
     score.correct++;
   }
 
+  if (typeof gamifOnQuizAnswer === "function") {
+    gamifOnQuizAnswer(q.id, q.subject, isCorrect);
+    gamifProcessarEventosPendentes();
+  }
+
   // Render explanation box
   const expBox = document.getElementById("explanation-box");
   const expTitle = document.getElementById("explanation-title");
@@ -1854,7 +1968,7 @@ function checkQuizAnswer() {
           <i class="fa-solid ${icon}" style="margin-top: 3px; font-size: 14px;"></i>
           <div>
             <strong style="color: #fff; margin-right: 4px;">Alternativa ${key}:</strong>
-            <span style="color: var(--text-muted);">${val}</span>
+            <span style="color: var(--text-muted);">${escapeHtml(val)}</span>
           </div>
         </div>
       `;
@@ -1863,7 +1977,7 @@ function checkQuizAnswer() {
     breakdownHtml += `
       </div>
       <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--text-muted); line-height: 1.5;">
-        <strong>Resumo da Questão:</strong> ${q.explanation}
+        <strong>Resumo da Questão:</strong> ${escapeHtml(q.explanation)}
       </div>
     `;
     

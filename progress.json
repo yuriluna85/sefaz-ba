@@ -1,7 +1,9 @@
 {
     "user_ti": {
         "name": "Auditor Fiscal (TI)",
-        "checked": []
+        "checked": [
+            "sefaz-ti-portugues-0"
+        ]
     },
     "user_brother": {
         "name": "Agente de Tributos",

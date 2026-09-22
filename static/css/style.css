@@ -172,8 +172,12 @@ a:hover {
 .nav-item.active {
   color: #fff;
   background: linear-gradient(90deg, rgba(6, 182, 212, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
-  border-left: 3px solid var(--accent-cyan);
-  box-shadow: var(--shadow-sm);
+  box-shadow: inset 0 0 0 1px rgba(var(--accent-cyan-rgb), 0.35), var(--shadow-sm);
+}
+
+.nav-item.active i {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px rgba(var(--accent-cyan-rgb), 0.6);
 }
 
 .profile-card {
@@ -1807,4 +1811,190 @@ a:hover {
   border-color: var(--accent-purple);
   background-color: rgba(139, 92, 246, 0.08);
   box-shadow: 0 0 12px rgba(139, 92, 246, 0.15);
+}
+
+/* ==========================================================================
+   GAMIFICAÇÃO: NÍVEL, XP, SEQUÊNCIA E CONQUISTAS
+   ========================================================================== */
+
+.gamif-card {
+  margin-bottom: 20px;
+}
+
+.gamif-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.gamif-level-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gamif-level-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.gamif-level-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.gamif-streak-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  color: #fb923c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+  display: inline-block;
+}
+
+.dot-orange { color: #fb923c; }
+.dot-cyan { color: var(--accent-cyan); }
+
+.gamif-xp-bar-container {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.gamif-xp-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  transition: width var(--transition-normal);
+}
+
+.gamif-xp-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gamif-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-fast);
+}
+
+.badge-chip.badge-earned {
+  color: var(--accent-cyan);
+  background: rgba(var(--accent-cyan-rgb), 0.08);
+  border-color: rgba(var(--accent-cyan-rgb), 0.25);
+}
+
+.badge-chip.badge-earned i {
+  text-shadow: 0 0 8px rgba(var(--accent-cyan-rgb), 0.6);
+}
+
+.badge-chip.badge-locked {
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.02);
+  opacity: 0.55;
+}
+
+.gamif-review-alert {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(var(--accent-cyan-rgb), 0.06);
+  border: 1px solid rgba(var(--accent-cyan-rgb), 0.2);
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.gamif-review-btn {
+  margin-left: auto;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.gamif-review-btn:hover {
+  opacity: 0.85;
+}
+
+.gamif-review-tab-btn {
+  position: relative;
+}
+
+/* Toast de conquista desbloqueada */
+.gamif-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--accent-cyan-rgb), 0.3);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-main);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.gamif-toast i {
+  color: var(--accent-cyan);
+}
+
+.gamif-toast-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

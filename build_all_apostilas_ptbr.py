@@ -6,6 +6,8 @@ from fpdf import FPDF
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONCURSO_DIR = os.path.join(BASE_DIR, 'Concurso SEFAZ')
 JSON_FILE = os.path.join(BASE_DIR, 'apostilas_conteudo.json')
+# Uso: python build_all_apostilas_ptbr.py [trecho_do_nome]  (gera só as apostilas cujo arquivo contém o trecho)
+FILTRO = sys.argv[1] if len(sys.argv) > 1 else None
 
 # Dicionário global de siglas para o glossário
 GLOSSARIO_SIGLAS = {
@@ -231,6 +233,8 @@ def generate_all_booklets():
     
     count = 0
     for b in booklets_data:
+        if FILTRO and FILTRO.lower() not in b['filename'].lower():
+            continue
         pdf = UniversalStudyBookletPDF(b["subject"])
         pdf.add_cover(b["title"], b["subtitle"])
         
@@ -257,5 +261,26 @@ def generate_all_booklets():
         
     print("\nTODAS AS APOSTILAS FORAM REVISADAS E REGERADAS EM PT-BR FLUIDO A PARTIR DO JSON!")
 
+def atualizar_lista_estatica():
+    """Regrava a lista de contingência (STATIC_FILES) do main.js com as apostilas existentes na pasta."""
+    import re
+    js_path = os.path.join(BASE_DIR, 'static', 'js', 'main.js')
+    if not os.path.exists(js_path) or not os.path.isdir(CONCURSO_DIR):
+        return
+    itens = []
+    for nome in sorted(os.listdir(CONCURSO_DIR)):
+        if nome.startswith('Apostila_') and nome.endswith('.pdf'):
+            kb = os.path.getsize(os.path.join(CONCURSO_DIR, nome)) / 1024
+            itens.append('    { name: "%s", size: "%.1f KB", url: "Concurso SEFAZ/%s" }' % (nome, kb, nome))
+    bloco = 'const STATIC_FILES = [\n' + ',\n'.join(itens) + '\n  ];'
+    with open(js_path, encoding='utf-8') as f:
+        js = f.read()
+    novo, n = re.subn(r'const STATIC_FILES = \[.*?\n\s*\];', lambda m: bloco, js, count=1, flags=re.S)
+    if n:
+        with open(js_path, 'w', encoding='utf-8', newline='') as f:
+            f.write(novo)
+        print('Lista estática do main.js atualizada: %d apostilas.' % len(itens))
+
 if __name__ == "__main__":
     generate_all_booklets()
+    atualizar_lista_estatica()

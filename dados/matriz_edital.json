@@ -1,0 +1,892 @@
+{
+ "gerado_em": "2026-09-21",
+ "referencias": {
+  "CE2026": "Edital 01/2026 SEFAZ-CE (FCC), Anexo VI, área B02 - Tecnologia da Informação",
+  "BA2022": "Edital 001/2022 SEFAZ-BA (FGV), Anexo I, Agente de Tributos Estaduais - Tecnologia da Informação"
+ },
+ "topicos": [
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "Governança de TI e alinhamento estratégico",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 4,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 3,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "PETIC e PDTIC",
+   "origem": "CE2026",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 22,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 22
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "Contratações de TIC (Lei 14.133: ETP, TR, SLA)",
+   "origem": "CE2026",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 16,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 9,
+    "Apostila_Direito_Administrativo.pdf": 1,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 2,
+    "Apostila_Ingles_Tecnico_TI.pdf": 2
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "Gestão financeira de TI (TCO, ROI, CAPEX, OPEX, FinOps)",
+   "origem": "CE2026",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 31,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 27,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 4
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "Gestão de riscos (ISO 31000)",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 7,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 7
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "COBIT 2019",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 21,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 19,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "ITIL 4",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 15,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 14,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "PMBOK 7",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 10,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 9,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "MPS.BR e CMMI 2.0",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Governança e Contratações de TIC",
+   "mencoes": 20,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 19,
+    "Apostila_Engenharia_Software.pdf": 1
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "BPMN, DMN e BPMS",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 17,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 17
+   }
+  },
+  {
+   "bloco": "Governança e contratações de TIC",
+   "topico": "Six Sigma, Lean e Value Stream Mapping",
+   "origem": "CE2026",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 27,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 25,
+    "Apostila_Engenharia_Software.pdf": 2
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "Pilares CID, autenticidade e não repúdio",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 13,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 13
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "Defesa em profundidade e Zero Trust",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 13,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 10,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 3
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "ISO/IEC 27001:2022 e 27002:2022",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 21,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 17,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 2
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "ISO/IEC 27005, 27035-1, 22301 e 27017",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 20,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 17,
+    "Apostila_Engenharia_Software.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 2
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "NIST SP 800-61 (resposta a incidentes)",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 33,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 2,
+    "Apostila_Segurança_Informação.pdf": 18,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 8,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 5
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "BIA, PCN, DRP, RPO e RTO",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 35,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Estatistica_RLM.pdf": 3,
+    "Apostila_Segurança_Informação.pdf": 20,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 7,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 4
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "IAM, RBAC, SSO, MFA, OAuth 2.0 e OIDC",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 49,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 2,
+    "Apostila_Segurança_Informação.pdf": 15,
+    "Apostila_Engenharia_Software.pdf": 4,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 21,
+    "Apostila_Ingles_Tecnico_TI.pdf": 4
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "PKI, X.509 e ICP-Brasil",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 16,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Auditoria_Fiscal.pdf": 1,
+    "Apostila_Segurança_Informação.pdf": 11,
+    "Apostila_Engenharia_Software.pdf": 2,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "Criptografia, HTTPS e TLS",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 46,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 3,
+    "Apostila_Segurança_Informação.pdf": 13,
+    "Apostila_Engenharia_Software.pdf": 2,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2,
+    "Apostila_Redes_Computadores_Telecom.pdf": 16,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 9,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "Firewall/NGFW, IDS/IPS, WAF, VPN, NAT",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 26,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 13,
+    "Apostila_Redes_Computadores_Telecom.pdf": 3,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 10
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "SIEM, SOC, EDR e logs",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 18,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 14,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 2
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "OWASP, DevSecOps e SDL",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 14,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 13,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "Gestão de vulnerabilidades e incidentes",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 11,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 6,
+    "Apostila_Igualdade_Racial_Gênero.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 1,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "LGPD (Lei 13.709/2018)",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 23,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 2,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 5,
+    "Apostila_Segurança_Informação.pdf": 13,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 3
+   }
+  },
+  {
+   "bloco": "Segurança da informação e cibernética",
+   "topico": "IA em segurança (ataques e defesa)",
+   "origem": "CE2026",
+   "apostila_alvo": "Segurança e Riscos",
+   "mencoes": 4,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Segurança_Informação.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Redes: arquitetura, endereçamento, SDN, Wi-Fi",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Redes (ampliar)",
+   "mencoes": 39,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Redes_Computadores_Telecom.pdf": 38,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Windows Server e Active Directory",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Infraestrutura: SO, virtualização, storage",
+   "mencoes": 13,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 12,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Linux (Red Hat)",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Infraestrutura: SO, virtualização, storage",
+   "mencoes": 22,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 1,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 17,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 3
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Virtualização (VMware, Hyper-V)",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Infraestrutura: SO, virtualização, storage",
+   "mencoes": 34,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Redes_Computadores_Telecom.pdf": 2,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 31,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Backup, recuperação, replicação, SAN e deduplicação",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Infraestrutura: SO, virtualização, storage",
+   "mencoes": 66,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 5,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 3,
+    "Apostila_Segurança_Informação.pdf": 4,
+    "Apostila_Engenharia_Software.pdf": 1,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 35,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 8,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 6,
+    "Apostila_Ingles_Tecnico_TI.pdf": 3
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "JBoss/WildFly e servidores de aplicação",
+   "origem": "CE2026",
+   "apostila_alvo": "Middleware, mensageria e observabilidade",
+   "mencoes": 23,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 23
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Mensageria e streaming (ActiveMQ, Kafka, Debezium)",
+   "origem": "CE2026",
+   "apostila_alvo": "Middleware, mensageria e observabilidade",
+   "mencoes": 47,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 3,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 44
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Kubernetes, containers e Ansible",
+   "origem": "CE2026",
+   "apostila_alvo": "Middleware, mensageria e observabilidade",
+   "mencoes": 60,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 3,
+    "Apostila_Engenharia_Software.pdf": 3,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 26,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 22,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 4,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Infraestrutura",
+   "topico": "Observabilidade (Zabbix, Prometheus, Grafana, ELK, APM)",
+   "origem": "CE2026",
+   "apostila_alvo": "Middleware, mensageria e observabilidade",
+   "mencoes": 37,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 4,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 32
+   }
+  },
+  {
+   "bloco": "Computação em nuvem",
+   "topico": "IaaS, PaaS, SaaS e modelos de implantação",
+   "origem": "CE2026",
+   "apostila_alvo": "Nuvem e FinOps",
+   "mencoes": 27,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Auditoria_Fiscal.pdf": 1,
+    "Apostila_Segurança_Informação.pdf": 3,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 6,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 17
+   }
+  },
+  {
+   "bloco": "Computação em nuvem",
+   "topico": "Serverless, event-driven e microsserviços",
+   "origem": "CE2026",
+   "apostila_alvo": "Nuvem e FinOps",
+   "mencoes": 31,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 17,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 2,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 3,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 8
+   }
+  },
+  {
+   "bloco": "Computação em nuvem",
+   "topico": "Segurança em nuvem (KMS, IAM, Zero Trust, conectividade)",
+   "origem": "CE2026",
+   "apostila_alvo": "Nuvem e FinOps",
+   "mencoes": 26,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 26
+   }
+  },
+  {
+   "bloco": "Computação em nuvem",
+   "topico": "Plataformas AWS, Azure e GCP",
+   "origem": "CE2026",
+   "apostila_alvo": "Nuvem e FinOps",
+   "mencoes": 134,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 4,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 129
+   }
+  },
+  {
+   "bloco": "Computação em nuvem",
+   "topico": "FinOps, tagueamento e governança de custos",
+   "origem": "CE2026",
+   "apostila_alvo": "Nuvem e FinOps",
+   "mencoes": 12,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 7,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 5
+   }
+  },
+  {
+   "bloco": "Banco de dados e engenharia de dados",
+   "topico": "Relacional, colunar e NoSQL; SQL e PL/SQL",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Dados e Engenharia de Dados",
+   "mencoes": 25,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 18,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 2,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 2
+   }
+  },
+  {
+   "bloco": "Banco de dados e engenharia de dados",
+   "topico": "DW, Data Mart, Data Lake, Lakehouse e Data Mesh",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Dados e Engenharia de Dados",
+   "mencoes": 48,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 36,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 7,
+    "Apostila_Ingles_Tecnico_TI.pdf": 2
+   }
+  },
+  {
+   "bloco": "Banco de dados e engenharia de dados",
+   "topico": "ETL, pipelines, Parquet e formatos (CSV, JSON, XML)",
+   "origem": "CE2026",
+   "apostila_alvo": "Dados e Engenharia de Dados",
+   "mencoes": 27,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 11,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 2,
+    "Apostila_Segurança_Informação.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 4,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 2,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 4,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Banco de dados e engenharia de dados",
+   "topico": "Governança e qualidade de dados (linhagem, catálogo, metadados)",
+   "origem": "CE2026",
+   "apostila_alvo": "Dados e Engenharia de Dados",
+   "mencoes": 26,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 12,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 8,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 5
+   }
+  },
+  {
+   "bloco": "Banco de dados e engenharia de dados",
+   "topico": "Streaming e tempo real (Spark Streaming, particionamento)",
+   "origem": "CE2026",
+   "apostila_alvo": "Dados e Engenharia de Dados",
+   "mencoes": 16,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 9,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 3,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 1,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "Python, Hadoop e Spark",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 50,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 3,
+    "Apostila_Auditoria_Fiscal.pdf": 1,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 37,
+    "Apostila_Engenharia_Software.pdf": 6,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 1
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "Aprendizado de máquina (supervisionado, não supervisionado, reforço)",
+   "origem": "CE2026",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 28,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 24,
+    "Apostila_Segurança_Informação.pdf": 2,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 2
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "Deep learning, redes neurais e PLN",
+   "origem": "CE2026",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 14,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 12,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "IA generativa, agentes e sistemas multiagentes",
+   "origem": "CE2026",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 9,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 7,
+    "Apostila_Segurança_Informação.pdf": 1,
+    "Apostila_Igualdade_Racial_Gênero.pdf": 1
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "MLOps e deploy",
+   "origem": "CE2026",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 4,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 4
+   }
+  },
+  {
+   "bloco": "Ciência de dados e IA",
+   "topico": "Ética em IA (explicabilidade, viés)",
+   "origem": "CE2026",
+   "apostila_alvo": "IA e Ciência de Dados",
+   "mencoes": 21,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Auditoria_Fiscal.pdf": 1,
+    "Apostila_Estatistica_RLM.pdf": 1,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 17,
+    "Apostila_Contabilidade_Geral.pdf": 1,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Requisitos, qualidade, métricas e testes",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 90,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 1,
+    "Apostila_Direito_Constitucional.pdf": 2,
+    "Apostila_Auditoria_Fiscal.pdf": 2,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 12,
+    "Apostila_Segurança_Informação.pdf": 5,
+    "Apostila_Gestão_Governança_TI.pdf": 9,
+    "Apostila_Direito_Administrativo.pdf": 2,
+    "Apostila_Engenharia_Software.pdf": 29,
+    "Apostila_Finanças_Publicas.pdf": 1,
+    "Apostila_Contabilidade_Geral.pdf": 1,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2,
+    "Apostila_Redes_Computadores_Telecom.pdf": 3,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 3,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 11,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 6,
+    "Apostila_Ingles_Tecnico_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Padrões GoF e EIP",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 16,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 11,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 5
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Microsserviços (BFF, CQRS, Saga, Circuit Breaker)",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 23,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 19,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 4
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "APIs e segurança web (REST, CORS, CSRF, XSS)",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 35,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 3,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Segurança_Informação.pdf": 7,
+    "Apostila_Engenharia_Software.pdf": 20,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 2,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 1
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Git, Gitflow, CI/CD, SonarQube, Helm",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 44,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 2,
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 26,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1,
+    "Apostila_Infraestrutura_Cloud_DevOps.pdf": 3,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 10,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Linguagens e frameworks (Java, TypeScript, Spring, Angular)",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 36,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 29,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 6
+   }
+  },
+  {
+   "bloco": "Engenharia de software",
+   "topico": "Persistência (Redis, MongoDB, Hibernate, Flyway)",
+   "origem": "CE2026",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 23,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Banco_Dados_BI.pdf": 2,
+    "Apostila_Engenharia_Software.pdf": 20,
+    "Apostila_Middleware_Mensageria_Observabilidade.pdf": 1
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Scrum, Kanban e gestão híbrida",
+   "origem": "CE2026/BA2022",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 31,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Gestão_Governança_TI.pdf": 29,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 2
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Backlog e priorização (MoSCoW, Kano)",
+   "origem": "CE2026",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 6,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 6
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Elicitação, Design Thinking e Lean Inception",
+   "origem": "CE2026",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 6,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 6
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Gestão de incidentes/problemas e melhoria contínua (Lean IT, Kaizen)",
+   "origem": "CE2026",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 6,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Segurança_Informação.pdf": 3,
+    "Apostila_Gestão_Governança_TI.pdf": 3
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Competências comportamentais",
+   "origem": "CE2026",
+   "apostila_alvo": "Gestão de Projetos, Produtos e Processos",
+   "mencoes": 8,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Ciencia_Dados_Big_Data.pdf": 1,
+    "Apostila_Segurança_Informação.pdf": 2,
+    "Apostila_Gestão_Governança_TI.pdf": 1,
+    "Apostila_Engenharia_Software.pdf": 2,
+    "Apostila_Redes_Computadores_Telecom.pdf": 1,
+    "Apostila_Computacao_Nuvem_AWS_Azure_GCP.pdf": 1
+   }
+  },
+  {
+   "bloco": "Gestão de projetos, produtos e serviços",
+   "topico": "Análise de pontos de função e métricas de projeto",
+   "origem": "BA2022",
+   "apostila_alvo": "Desenvolvimento e Arquiteturas",
+   "mencoes": 6,
+   "status": "coberto",
+   "apostilas_onde_aparece": {
+    "Apostila_Engenharia_Software.pdf": 5,
+    "Apostila_Auditoria_Fiscal_TI.pdf": 1
+   }
+  },
+  {
+   "bloco": "Inglês",
+   "topico": "Inglês técnico",
+   "origem": "CE2026",
+   "apostila_alvo": "Inglês Técnico",
+   "mencoes": 3,
+   "status": "raso",
+   "apostilas_onde_aparece": {
+    "Apostila_Ingles_Tecnico_TI.pdf": 3
+   }
+  }
+ ]
+}
