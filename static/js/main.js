@@ -806,54 +806,82 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gamifOnAppOpen === "function") gamifOnAppOpen();
 });
 
-// Fetch and render Google News RSS items
+// Mapeia o certame ativo (seletor global) para a tag gravada pelo fetch_news.py
+const CERTAME_PARA_TAG_NOTICIA = {
+  sefaz: "SEFAZ-BA",
+  rfb: "Receita Federal",
+  bacen: "Banco Central"
+};
+
+const NEWS_TAG_COLORS = {
+  "SEFAZ-BA": "#3E9A2D",       // Verde oficial do IF Baiano / Sefaz
+  "Receita Federal": "#06b6d4", // Cyan
+  "Banco Central": "#8b5cf6"    // Purple
+};
+
+let allNewsData = [];
+
+// Busca o JSON de notícias uma única vez e guarda em cache local (allNewsData)
 function loadNews() {
   const container = document.getElementById("news-timeline-container");
   if (!container) return;
-  
+
   fetch('static/news_data.json')
     .then(res => {
       if (!res.ok) throw new Error("News JSON not found");
       return res.json();
     })
     .then(data => {
-      if (data.length === 0) return;
-      
-      const tagColors = {
-        "SEFAZ-BA": "#3E9A2D",       // Verde oficial do IF Baiano / Sefaz
-        "Receita Federal": "#06b6d4", // Cyan
-        "Banco Central": "#8b5cf6"    // Purple
-      };
-      
-      container.innerHTML = data.slice(0, 4).map(item => {
-        let displayDate = "";
-        try {
-          const date = new Date(item.pubDate);
-          displayDate = date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
-        } catch (e) {
-          displayDate = item.pubDate;
-        }
-        
-        const color = tagColors[item.tag] || "#06b6d4";
-        
-        return `
-          <div class="timeline-item">
-            <div class="tl-badge active" style="background-color: ${color}; border-color: ${color};"><i class="fa-solid fa-newspaper" style="font-size: 12px; color: #fff;"></i></div>
-            <div class="tl-content">
-              <span class="tl-date" style="display: flex; align-items: center; gap: 8px;">
-                ${displayDate} 
-                <span class="quiz-badge" style="font-size: 9px; padding: 2px 6px; border-color: ${color}; color: ${color}; border-style: solid; border-width: 1px; border-radius: 4px;">${item.tag}</span>
-              </span>
-              <h4 style="margin: 6px 0 4px 0;"><a href="${item.link}" target="_blank" style="color:#fff; text-decoration:none; font-weight: 600;">${item.title}</a></h4>
-              <p style="font-size:12px; color:var(--text-muted); margin:0;">Fonte: ${item.source} | Capturado em: ${item.fetchedAt.split(' ')[0]}</p>
-            </div>
-          </div>
-        `;
-      }).join('');
+      allNewsData = Array.isArray(data) ? data : [];
+      renderNewsTimeline();
     })
     .catch(err => {
       console.log("Using default static timeline for news (local news data not populated yet).");
     });
+}
+
+// Renderiza apenas as notícias da tag correspondente ao concurso selecionado no topo (activeCertame)
+function renderNewsTimeline() {
+  const container = document.getElementById("news-timeline-container");
+  if (!container) return;
+
+  const tagAlvo = CERTAME_PARA_TAG_NOTICIA[activeCertame];
+  const noticiasFiltradas = allNewsData.filter(item => item.tag === tagAlvo);
+
+  if (noticiasFiltradas.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state" style="padding: 24px 12px;">
+        <i class="fa-solid fa-newspaper text-cyan"></i> Nenhuma novidade registrada ainda para este concurso.
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = noticiasFiltradas.slice(0, 5).map(item => {
+    let displayDate = "";
+    try {
+      const date = new Date(item.pubDate);
+      displayDate = date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
+    } catch (e) {
+      displayDate = item.pubDate;
+    }
+
+    const color = NEWS_TAG_COLORS[item.tag] || "#06b6d4";
+
+    return `
+      <div class="timeline-item">
+        <div class="tl-badge active" style="background-color: ${color}; border-color: ${color};"><i class="fa-solid fa-newspaper" style="font-size: 12px; color: #fff;"></i></div>
+        <div class="tl-content">
+          <span class="tl-date" style="display: flex; align-items: center; gap: 8px;">
+            ${displayDate}
+            <span class="quiz-badge" style="font-size: 9px; padding: 2px 6px; border-color: ${color}; color: ${color}; border-style: solid; border-width: 1px; border-radius: 4px;">${item.tag}</span>
+          </span>
+          <h4 style="margin: 6px 0 4px 0;"><a href="${item.link}" target="_blank" style="color:#fff; text-decoration:none; font-weight: 600;">${item.title}</a></h4>
+          <p style="font-size:12px; color:var(--text-muted); margin:0;">Fonte: ${item.source} | Capturado em: ${item.fetchedAt.split(' ')[0]}</p>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 // Setup Page Tabs
@@ -893,7 +921,7 @@ function setupTabs() {
 }
 
 // Global countdown target date
-let targetCountdownDate = "2026-11-15T09:00:00";
+let targetCountdownDate = "2026-10-31T09:00:00";
 
 // Calculate Days remaining to tentative exam date
 function calculateCountdown() {
@@ -903,6 +931,12 @@ function calculateCountdown() {
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   
   document.getElementById("days-val").textContent = diffDays > 0 ? diffDays : 0;
+
+  // Depois da data prevista, não deixar o painel fingindo que a previsão segue válida
+  if (diffDays <= 0) {
+    const descEl = document.getElementById("countdown-desc-el");
+    if (descEl) descEl.textContent = "A data prevista já passou. Confira as Novidades do Concurso para a situação atual do edital.";
+  }
 }
 
 // Switch Trilha subtabs inside Trilhas section
@@ -1230,6 +1264,10 @@ function switchCertame(certame) {
   const activeBtn = document.getElementById(`btn-certame-${certame}`);
   if (activeBtn) activeBtn.classList.add("active");
 
+  // O card de banca e calendário só vale para a SEFAZ-BA, única com banca já definida
+  const bancaCard = document.getElementById("banca-card");
+  if (bancaCard) bancaCard.hidden = certame !== 'sefaz';
+
   // Update Hero Card details dynamically
   const heroTitle = document.getElementById("hero-title");
   const heroDesc = document.getElementById("hero-desc");
@@ -1252,16 +1290,16 @@ function switchCertame(certame) {
 
   if (certame === 'sefaz') {
     if (heroTitle) heroTitle.textContent = "Rumo à SEFAZ-BA 2026";
-    if (heroDesc) heroDesc.innerHTML = "Uma oportunidade histórica com <strong>200 vagas</strong> autorizadas no orçamento! Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).";
+    if (heroDesc) heroDesc.innerHTML = "Uma oportunidade histórica com <strong>200 vagas</strong> previstas e banca definida: <strong>Fundação Cesgranrio</strong>. Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).";
     if (heroStatTi) heroStatTi.textContent = "100";
-    if (heroLabelTi) heroLabelTi.textContent = "Vagas Auditor (TI/Outros)";
+    if (heroLabelTi) heroLabelTi.textContent = "Vagas Auditor (TI e outra área)";
     if (heroStatBrother) heroStatBrother.textContent = "100";
-    if (heroLabelBrother) heroLabelBrother.textContent = "Vagas Agente (Qualquer Nível)";
+    if (heroLabelBrother) heroLabelBrother.textContent = "Vagas Agente (Qualquer Graduação)";
     if (heroStatSalary) heroStatSalary.textContent = "R$ 33,8k";
-    if (statusPillText) statusPillText.textContent = "Comissão Formada (Provas em datas distintas)";
-    if (countdownTitleEl) countdownTitleEl.textContent = "Estimativa do Edital";
-    if (countdownDescEl) countdownDescEl.textContent = "Baseado na previsão de provas no final de 2026.";
-    targetCountdownDate = "2026-11-15T09:00:00";
+    if (statusPillText) statusPillText.textContent = "Banca: Cesgranrio";
+    if (countdownTitleEl) countdownTitleEl.textContent = "Previsão do Edital";
+    if (countdownDescEl) countdownDescEl.textContent = "Edital previsto até outubro de 2026; provas até janeiro de 2027.";
+    targetCountdownDate = "2026-10-31T09:00:00";
 
     if (labelTi) labelTi.textContent = "Trilha Auditor Fiscal (Tecnologia da Informação)";
     if (labelBrother) labelBrother.textContent = "Trilha Agente de Tributos (Qualquer Formação)";
@@ -1329,6 +1367,9 @@ function switchCertame(certame) {
       if (chk) chk.checked = true;
     });
   }
+
+  // Atualiza a lista de "Novidades do Concurso" para mostrar só notícias do certame selecionado
+  renderNewsTimeline();
 
   updatePercentages();
 }
@@ -1662,11 +1703,72 @@ function loadQuestions() {
 // Global configuration options for quiz
 let quizSize = '10'; // Default size
 let quizOrder = 'random'; // Default order
+let quizBanca = 'todas'; // 'todas' ou 'cesgranrio'
+let quizModo = 'estudo'; // 'estudo' (gabarito a cada questão) ou 'prova' (cronometrado, gabarito no final)
+
+// Tempo médio por questão no modo prova. Referência real da Cesgranrio: BNDES 2024, 70 questões
+// em 4 horas (cerca de 3,4 min por questão, marcação do cartão incluída). Ajustar quando o edital
+// da SEFAZ-BA informar número de questões e duração das provas.
+const MINUTOS_POR_QUESTAO_PROVA = 3.4;
+let provaRespostas = [];
+let provaTimerId = null;
+let provaFimEm = 0;
+
+function provaEmAndamento() {
+  return provaTimerId !== null;
+}
+
+// Evita perder uma prova cronometrada em andamento por um clique em outro botão
+function confirmarAbandonoProva() {
+  if (!provaEmAndamento()) return true;
+  if (!confirm("Há uma prova cronometrada em andamento. Deseja abandoná-la? As respostas serão perdidas.")) return false;
+  pararCronometroProva();
+  return true;
+}
+
+function minutosDaProva(qtd) {
+  return Math.round(qtd * MINUTOS_POR_QUESTAO_PROVA);
+}
+
+// Só questões reais da banca (campo banca). Inéditas "no estilo Cesgranrio" citam a banca na fonte,
+// mas não podem entrar neste filtro.
+function isCesgranrio(q) {
+  return String(q.banca || "").toUpperCase() === "CESGRANRIO";
+}
+
+function questoesDoSimulado(category) {
+  let base = questionsForCargo(category);
+  if (quizBanca === 'cesgranrio') base = base.filter(isCesgranrio);
+  // A prova no padrão Cesgranrio só usa itens de cinco alternativas (fora Certo/Errado do Cebraspe)
+  if (quizModo === 'prova') base = base.filter(q => Object.keys(q.options || {}).length >= 5);
+  return base;
+}
+
+function pararCronometroProva() {
+  if (provaTimerId) clearInterval(provaTimerId);
+  provaTimerId = null;
+}
+
+function atualizarCronometroProva() {
+  const el = document.getElementById("prova-cronometro");
+  const restante = Math.max(0, provaFimEm - Date.now());
+  if (el) {
+    const min = Math.floor(restante / 60000);
+    const seg = Math.floor((restante % 60000) / 1000);
+    el.textContent = `${String(min).padStart(2, "0")}:${String(seg).padStart(2, "0")}`;
+    el.classList.toggle("tempo-critico", restante < 5 * 60000);
+  }
+  if (restante === 0) {
+    pararCronometroProva();
+    showQuizSummary(true);
+  }
+}
 
 // Start simulated exam for a specific category ('ti' or 'general')
 function startSimulado(category) {
+  if (!confirmarAbandonoProva()) return;
   quizCategory = category;
-  
+
   // Update sub-tab buttons style
   const btnTi = document.getElementById("btn-simulado-ti");
   const btnBrother = document.getElementById("btn-simulado-brother");
@@ -1681,7 +1783,7 @@ function startSimulado(category) {
   // Filter base questions:
   // - If category is 'ti', include both 'ti' (P2) and 'general' (P1) questions!
   // - If category is 'general', include only 'general' questions.
-  activeQuizQuestions = questionsForCargo(category);
+  activeQuizQuestions = questoesDoSimulado(category);
 
   // Render setup configuration screen
   renderQuizSetup();
@@ -1693,6 +1795,8 @@ function renderQuizSetup() {
   const isBrother = quizCategory === 'brother' || quizCategory === 'general';
   const cargoName = quizCategory === 'ti' ? "Auditor Fiscal (TI)" : "Agente de Tributos";
   const numAvailable = activeQuizQuestions.length;
+  const numCesgranrio = questionsForCargo(quizCategory).filter(isCesgranrio).length;
+  const qtdProva = quizSize === 'all' ? numAvailable : Math.min(parseInt(quizSize, 10), numAvailable);
 
   container.innerHTML = `
     <div class="quiz-setup-card ${isBrother ? 'setup-brother' : ''}">
@@ -1706,6 +1810,23 @@ function renderQuizSetup() {
           : "Este simulado foca nas disciplinas de <strong>Conhecimentos Gerais e Específicos</strong> comuns ao cargo."}
         <br>Total de questões disponíveis no banco: <strong>${numAvailable}</strong>.
       </p>
+
+      <div class="setup-section">
+        <label><i class="fa-solid fa-building-columns"></i> Banca de Origem:</label>
+        <div class="setup-options">
+          <button class="setup-opt-btn ${quizBanca === 'todas' ? 'active' : ''}" onclick="selectQuizBanca('todas')">Todas as bancas</button>
+          <button class="setup-opt-btn ${quizBanca === 'cesgranrio' ? 'active' : ''}" onclick="selectQuizBanca('cesgranrio')" ${numCesgranrio === 0 ? 'disabled title="Questões reais da Cesgranrio ainda não importadas"' : ''}>Somente Cesgranrio (${numCesgranrio})</button>
+        </div>
+      </div>
+
+      <div class="setup-section">
+        <label><i class="fa-solid fa-stopwatch"></i> Modo:</label>
+        <div class="setup-options">
+          <button class="setup-opt-btn ${quizModo === 'estudo' ? 'active' : ''}" onclick="selectQuizModo('estudo')">Estudo (gabarito a cada questão)</button>
+          <button class="setup-opt-btn ${quizModo === 'prova' ? 'active' : ''}" onclick="selectQuizModo('prova')">Prova cronometrada (gabarito no final)</button>
+        </div>
+        ${quizModo === 'prova' ? `<p class="setup-nota">Tempo: ${minutosDaProva(qtdProva)} minutos (cerca de 3,4 min por questão, ritmo da Cesgranrio no BNDES 2024: 70 questões em 4 horas; ajustar quando sair o edital da SEFAZ-BA). Somente questões de cinco alternativas (A a E), sem desconto por erro.</p>` : ''}
+      </div>
 
       <div class="setup-section">
         <label><i class="fa-solid fa-list-ol"></i> Quantidade de Questões:</label>
@@ -1744,10 +1865,22 @@ function selectQuizOrder(order) {
   renderQuizSetup();
 }
 
+function selectQuizBanca(banca) {
+  quizBanca = banca;
+  activeQuizQuestions = questoesDoSimulado(quizCategory);
+  renderQuizSetup();
+}
+
+function selectQuizModo(modo) {
+  quizModo = modo;
+  activeQuizQuestions = questoesDoSimulado(quizCategory);
+  renderQuizSetup();
+}
+
 // Launch the quiz with current configurations
 function launchSimuladoWithConfig() {
   // Apply filtering again (just to be safe)
-  const baseQuestions = questionsForCargo(quizCategory).map(shuffleOptions);
+  const baseQuestions = questoesDoSimulado(quizCategory).map(shuffleOptions);
 
   // Handle Order
   if (quizOrder === 'random') {
@@ -1772,6 +1905,13 @@ function launchSimuladoWithConfig() {
   answerChecked = false;
   score.correct = 0;
   score.total = activeQuizQuestions.length;
+  provaRespostas = [];
+
+  pararCronometroProva();
+  if (quizModo === 'prova' && activeQuizQuestions.length > 0) {
+    provaFimEm = Date.now() + minutosDaProva(activeQuizQuestions.length) * 60000;
+    provaTimerId = setInterval(atualizarCronometroProva, 1000);
+  }
 
   renderQuestion();
 }
@@ -1787,11 +1927,13 @@ function startRevisaoEspacada() {
     return;
   }
 
+  if (!confirmarAbandonoProva()) return;
   const questoesRevisao = allQuestions.filter(q => idsHoje.includes(q.id)).map(shuffleOptions);
 
   document.querySelectorAll(".trilha-selector-btn[id^='btn-simulado-']").forEach(btn => btn.classList.remove("active"));
   switchQuizType('mc');
 
+  // A revisão roda sempre com gabarito imediato, sem alterar o modo escolhido pelo usuário
   quizCategory = 'revisao';
   activeQuizQuestions = questoesRevisao;
   currentQuestionIdx = 0;
@@ -1825,7 +1967,9 @@ function renderQuestion() {
   }
 
   const q = activeQuizQuestions[currentQuestionIdx];
-  
+  const emProva = quizModo === 'prova' && provaTimerId !== null;
+  const ultima = currentQuestionIdx + 1 >= activeQuizQuestions.length;
+
   // Generate options list
   let optionsHtml = '';
   for (const [key, val] of Object.entries(q.options)) {
@@ -1845,6 +1989,7 @@ function renderQuestion() {
       <span class="quiz-badge badge-subject">${q.subject}</span>
       <span class="quiz-badge badge-source">${q.source}</span>
       <span class="quiz-badge badge-source">Questão ${currentQuestionIdx + 1} de ${activeQuizQuestions.length}</span>
+      ${emProva ? `<span class="quiz-badge badge-cronometro"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> <span id="prova-cronometro" role="timer" aria-label="Tempo restante da prova">--:--</span></span>` : ''}
     </div>
     
     <div class="quiz-question-text">
@@ -1862,12 +2007,34 @@ function renderQuestion() {
     </div>
     
     <div class="quiz-actions">
-      <span class="text-muted" style="font-size: 13px;">Acertos: ${score.correct}/${currentQuestionIdx}</span>
-      <button class="btn" id="quiz-action-btn" onclick="checkQuizAnswer()" disabled>
-        Verificar Resposta
-      </button>
+      ${emProva
+        ? `<button class="btn btn-secondary" onclick="confirmarRespostaProva(true)">Deixar em branco</button>
+           <button class="btn" id="quiz-action-btn" onclick="confirmarRespostaProva(false)" disabled>${ultima ? 'Entregar Prova' : 'Confirmar e Avançar'}</button>`
+        : `<span class="text-muted" style="font-size: 13px;">Acertos: ${score.correct}/${currentQuestionIdx}</span>
+           <button class="btn" id="quiz-action-btn" onclick="checkQuizAnswer()" disabled>Verificar Resposta</button>`}
     </div>
   `;
+  if (emProva) atualizarCronometroProva();
+}
+
+// Modo prova: registra a resposta sem revelar o gabarito e segue para a próxima questão
+function confirmarRespostaProva(emBranco) {
+  if (!emBranco && !selectedOption) return;
+  const q = activeQuizQuestions[currentQuestionIdx];
+  const marcada = emBranco ? null : selectedOption;
+  const acertou = marcada === q.correct;
+  provaRespostas.push({ q, marcada, acertou });
+  if (acertou) score.correct++;
+  if (marcada && typeof gamifOnQuizAnswer === "function") {
+    gamifOnQuizAnswer(q.id, q.subject, acertou);
+    gamifProcessarEventosPendentes();
+  }
+  if (currentQuestionIdx + 1 >= activeQuizQuestions.length) {
+    pararCronometroProva();
+    showQuizSummary(false);
+    return;
+  }
+  nextQuizQuestion();
 }
 
 // Select option handler
@@ -2005,8 +2172,13 @@ function nextQuizQuestion() {
 }
 
 // Render final score summary card
-function showQuizSummary() {
+function showQuizSummary(tempoEsgotado) {
+  pararCronometroProva();
   const container = document.getElementById("quiz-card");
+  if (quizModo === 'prova' && quizCategory !== 'revisao') {
+    renderResumoProva(container, tempoEsgotado === true);
+    return;
+  }
   const pct = Math.round((score.correct / score.total) * 100) || 0;
   
   let resultIcon = "fa-trophy text-cyan";
@@ -2026,6 +2198,70 @@ function showQuizSummary() {
       <p>${resultDesc}</p>
       <button class="btn btn-secondary" onclick="startSimulado('${quizCategory}')">
         <i class="fa-solid fa-rotate-left"></i> Refazer Simulado
+      </button>
+    </div>
+  `;
+}
+
+// Resultado do modo prova: nota geral, desempenho por disciplina e gabarito comentado
+function renderResumoProva(container, tempoEsgotado) {
+  const total = activeQuizQuestions.length;
+  const marcadas = provaRespostas.filter(r => r.marcada).length;
+  const pct = Math.round((score.correct / total) * 100) || 0;
+
+  const porDisciplina = {};
+  provaRespostas.forEach(r => {
+    const d = porDisciplina[r.q.subject] || (porDisciplina[r.q.subject] = { acertos: 0, total: 0 });
+    d.total++;
+    if (r.acertou) d.acertos++;
+  });
+  const linhasDisciplina = Object.entries(porDisciplina)
+    .sort((a, b) => (a[1].acertos / a[1].total) - (b[1].acertos / b[1].total))
+    .map(([nome, d]) => {
+      const p = Math.round((d.acertos / d.total) * 100);
+      return `<li><span>${escapeHtml(nome)}</span><strong>${d.acertos}/${d.total} (${p}%)</strong></li>`;
+    }).join("");
+
+  // Para cada questão: alternativa marcada e correta (com texto) e a justificativa da marcada, quando houver
+  const gabarito = provaRespostas.map((r, i) => {
+    const justificativas = r.q.option_explanations || {};
+    const linhaMarcada = r.marcada
+      ? `<p><strong>Sua resposta (${r.marcada}):</strong> ${escapeHtml(r.q.options[r.marcada] || "")}</p>
+         ${!r.acertou && justificativas[r.marcada] ? `<p class="prova-just">${escapeHtml(justificativas[r.marcada])}</p>` : ""}`
+      : `<p><strong>Sua resposta:</strong> em branco</p>`;
+    return `
+    <details class="prova-item ${r.acertou ? 'acerto' : 'erro'}">
+      <summary>
+        <span class="status-indicator-dot ${r.acertou ? 'dot-green' : 'dot-red'}" aria-hidden="true"></span>
+        Questão ${i + 1}: ${escapeHtml(r.q.subject)} &middot; ${r.acertou ? 'acerto' : 'erro'}; marcada ${r.marcada || 'em branco'}, gabarito ${r.q.correct}
+      </summary>
+      <div class="prova-item-corpo">
+        <p>${escapeHtml(r.q.question)}</p>
+        ${linhaMarcada}
+        <p><strong>Gabarito (${r.q.correct}):</strong> ${escapeHtml(r.q.options[r.q.correct] || "")}</p>
+        ${justificativas[r.q.correct] ? `<p class="prova-just">${escapeHtml(justificativas[r.q.correct])}</p>` : ""}
+        <p><strong>Resumo:</strong> ${escapeHtml(r.q.explanation || "")}</p>
+      </div>
+    </details>`;
+  }).join("");
+
+  container.innerHTML = `
+    <div class="quiz-score-summary prova-resumo">
+      <i class="fa-solid ${pct >= 50 ? 'fa-trophy text-cyan' : 'fa-circle-exclamation text-purple'}"></i>
+      <h4>${tempoEsgotado ? 'Tempo esgotado!' : 'Prova entregue!'}</h4>
+      <p>Acertos: <strong>${score.correct} de ${total}</strong> (${pct}%). Marcadas: ${marcadas}; em branco ou não alcançadas: ${total - marcadas}.</p>
+      <div class="prova-blocos">
+        <div>
+          <h5>Desempenho por disciplina (pior primeiro)</h5>
+          <ul class="prova-disciplinas">${linhasDisciplina || '<li>Nenhuma questão respondida.</li>'}</ul>
+        </div>
+        <div>
+          <h5>Gabarito comentado</h5>
+          ${gabarito || '<p class="text-muted">Nenhuma questão respondida.</p>'}
+        </div>
+      </div>
+      <button class="btn btn-secondary" onclick="startSimulado('${quizCategory}')">
+        <i class="fa-solid fa-rotate-left"></i> Nova Prova
       </button>
     </div>
   `;
@@ -2062,8 +2298,9 @@ function switchQuizType(type) {
     btnMc.style.borderColor = "rgba(6, 182, 212, 0.15)";
     btnDisc.style.backgroundColor = "transparent";
     btnDisc.style.borderColor = "transparent";
-    
-    startSimulado(quizCategory);
+
+    // Prova cronometrada em andamento continua de onde parou (o tempo seguiu correndo, como na prova real)
+    if (!provaEmAndamento()) startSimulado(quizCategory);
   } else {
     btnMc.classList.remove("active");
     btnDisc.classList.add("active");
@@ -2137,7 +2374,7 @@ function renderDiscursiva() {
       ${d.context}
     </div>
 
-    <div class="quiz-question-text" style="font-size:14.5px; border-left:3px solid var(--accent-cyan); padding-left:14px;">
+    <div class="quiz-question-text" style="font-size:14.5px; background: rgba(var(--accent-cyan-rgb), 0.06); border: 1px solid rgba(var(--accent-cyan-rgb), 0.2); border-radius: 8px; padding: 12px 14px;">
       <strong>Enunciado da Questão:</strong><br>
       ${d.question.replace(/\n/g, '<br>')}
     </div>
