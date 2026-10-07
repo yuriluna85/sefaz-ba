@@ -152,7 +152,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
         <div class="topbar-actions">
           <div class="status-pill">
             <span class="pulse-dot"></span>
-            <span class="status-text" id="status-pill-text">Comissão Formada (Provas em datas distintas)</span>
+            <span class="status-text" id="status-pill-text">Banca: Cesgranrio</span>
           </div>
         </div>
       </header>
@@ -169,15 +169,15 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
           <div class="hero-card">
             <div class="hero-info">
               <h2 id="hero-title">Rumo à SEFAZ-BA 2026</h2>
-              <p id="hero-desc">Uma oportunidade histórica com <strong>200 vagas</strong> autorizadas no orçamento! Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).</p>
+              <p id="hero-desc">Uma oportunidade histórica com <strong>200 vagas</strong> previstas e banca definida: <strong>Fundação Cesgranrio</strong>. Prepare-se estrategicamente para Auditor Fiscal (Especialidade TI) e Agente de Tributos Estaduais (Qualquer Formação).</p>
               <div class="hero-stats">
                 <div class="h-stat">
                   <span class="h-val" id="hero-stat-ti">100</span>
-                  <span class="h-lbl" id="hero-label-ti">Vagas Auditor (TI/Outros)</span>
+                  <span class="h-lbl" id="hero-label-ti">Vagas Auditor (TI e outra área)</span>
                 </div>
                 <div class="h-stat">
                   <span class="h-val" id="hero-stat-brother">100</span>
-                  <span class="h-lbl" id="hero-label-brother">Vagas Agente (Qualquer Nível)</span>
+                  <span class="h-lbl" id="hero-label-brother">Vagas Agente (Qualquer Graduação)</span>
                 </div>
                 <div class="h-stat">
                   <span class="h-val" id="hero-stat-salary">R$ 33,8k</span>
@@ -186,14 +186,45 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
               </div>
             </div>
             <div class="hero-countdown">
-              <div class="countdown-title" id="countdown-title-el">Estimativa do Edital</div>
+              <div class="countdown-title" id="countdown-title-el">Previsão do Edital</div>
               <div class="countdown-timer">
                 <div class="time-block">
                   <span class="time-val" id="days-val">--</span>
                   <span class="time-lbl">Dias</span>
                 </div>
               </div>
-              <p class="countdown-desc" id="countdown-desc-el">Baseado na previsão de provas no final de 2026.</p>
+              <p class="countdown-desc" id="countdown-desc-el">Edital previsto até outubro de 2026; provas até janeiro de 2027.</p>
+            </div>
+          </div>
+
+          <!-- BANCA E CALENDÁRIO (somente SEFAZ-BA) -->
+          <div class="card banca-card" id="banca-card">
+            <div class="banca-head">
+              <h3><i class="fa-solid fa-building-columns"></i> Banca e Calendário</h3>
+              <span class="banca-chip"><span class="status-indicator-dot dot-cyan" aria-hidden="true"></span> Fundação Cesgranrio</span>
+            </div>
+            <div class="banca-grid">
+              <div class="banca-marcos">
+                <h4>Marcos do certame</h4>
+                <ol class="banca-lista-marcos">
+                  <li class="feito"><span class="marco-data">22/09/2026</span> Cesgranrio definida como banca organizadora</li>
+                  <li class="feito"><span class="marco-data">Previsto</span> 200 vagas: 100 Auditor Fiscal e 100 Agente de Tributos Estaduais</li>
+                  <li class="proximo"><span class="marco-data">Até out/2026</span> Publicação do edital</li>
+                  <li><span class="marco-data">Até jan/2027</span> Aplicação das provas</li>
+                </ol>
+              </div>
+              <div class="banca-perfil">
+                <h4>Como a Cesgranrio cobra (observado em provas reais de nível superior)</h4>
+                <ul class="banca-lista-perfil">
+                  <li><strong>Formato:</strong> múltipla escolha com cinco alternativas (A a E), um ponto cada, sem desconto por erro.</li>
+                  <li><strong>Enunciados:</strong> situação-problema terminada em frase incompleta; muitas vezes a questão descreve um conceito e pede o nome dele.</li>
+                  <li><strong>Distratores:</strong> definições corretas de conceitos vizinhos (ameaça, evento, incidente ao lado de vulnerabilidade). Estude por quadros comparativos.</li>
+                  <li><strong>Normas:</strong> versões recentes e definições literais (ISO/IEC 27001:2022, 27005:2023, CIS Controls v8, NBC TA).</li>
+                  <li><strong>Cálculo:</strong> traz dado de distração de propósito, como custos de outros projetos num ROI ou depreciação escondida na DFC.</li>
+                  <li><strong>Português:</strong> pontuação e concordância em frases autorais sobre o tema do texto, além de interpretação por paráfrase.</li>
+                </ul>
+                <p class="banca-aviso"><i class="fa-solid fa-circle-info"></i> Referência da banca, não regra da SEFAZ-BA: no BNDES 2024 foram 70 questões em 4 horas, com eliminação abaixo de 60% do total e mínimo por bloco. Número de questões, pesos, nota de corte e discursiva da SEFAZ-BA: <strong>[aguardando edital]</strong>.</p>
+              </div>
             </div>
           </div>
 
@@ -254,12 +285,20 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
                     <p>A Secretaria de Administração do Estado (SAEB) instituiu os grupos de trabalho para definir os perfis de disciplinas do certame.</p>
                   </div>
                 </div>
+                <div class="timeline-item">
+                  <div class="tl-badge active"><i class="fa-solid fa-check"></i></div>
+                  <div class="tl-content">
+                    <span class="tl-date">Setembro 2026</span>
+                    <h4>Cesgranrio é a Banca</h4>
+                    <p>A Fundação Cesgranrio foi definida em 22/09/2026 como organizadora do concurso, com 200 vagas previstas.</p>
+                  </div>
+                </div>
                 <div class="timeline-item pending">
                   <div class="tl-badge"><i class="fa-solid fa-spinner fa-spin"></i></div>
                   <div class="tl-content">
                     <span class="tl-date">Próximo Passo</span>
-                    <h4>Escolha da Banca Examinadora</h4>
-                    <p>A comissão finalizará o termo de referência para contratar a banca organizadora. As favoritas são FGV, FCC ou Cebraspe.</p>
+                    <h4>Publicação do Edital</h4>
+                    <p>Edital previsto até outubro de 2026, com provas até janeiro de 2027.</p>
                   </div>
                 </div>
               </div>
@@ -327,8 +366,8 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
                 <a href="https://www.youtube.com/results?search_query=saber+direito+direito+tributario" target="_blank" class="video-link-item">
                   <i class="fa-brands fa-youtube red-yt"></i> Saber Direito (TV Justiça) — Aulas Completas
                 </a>
-                <a href="https://www.youtube.com/results?search_query=direito+tributario+fgv+questoes" target="_blank" class="video-link-item">
-                  <i class="fa-brands fa-youtube red-yt"></i> Questões Resolvidas — Foco em Bancas Fiscais
+                <a href="https://www.youtube.com/results?search_query=direito+tributario+cesgranrio+questoes+comentadas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Questões Resolvidas: Direito Tributário Cesgranrio
                 </a>
               </div>
             </div>
@@ -346,6 +385,9 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
                 <a href="https://www.youtube.com/results?search_query=contabilidade+de+custos+concurso+sefaz" target="_blank" class="video-link-item">
                   <i class="fa-brands fa-youtube red-yt"></i> Contabilidade de Custos — Aulas Direcionadas
                 </a>
+                <a href="https://www.youtube.com/results?search_query=contabilidade+cesgranrio+questoes+comentadas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Questões Resolvidas: Contabilidade Cesgranrio
+                </a>
               </div>
             </div>
 
@@ -353,7 +395,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
               <h3><i class="fa-solid fa-laptop-code"></i> Tecnologia da Informação</h3>
               <p>Conteúdo avançado sobre Governança de TI, Bancos de Dados e Engenharia de Software.</p>
               <div class="video-links">
-                <a href="https://www.youtube.com/watch?v=nLQRx6DDDeg" target="_blank" class="video-link-item" style="border-left: 3px solid #0d6efd; background: #f0f4fc;">
+                <a href="https://www.youtube.com/watch?v=nLQRx6DDDeg" target="_blank" class="video-link-item">
                   <i class="fa-brands fa-youtube red-yt"></i> O que faz e como se tornar Auditor Fiscal de TI (Yuri do Carmo)
                 </a>
                 <a href="https://www.youtube.com/results?search_query=governanca+de+ti+concurso+cobit+itil" target="_blank" class="video-link-item">
@@ -364,6 +406,9 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
                 </a>
                 <a href="https://www.youtube.com/results?search_query=engenharia+de+software+concurso+ti" target="_blank" class="video-link-item">
                   <i class="fa-brands fa-youtube red-yt"></i> Engenharia de Software e APIs REST
+                </a>
+                <a href="https://www.youtube.com/results?search_query=cesgranrio+tecnologia+da+informacao+questoes+comentadas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Questões Resolvidas: TI Cesgranrio
                 </a>
               </div>
             </div>
@@ -384,15 +429,31 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
               </div>
             </div>
 
+            <div class="card video-category-card">
+              <h3><i class="fa-solid fa-spell-check"></i> Português e Exatas na Cesgranrio</h3>
+              <p>Disciplinas básicas em que a banca tem estilo próprio: textos longos em Português e cálculo efetivo em Matemática Financeira e Estatística.</p>
+              <div class="video-links">
+                <a href="https://www.youtube.com/results?search_query=lingua+portuguesa+cesgranrio+questoes+comentadas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Língua Portuguesa: Questões Cesgranrio
+                </a>
+                <a href="https://www.youtube.com/results?search_query=matematica+financeira+cesgranrio+questoes+resolvidas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Matemática Financeira: Questões Cesgranrio
+                </a>
+                <a href="https://www.youtube.com/results?search_query=estatistica+cesgranrio+questoes+resolvidas" target="_blank" class="video-link-item">
+                  <i class="fa-brands fa-youtube red-yt"></i> Estatística: Questões Cesgranrio
+                </a>
+              </div>
+            </div>
+
           </div>
-          
+
           <div class="card alert-card-info" style="margin-top: 24px;">
             <div class="alert-icon-box">
               <i class="fa-solid fa-circle-exclamation"></i>
             </div>
             <div class="alert-text-box">
               <h4>Dica de Estudo em Vídeo</h4>
-              <p>Utilize as videoaulas principalmente para sanar dúvidas em temas complexos (como Contabilidade de Custos ou Banco de Dados NoSQL) e foque a maior parte do tempo em leitura da lei seca, PDFs e resolução de questões de bancas anteriores.</p>
+              <p>Utilize as videoaulas principalmente para sanar dúvidas em temas complexos (como Contabilidade de Custos ou Banco de Dados NoSQL) e foque a maior parte do tempo em leitura da lei seca, PDFs e resolução de questões, priorizando provas da Cesgranrio de nível superior.</p>
             </div>
           </div>
         </section>
@@ -481,7 +542,7 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
         <section id="simulados" class="tab-content">
           <div class="card">
             <h3><i class="fa-solid fa-pen-to-square"></i> Simulados Interativos</h3>
-            <p class="section-desc">Testem seus conhecimentos com questões reais ou adaptadas de concursos anteriores da área fiscal (FCC e FGV).</p>
+            <p class="section-desc">Testem seus conhecimentos com questões reais ou adaptadas de concursos anteriores da área fiscal. Banca da SEFAZ-BA 2026: <strong>Fundação Cesgranrio</strong>; use o modo Prova cronometrada para treinar no formato dela.</p>
             
             <!-- Inner Navigation: Múltipla Escolha vs Discursiva -->
             <div class="inner-tab-selector">
@@ -545,37 +606,37 @@ body.high-contrast button, body.high-contrast input, body.high-contrast select {
 
             <div id="glossario-list" class="glossario-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
               <!-- Termos preenchidos dinamicamente ou estaticamente -->
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #65a30d; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #ecfdf5; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">NBC TA</span> Norma Brasileira de Contabilidade Técnica de Auditoria</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Normas emitidas pelo CFC aplicáveis aos auditores independentes/externos. O sufixo "TA" indica Auditoria Técnica (ex: NBC TA 300, 320, 315).</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">NBC TI</span> Norma Brasileira de Contabilidade Técnica de Auditoria Interna</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Regras aplicáveis à atuação dos auditores internos pertencentes aos quadros próprios das organizações ou órgãos públicos.</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #8b5cf6; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #f3e8ff; color: #6b21a8; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CPC</span> Comitê de Pronunciamentos Contábeis</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Órgão que alinha e converge as normas de contabilidade do Brasil com o padrão internacional IFRS (International Financial Reporting Standards).</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #f59e0b; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CIAP</span> Controle de Crédito de ICMS do Ativo Permanente</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Sistemática fiscal para aproveitamento do crédito de ICMS referente à aquisição de bens do ativo imobilizado (máquinas, equipamentos), fracionado à razão de 1/48 por mês.</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #ef4444; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">PAF-BA</span> Processo Administrativo Fiscal do Estado da Bahia</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Regulamento contencioso estadual (Lei nº 3.956/1981) que disciplina autuações, defesas, recursos e julgamentos administrativos de tributos na SEFAZ-BA.</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">CFC</span> Conselho Federal de Contabilidade</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Autarquia federal responsável por regulamentar e fiscalizar a profissão contábil e emitir as NBCs no território nacional.</p>
               </div>
 
-              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #6366f1; padding: 16px; border-radius: 8px;">
+              <div class="glossario-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px;">
                 <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;"><span style="background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-size: 13px; margin-right: 6px;">RICMS-BA</span> Regulamento do ICMS do Estado da Bahia</h4>
                 <p style="margin: 0; color: #475569; font-size: 13.5px; line-height: 1.5;">Decreto estadual que disciplina a incidência, isenções, substituição tributária e obrigações acessórias relativas ao ICMS baiano.</p>
               </div>

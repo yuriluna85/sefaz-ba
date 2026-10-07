@@ -1,25 +1,28 @@
 # Concurso SEFAZ Dashboard - Painel de Preparação Integrada
 
-Painel de estudos e acompanhamento estratégico para o concurso da Secretaria da Fazenda do Estado da Bahia (SEFAZ-BA), focado nos cargos de Auditor Fiscal (Especialidade Tecnologia da Informação) e Agente de Tributos Estaduais.
+Painel de estudos e acompanhamento estratégico para o concurso da Secretaria da Fazenda do Estado da Bahia (SEFAZ-BA), focado nos cargos de Auditor Fiscal (Especialidade Tecnologia da Informação) e Agente de Tributos Estaduais. Banca organizadora: Fundação Cesgranrio (definida em 22/09/2026).
 
 ## Principais Funcionalidades
 
 - **Trilhas de Estudo Diferenciadas**: Trilhas completas com checklist de progresso para Auditor Fiscal (TI) e Agente de Tributos.
 - **Apostilas Digitais Estruturadas**: Módulos pedagógicos em formato PDF gerados com chancela editorial YLuna85 LABs e glossário de siglas.
-- **Banco de Questões e Casos Práticos**: Treinamento focado em questões de bancas examinadoras (FCC, CEBRASPE, FGV) e estudos de caso discursivos.
+- **Banco de Questões e Casos Práticos**: Treinamento com questões de bancas examinadoras (FCC, CEBRASPE, FGV e, em incorporação, Cesgranrio) e estudos de caso discursivos, com filtro por banca e modo prova cronometrada no padrão Cesgranrio.
 - **Gamificação do Aprendizado**: Sistema de XP e níveis, sequência diária de estudo (streak), conquistas (badges) e fila de revisão espaçada das questões erradas no simulado, tudo salvo localmente no navegador (localStorage), sem necessidade de backend ou login.
 - **Videoaulas e Referências**: Curadoria de materiais, aulas magnas e orientações de carreira para o cargo de Auditor de TI.
 - **Glossário de Siglas**: Catálogo completo de termos contábeis, fiscais e tecnológicos.
 
 ## Arquitetura e Estrutura de Arquivos
 
--  pp.py: Servidor Flask local que fornece a API REST para progresso, simulados, questões e listagem de apostilas.
+- app.py: Servidor Flask local que fornece a API REST para progresso, simulados, questões e listagem de apostilas.
 - index.html: Interface web responsiva em estilo Bento Grid, com alternância de trilhas e controles de acessibilidade.
--  uild_all_apostilas_ptbr.py: Compilador automatizado que gera cadernos e apostilas em formato PDF na pasta Concurso SEFAZ/.
+- build_all_apostilas_ptbr.py: Compilador automatizado que gera cadernos e apostilas em formato PDF na pasta Concurso SEFAZ/.
 - apostilas_conteudo.json: Base de dados estruturada em JSON com 18 apostilas completas.
 - harness.py: Suíte de autoteste padronizada que valida integridade documental, sintaxe e ativos web.
 - static/js/gamificacao.js: Motor de gamificação (XP, níveis, streak, badges e fila de revisão espaçada), 100% client-side via localStorage.
 - testar_gamificacao.py: Suíte Playwright que valida ponta a ponta o motor de gamificação (XP por tópico e por questão, badges, alerta e carregamento da fila de revisão).
+- importar_cesgranrio_bndes2024.py: Importa, de forma idempotente, o lote de questões reais da Cesgranrio (BNDES 2024, nível superior) com fonte, gabarito definitivo e justificativa por alternativa.
+- testar_fetch_news.py: Teste offline dos filtros de notícias (relevância por título, spam e títulos repetidos).
+- testar_modo_prova.py: Suíte Playwright do simulado no padrão Cesgranrio (filtro por banca, cronômetro, prova sem gabarito, questão em branco e resultado por disciplina).
 
 ## Como Executar
 
@@ -36,6 +39,27 @@ Para iniciar o painel localmente:
 
 ## Log de Atualizações
 
+### 07/10/2026 - Versão 2.19.0
+- Banca definida: Fundação Cesgranrio (22/09/2026). Painel Geral atualizado (apresentação, pílula de status, contagem regressiva para o edital previsto até 31/10/2026, linha do tempo) e novo card "Banca e Calendário", exibido só no certame SEFAZ-BA, com marcos e perfil de cobrança da banca; número de questões, pesos e discursiva ficam como "[aguardando edital]".
+- Rótulos de vagas: Agente de Tributos "Qualquer Graduação"; Auditor "TI e outra área" (segunda área ainda não confirmada para 2026).
+- Simulado: filtro por banca de origem e modo "Prova cronometrada" (cerca de 3,4 min por questão, ritmo da Cesgranrio no BNDES 2024, até o edital da SEFAZ-BA; gabarito só no final; questão em branco; desempenho por disciplina e gabarito comentado; só itens de cinco alternativas, como na Cesgranrio). Nova suíte testar_modo_prova.py.
+- Videoaulas: buscas de questões resolvidas da Cesgranrio e novo card "Português e Exatas na Cesgranrio".
+- fetch_news.py: várias buscas por concurso (SEFAZ-BA inclui "Cesgranrio edital"), filtro de relevância pelo título (o órgão precisa ser citado) e remoção de títulos repetidos entre portais.
+- Corrigido bloco `@media (max-width: 900px)` duplicado e sem fechamento em style.css, que anulava todas as regras CSS posteriores (inclusive gamificação e seletor de concurso).
+- Removidos os sidestripes (`border-left` decorativo) restantes: link de videoaula, 7 cards do glossário e contexto das discursivas.
+- PLANO_ATUALIZACAO_APOSTILAS.md: situação do edital atualizada e nova hierarquia de fontes de estilo de cobrança (provas reais da Cesgranrio de nível superior, só nas disciplinas equivalentes).
+- Banco de questões: lote piloto de 30 questões reais da Cesgranrio (BNDES 2024, Analista, nível superior), conferidas com o gabarito final após recursos publicado pelo BNDES; justificativa por alternativa e fundamento em cada uma. Inclui as primeiras questões de Língua Portuguesa do banco. Script idempotente importar_cesgranrio_bndes2024.py; backup questions.backup_20261007_antes_cesgranrio.json. Banco: 402 para 432 questões.
+- Filtro "Somente Cesgranrio" passa a usar apenas o campo `banca`, para que futuras inéditas "no estilo Cesgranrio" não se misturem às questões reais.
+- Revisão (Opus 5.5, esforço alto): prova cronometrada em andamento não é mais perdida ao abrir as Discursivas (retoma de onde parou) e pede confirmação antes de ser abandonada; a Revisão Espaçada não altera mais o modo escolhido; a contagem regressiva avisa quando a data prevista do edital passar; cronômetro com role="timer" para leitores de tela; o gabarito comentado da prova mostra o texto da alternativa marcada e da correta, com justificativas.
+- Card "Banca e Calendário" reescrito só com o perfil observado em provas reais da Cesgranrio (removidas afirmações sem base e a referência ao Banco do Brasil, cargo de nível médio), com o BNDES 2024 citado como referência da banca.
+- fetch_news.py descarta títulos com código de spam entre parênteses; nova suíte offline testar_fetch_news.py. Corrigidos nomes de arquivo corrompidos na seção de arquitetura deste README (app.py e build_all_apostilas_ptbr.py).
+
+### 22/09/2026 - Versão 2.18.0
+- Corrigido fetch_news.py: notícias agora são ordenadas pela data real de publicação (antes ficavam por ordem de chegada, deixando itens antigos presos no topo), com cota fixa de 8 notícias por concurso (antes era um teto global de 20 que podia fazer um concurso "engolir" o espaço dos outros dois) e poda de notícias com mais de 90 dias mesmo sem substituto novo.
+- Adicionado `permissions: contents: write` ao .github/workflows/fetch_news.yml, necessário para o job comitar o news_data.json atualizado.
+- "Novidades do Concurso" (Painel Geral) agora filtra pelo concurso selecionado no seletor global do topo (SEFAZ-BA, Receita Federal ou Banco Central), mostrando só notícias daquele certame, em vez de uma lista misturada dos três.
+- Nova suíte testar_noticias.py (Playwright), validando que cada botão de concurso mostra exclusivamente as notícias com a tag correspondente.
+- **Nota operacional**: como o repositório é publicado manualmente via GitHub Desktop, o news_data.json só recebe as atualizações automáticas do GitHub Actions no próximo `Fetch/Pull` feito no Desktop; um `push` isolado não traz de volta o que o Actions gerou no servidor.
 ### 22/09/2026 - Versão 2.17.0
 - Sistema de gamificação do aprendizado (static/js/gamificacao.js): XP por tópico marcado na trilha (10 XP) e por questão de simulado respondida (15 XP acerto, 2 XP tentativa), níveis progressivos com rótulo (Iniciante a Mestre Fiscal), sequência diária de estudo (streak) com badges em 3, 7 e 30 dias, conquistas por marcos de simulado e por trilha/apostila concluída, e fila de revisão espaçada (intervalos de 1, 3, 7 e 30 dias) para questões erradas, com botão dedicado "Revisão Espaçada" na aba de Simulados. Widget de progresso na aba Painel Geral. Tudo salvo em localStorage (`sefaz_gamificacao_v1`), sem backend.
 - Corrigido sidestripe (`border-left`) remanescente no item ativo do menu lateral (static/css/style.css), substituído por brilho interno sem borda lateral colorida.
